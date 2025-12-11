@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
@@ -6,45 +6,65 @@
 @import "tailwindcss-intersect";
 
 @font-face {
-  font-family: 'Honk';
-  src: url('/fonts/Honk-Regular-VariableFont_MORF,SHLN.ttf') format('truetype');
+  font-family: "Honk";
+  src: url("/fonts/Honk-Regular-VariableFont_MORF,SHLN.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Quicksand';
-  src: url('/fonts/Quicksand-VariableFont_wght.ttf') format('truetype');
+  font-family: "Quicksand";
+  src: url("/fonts/Quicksand-VariableFont_wght.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Domine';
-  src: url('/fonts/Domine-Regular.ttf') format('truetype');
+  font-family: "Domine";
+  src: url("/fonts/Domine-Regular.ttf") format("truetype");
 }
 
 @theme {
   /* Her tilføjes theme variable // tokens */
 
   /*Farver */
-  --color-primary-400: #00E4F5;
-  --color-primary-500: #006269;
-  --color-primary-600: #006D75;
-  --color-secondary-400: #F5E400;
-  --color-secondary-500: #F5A600;
-  --color-secondary-600: #F57A00;
+  --color-bg: #eee5db;
+  --color-secondary: #809575;
+  --color-accent: #ff6d3b;
+  --color-offwhite: #fffdf9;
+  --color-offwhite: #fffdf9;
+  --color-dustblue200: #bbdadd;
+  --color-text: #272727;
+  --color-skyblue500: #1b8691;
+  --color-skyblue400: #23a2af;
+  --color-skyblue100: #96f1fe;
+  --color-lime800: #4c5524;
+  --color-lime200: #c6dc68;
+  --color-pink600: #d01878;
+  --color-pink200: #fdbad1;
+  --color-grassgreen700: #34562a;
+  --color-grassgreen300: #80c86a;
+  --color-orange50: #ffedea;
+  --color-burnedorange300: #f8ad83;
+  --color-burnedorange100: #fce3d9;
+  --color-dustgreen200: #bfc9ba;
+
+  --color-accent-pink: #ffcfff;
+  --color-accent-turquoise: #7ad8c0;
+  --color-accent-yellow: #ffe7ba;
+  --color-accent-salmon: #ffc7b7;
+  --color-accent-dustgreen: #bad0bb;
+  --color-accent-coral: #ec5e55;
+  --color-accent-blue: #c9eefc;
+  --color-hover: #ac54d9;
 
   /*Typografi */
-  --font-display: 'Honk', monospace;
-  --font-sans: 'Quicksand', sans-serif;
-  --font-serif: 'Domine', serif;
+  --font-display: "Honk", monospace;
+  --font-sans: "Quicksand", sans-serif;
+  --font-serif: "Domine", serif;
 }
 
 @layer base {
-
 }
 
-@layer components{
-
+@layer components {
 }
 
-@layer utilities{
-  
+@layer utilities {
 }
