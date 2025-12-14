@@ -1,0 +1,32 @@
+---
+import Heading from "../components/Heading.astro";
+import Text from "../components/Text.astro";
+import Link from "../components/Link.astro";
+---
+
+<article class="bg-offwhite p-8 rounded-tl-[60px] rounded-tr-[10px] rounded-br-[60px] rounded-bl-[10px] ml-15 mr-15">
+<Heading htmlheading="h3" size="medium" stylingclasses="font-semibold pb-8 pl-6">Støt alvorligt og kronisk syge børn</Heading>
+<div class="flex flex-row justify-between items-center">
+<div class="pl-6">
+    <div class="flex items-center mb-4">
+        <input id="default-radio-1" type="radio" value="" name="default-radio" class="w-6 h-6 text-neutral-primary border-default-medium bg-neutral-secondary-medium rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
+        <label for="default-radio-1" class="select-none ms-2 font-serif text-2xl"><Text teksttype="brødtekst">Enkelt</Text></label>
+    </div>
+    <div class="flex items-center">
+        <input checked id="default-radio-2" type="radio" value="" name="default-radio" class="w-6 h-6 text-neutral-primary border-default-medium bg-neutral-secondary-medium rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
+        <label for="default-radio-2" class="select-none ms-2 font-serif text-2xl"><Text teksttype="brødtekst">Månedligt</Text></label>
+    </div>  
+</div>
+<div class="flex flex-row justify-between rounded-full bg-bg px-12">
+  <!-- Active -->
+  <button class="px-8 py-3 rounded-full border-3 border-accent bg-orange50 font-serif text-2xl">50 kr</button>
+
+  <!-- Inactive -->
+  <button class="px-6 py-2 rounded-full text-text font-serif text-2xl">150 kr</button>
+  <button class="px-6 py-2 rounded-full text-text font-serif text-2xl">250 kr</button>
+</div>
+
+ <input id="andetbeloeb" type="text" name="andetbeloeb" placeholder="Andet beløb" class="px-12 py-3 rounded-full  placeholder:text-text focus:outline-accent font-serif text-2xl bg-bg" />
+<Text><Link href="#" variant="primary" size="large" icon="/assets/stoet_ikon_web.svg" iconHover="/assets/stoet_ikon_filled.svg">Støt</Link></Text>
+</div>
+</article>
