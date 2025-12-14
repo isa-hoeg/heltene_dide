@@ -28,7 +28,6 @@
   --color-secondary: #809575;
   --color-accent: #ff6d3b;
   --color-offwhite: #fffdf9;
-  --color-offwhite: #fffdf9;
   --color-dustblue200: #bbdadd;
   --color-text: #272727;
   --color-skyblue500: #1b8691;
@@ -45,19 +44,10 @@
   --color-burnedorange100: #fce3d9;
   --color-dustgreen200: #bfc9ba;
 
-  --color-accent-pink: #ffcfff;
-  --color-accent-turquoise: #7ad8c0;
-  --color-accent-yellow: #ffe7ba;
-  --color-accent-salmon: #ffc7b7;
-  --color-accent-dustgreen: #bad0bb;
-  --color-accent-coral: #ec5e55;
-  --color-accent-blue: #c9eefc;
-  --color-hover: #ac54d9;
-
   /*Typografi */
-  --font-display: "Honk", monospace;
-  --font-sans: "Quicksand", sans-serif;
-  --font-serif: "Domine", serif;
+  --font-display: "Gloock", serif;
+  --font-sans: "Fredoka", sans-serif;
+  --font-serif: "Faustina", serif;
 }
 
 @layer base {
