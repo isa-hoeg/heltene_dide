@@ -6,13 +6,48 @@ import thumbsup from "../assets/images/thumbsup.png";
 import Heading from "../components/Heading.astro";
 import Text from "../components/Text.astro";
 import Button from "../components/Button.astro";
+import Stoet from "../components/Stoet.astro";
 import InitiativeCard from "../components/InitiativeCard.astro";
 ---
 <MainLayout title="Heltene">
 <main class="">
+<!-- start på hero -->
+	<img src="/assets/mobil_orange_doodle.svg" alt="doodle" class=" mx-auto pb-2 block lg:hidden" />
+	<img src="/assets/orange_doodle_web.svg" alt="doodle" class="lg:px-20 mt-12 hidden lg:block" />
+	<img src="/assets/orange_doodle_web.svg" alt="doodle" class="mx-auto hidden md:block lg:hidden" />
+<section class="w-full min-h-145 bg-[url(/assets/mobil_regnbue_hero.svg)] bg-cover bg-center bg-no-repeat lg:w-full lg:bg-[url(/assets/regnbue_hero.svg)] lg:bg-cover lg:bg-center">
+<div class="grid grid-cols-1 lg:grid-cols-2 grid-rows-2">
+
+<div class="text-center lg:text-left px-4 lg:px-20">
+<Heading htmlheading="h1" size="xlarge" font="display" stylingclasses="text-text mt-4 py-2 row-start-2 lg:row-start-1 lg:col-start-2">Sammen kan vi give børn smil og styrke i en svær tid</Heading>
+<Text teksttype="brødtekst" stylingclasses="text-text">Vi arbejder for at skabe et liv med mere leg, bevægelse og fællesskab for syge, indlagte og udsatte børn og deres familier.</Text>
+<Text teksttype="brødtekst" stylingclasses="text-text">Gør en heltegerning, og støt vores arbejde.</Text>
+
+<div class="flex flex-row items-center gap-5 py-8 lg:flex-row lg:items-start px-10 lg:px-0">
+  <Link href="#" variant="primary" size="large" icon="/assets/stoet_ikon_web.svg" iconHover="/assets/stoet_ikon_filled.svg">
+    Støt
+  </Link>
+
+  <Link href="/" variant="secondary" size="large" className="mt-4 lg:mt-0">
+    Helteinitiativer
+  </Link>
+</div>
+</div>
+<img
+    src="/img/forside_hero.webp"
+    class="w-100 mx-auto z-10 -order-1 lg:order-1"
+    alt="hero_img"
+/>
+</div>
+<div class="relative md:-translate-y-30 lg:-translate-y-90">
+  <Stoet />
+</div>
+</section>
+
+
 
 <!-- Start på helteinitiativer -->
- <section class="bg-secondary py-20">
+ <section class="bg-secondary pt-50 py-20 -mt-30 lg:-mt-115">
 	<div class="container mx-auto">
 		<img src="/assets/mobil_offwhite_doodle.svg" alt="doodle" class="mx-auto pb-2 block lg:hidden" />
 		<img src="/assets/offwhite_doodle_web.svg" alt="doodle" class="mx-auto pb-2 hidden lg:block" />
@@ -50,7 +85,8 @@ import InitiativeCard from "../components/InitiativeCard.astro";
 		/>
 	</div>
 	<div class="flex justify-center mt-10">
-  <Link href="/legeheltene" variant="secondary" size="large ">Det går din støtte til</Link>
+  <Link href="/om" variant="secondary" size="large ">Det går din støtte til</Link>
+
 </section>
 <!-- Slut på helteinitiativer -->
 
