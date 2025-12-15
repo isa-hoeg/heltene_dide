@@ -7,16 +7,18 @@ const linkStyling = "rounded-full text-sans inline-flex items-center gap-2";
  
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskellige varianter 
 const variantClasses = {
-"textlink": "underline text-text", /* text-primary-500 */
-"primary": "inline-block px-12 py-3 bg-accent text-offwhite cursor-pointer hover:scale-102 transition-all duration-500", /* border-primary-500 */
-"secondary": "inline-block border-2 lg:border-4 px-16 py-4 border-accent bg-burnedorange100 hover:bg-accent text-accent hover:text-offwhite cursor-pointer hover:scale-102 transition-all duration-500" 
+"textlink": "underline text-text hover:text-accent", /* text-primary-500 */
+"primary": "inline-block px-12 py-3 bg-accent text-offwhite hover:bg-[url('/assets/regnbue_hover.svg')]", /* border-primary-500 */
+"secondary": "inline-block border-4 px-12 py-3 border-accent bg-burnedorange100 text-accent hover:bg-accent hover:text-offwhite", /* border-secondary-500 */
+"headerlink": "text-text hover:text-accent font-semibold",
+"headerlink2": "text-text hover:text-accent"
 };
  
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskelligeog størrelser.
 const sizeClasses = {
 "default": "text-default", 
 "large": "text-base lg:text-2xl",
-"medium": "text-sm lg:text-lg",
+"medium": "text-lg lg:text-xl",
 "small": "text-base"
 };
 
