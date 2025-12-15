@@ -5,9 +5,10 @@ import Text from "../components/Text.astro";
 import Link from "../components/Link.astro";
 import Button from "../components/Button.astro";
 import Stoet from "../components/Stoet.astro";
+import Footer from "../components/Footer.astro";
 ---
 <MainLayout title="Titel">
-	<main class=" bg-dustblue200">
+	<main class=" bg-bg">
         
 		<Heading htmlheading="h1" size="large">Komponentbibliotek</Heading>
         <Text stylingclasses="italic">Her kan du finde alle de komponenter, der er brugt i dette projekt.</Text>
@@ -46,6 +47,8 @@ import Stoet from "../components/Stoet.astro";
             <Text><Link href="#" variant="secondary" size="medium">Link variant: secondary size medium</Link></Text>
             <Text><Link href="#" variant="secondary" size="large">Link variant: secondary size large</Link></Text>
             <Text><Link href="#" variant="textlink" size="large">Link variant: textlink size large</Link></Text>
+            <Text><Link href="#" variant="headerlink" size="large">Link variant: Headerlink size large</Link></Text>
+            <Text><Link href="#" variant="headerlink2" size="large">Link variant: Headerlink 2 size large</Link></Text>
         </section>
         <!-- Slut på Link komponent instanser -->
          <hr class="my-4" />
@@ -66,5 +69,6 @@ import Stoet from "../components/Stoet.astro";
           <section class="">
                 <Stoet/>
           </section>
+         
 	</main>
 </MainLayout>
