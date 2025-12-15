@@ -1,0 +1,18 @@
+---
+const { logo, number, title, text, class: extraClass = "" } = Astro.props;
+import Heading from "./Heading.astro";
+import Text from "./Text.astro";
+import '../styles/tailwind.css';
+---
+<article class={`flex items-center gap-4 bg-offwhite cursor-pointer ${extraClass}`}>
+  <img src={logo} alt={`${title} logo`} class="w-60 lg:w-full object-cover" />
+  <div class="flex flex-col gap-2">
+    <Heading htmlheading="h2" size="xxlarge" font="display">{number}</Heading>
+    <Heading htmlheading="h3" size="medium" font="sans" stylingclasses="-mt-4">{title}</Heading>
+    <Text teksttype="brødtekst" stylingclasses="-mt-2">{text}</Text>
+    <a href="#" class="underline">
+      <Heading htmlheading="h4" size="xsmall" font="sans">Læs mere</Heading>
+    </a>
+  </div>
+</article>
+
