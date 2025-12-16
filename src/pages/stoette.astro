@@ -3,17 +3,33 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Heading from "../components/Heading.astro";
 import Text from "../components/Text.astro";
 import Button from "../components/Button.astro";
-import Stoet from "../components/Stoet.astro";
+import Stoet from "../components/Stoet.astro"
+import Link from "../components/Link.astro";
 ---
 <MainLayout title="Støt nu">
 	<main class="">
 
 <!-- Start på hero -->
+<section
+  class="
+    w-full
+    min-h-145
+	bg-[url(/assets/mobil_regnbue_hero.svg)]
+    bg-cover bg-center bg-no-repeat
+
+    md:w-full
+    md:min-h-250
+
+    lg:min-h-155 
+    lg:bg-[url(/assets/regnbue_hero.svg)]
+    lg:bg-cover"
+>
+
 
 <img 
   src="/assets/mobil_orange_doodle.svg" 
   alt="Orange doodle mobil" 
-  class="block md:hidden mx-auto" 
+  class="block mt-12 md:hidden mx-auto" 
 />
 
 <!-- Medium -->
@@ -31,20 +47,6 @@ import Stoet from "../components/Stoet.astro";
   class="hidden lg:block ml-20 mt-12"
 />
 
-<section
-  class="
-    w-full
-    min-h-145
-	bg-[url(/assets/mobil_regnbue_hero.svg)]
-    bg-cover bg-center bg-no-repeat
-
-    md:w-full
-    md:min-h-250
-
-    lg:min-h-145 
-    lg:bg-[url(/assets/regnbue_hero.svg)]
-    lg:bg-cover"
->
 
 <div class="grid grid-cols-1 
 	lg:grid-cols-2 grid-rows-2">
@@ -87,16 +89,39 @@ import Stoet from "../components/Stoet.astro";
 </div>
 </div>
 
-<div class="-mt-20 md:-mt-28 lg:-mt-90">
+<!-- Slut på hero -->
+<div class="-mt-20 md:-mt-28 lg:-mt-90 relative z-10">
   <Stoet />
 </div>
 
+<!-- Start på Det går din støtte til-section -->
+<section class="bg-secondary relative z-0 pt-30 py-20 -mt-30 lg:-mt-10">
+  <div class="container mx-auto relative z-0">
+    <!-- Doodles -->
+    <img src="/assets/mobil_offwhite_doodle.svg" alt="doodle" class="mx-auto pb-2 block mt-12 lg:hidden" />
+    <img src="/assets/offwhite_doodle_web.svg" alt="doodle" class="mx-auto pb-2 hidden lg:block" />
+
+    <Heading htmlheading="h2" size="large" font="display" stylingclasses="text-offwhite text-center mb-6">
+      Det går din støtte til
+    </Heading>
+
+    <Text teksttype="brødtekst" stylingclasses="text-offwhite text-center lg:px-20 pb-2">
+      Med din hjælp skaber vi øjeblikke af glæde, tryghed og fællesskab
+    </Text>
+
+    <Text teksttype="brødtekst" stylingclasses="text-offwhite text-center lg:px-20 pb-2">
+      for indlagte og udsatte børn - et vigtigt pusterum midt i en svær tid. 
+    </Text>
+
+ 	<Text teksttype="brødtekst" stylingclasses="text-offwhite text-center lg:px-20 pb-10">
+  	Af hjertet tak.
+    </Text>
+  </div>
+
 </section>
 
-<!-- Slut på hero -->
-
-
-
 		
+
+
 	</main>
 </MainLayout>
