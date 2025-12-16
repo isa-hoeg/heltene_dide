@@ -7,35 +7,42 @@ import Heading from "../components/Heading.astro";
 import Text from "../components/Text.astro";
 import Button from "../components/Button.astro";
 import Stoet from "../components/Stoet.astro";
+import Legehelte from "../components/Legehelte.astro";
 ---
 <MainLayout title="Titel">
 	<!-- container mx-auto p-4 -->
 	<main class="">
 		<!-- HERO LEGEHELTENE -->
-		<section class="bg-dustblue200">
-			<img src="/assets/mobil_blaa_doodle.svg" class="mx-auto pt-10 pb-6" alt="">
-			<div class="p-4">
-				<Heading htmlheading="h1" size="xlarge" font="display" stylingclasses="text-center">Legeheltene skaber leg, bevægelse og frirum</Heading>
-				<Text teksttype="brødtekst" stylingclasses="pt-10 text-center">Legeheltene møder børn på hospitaler, institutioner og indkvarteringssteder og skaber et frirum med leg, bevægelse og plads til at være barn igen.</Text>
+		<section class="bg-dustblue200 h-190 lg:h-160 lg:grid lg:grid-cols-2 ">
+			<div class="p-4 text-center lg:text-left lg:pl-20">
+				<img src="/assets/mobil_blaa_doodle.svg" class="mx-auto pt-10 pb-6 block lg:hidden" alt="">
+				<img src="/assets/blue_doodle_web.svg" class="pt-20 pb-6 hidden lg:block" alt="doodle">
+				<Heading htmlheading="h1" size="xlarge" font="display" stylingclasses="">Legeheltene skaber leg, bevægelse og frirum</Heading>
+				<Text teksttype="brødtekst" stylingclasses="pt-10 lg:w-115">Legeheltene møder børn på hospitaler, institutioner og indkvarteringssteder og skaber et frirum med leg, bevægelse og plads til at være barn igen.</Text>
 			</div>
-				<img src="/assets/legehelte_hero.svg" class="scale-80" alt="">
-			<Stoet/>
+			<img src="/assets/legehelte_hero.svg" class="scale-80 relative z-0" alt="">
+			
 		</section>
+		<div class="-mt-40 relative">
+			<Stoet/>
+		</div>
 		<!-- SLUT HERO LEGEHELTENE -->
 
 		<!-- START - FÅ INDBLIK I LEGEHELTENS HVERDAG -->
-		<section class=" bg-bg mt-20 mb-20">
-			<iframe class=" w-full max-w-sm mx-auto aspect-video rounded-tl-[10px] rounded-tr-[60px] rounded-bl-[60px] rounded-br-[10px]"   src="https://www.youtube.com/embed/_B3UnoStQDY?si=C43VlCX1kQQDgG7u" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-			<div class="bg-[url('/assets/blaa_boobel.svg')] bg-cover bg-no-repeat h-120 bg-center -mt-15">
-				<div class="container mx-auto p-8">
-					<Heading htmlheading="h2" size="large" font="display" stylingclasses="text-center pt-12">Få indblik i <br/>Legeheltenes arbejde</Heading>
+		<section class=" bg-bg mt-20 lg:grid lg:grid-cols-2 lg:mt-40 lg:gap-30 lg:relative">
+			<iframe class="mx-auto h-70 w-95 rounded-tl-[10px] rounded-tr-[60px] rounded-bl-[60px] rounded-br-[10px] lg:w-190 lg:h-130 lg:ml-15 lg:z-10"   src="https://www.youtube.com/embed/_B3UnoStQDY?si=C43VlCX1kQQDgG7u" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+			<div class="bg-[url('/assets/blaa_boobel.svg')] bg-cover bg-no-repeat h-130 bg-center -mt-15 lg:h-170 lg:bg-[url('/assets/blaa_bobbel_web.svg')]">
+				<div class="container mx-auto p-8 lg:text-left lg:pl-20 lg:pt-25">
+					<img src="/assets/legehelte_hero.svg" alt="" class="absolute -rotate-20 scale-30 hidden lg:block lg:-top-70 lg:-right-25">
+					<Heading htmlheading="h2" size="large" font="display" stylingclasses="pt-12 text-center lg:text-left">Få indblik i <br/>Legeheltenes arbejde</Heading>
 					<Text teksttype="brødtekst" stylingclasses="pt-8">Legeheltene skaber:</Text>
 					<ul class="list-disc ml-6">
-						<li><Text>Et trygt frirum med plads til leg og bevægelse</Text></li>
-						<li><Text>Et øjeblik, hvor børn kan være børn igen</Text></li>
+						<li><Text teksttype="brødtekst">Et trygt frirum med plads til leg og bevægelse</Text></li>
+						<li><Text teksttype="brødtekst">Et øjeblik, hvor børn kan være børn igen</Text></li>
+						<li><Text teksttype="brødtekst">Tumlelege, samarbejde og store armbevægelser</Text></li>
 					</ul>
 					<Text teksttype="brødtekst" stylingclasses="pt-4">Vi møder børn på hospitaler, psykiatriske afdelinger, børnehjem og indkvarteringssteder for flygtninge.</Text>
-					<div class="flex justify-center mt-8">
+					<div class="flex justify-center mt-8 lg:justify-start">
 						<Text><Link href="/forms" variant="primary" size="medium" icon="/assets/stoet_ikon_web.svg" iconHover="/assets/stoet_ikon_filled.svg">Støt legeheltene her</Link></Text>
 					</div>
 				</div>
@@ -44,26 +51,26 @@ import Stoet from "../components/Stoet.astro";
 		<!-- SLUT - FÅ INDBLIK I LEGEHELTENS HVERDAG -->
 
 		<!-- START - VI LEGER HVER DAG -->
-		 <section class="bg-[url('/assets/mobil_orange_boelge_legehelte.svg')] bg-center bg-cover bg-no-repeat h-315 flex items-center">
-    		<div class="container mx-auto p-8 text-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-24 lg:gap-16">
+		 <section class="bg-[url('/assets/mobil_orange_boelge_legehelte.svg')] bg-bottom bg-cover bg-no-repeat h-315 flex items-center lg:bg-[url('/assets/orange_boelge_legehelte.svg')] lg:h-230">
+    		<div class="container mx-auto p-8 text-center grid grid-cols-1 gap-24 md:grid-cols-2 lg:grid-cols-4 lg:gap-10 lg:pt-40">
         		<div>
             		<Heading htmlheading="h1" size="xxlarge" font="display">64</Heading>
-            		<Heading htmlheading="h2" size="large" font="display">Afdelinger</Heading>
+            		<Heading htmlheading="h2" size="medium" font="display">Afdelinger</Heading>
             		<Text teksttype="brødtekst">Legeheltene er på 64 afdelinger inden for hospitalsvæsenet, børne- og ungepsykiatrien, børnehjem og indkvarteringssteder for flygtninge.</Text>
         		</div>
         		<div>
             		<Heading htmlheading="h1" size="xxlarge" font="display">3000+</Heading>
-            		<Heading htmlheading="h2" size="large" font="display">Legeheltvagter</Heading>
+            		<Heading htmlheading="h2" size="medium" font="display">Legeheltevagter</Heading>
             		<Text teksttype="brødtekst">Vi har mere end 3000 Legeheltevagter hvert år.</Text>
         		</div>
        		 <div>
             		<Heading htmlheading="h1" size="xxlarge" font="display">12.620</Heading>
-            		<Heading htmlheading="h2" size="large" font="display">Timer</Heading>
+            		<Heading htmlheading="h2" size="medium" font="display">Timer</Heading>
             		<Text teksttype="brødtekst">Vi leger 12.620 timer på et år. Det svarer til 35 timer hver eneste dag året rundt.</Text>
         		</div>
         		<div>
             		<Heading htmlheading="h1" size="xxlarge" font="display">21.700+</Heading>
-            		<Heading htmlheading="h2" size="large" font="display">Børn og unge</Heading>
+            		<Heading htmlheading="h2" size="medium" font="display">Børn og unge</Heading>
             		<Text teksttype="brødtekst">Hvert år leger vi med mere end 21.700 børn og unge.</Text>
         		</div>
     		</div>
@@ -71,15 +78,20 @@ import Stoet from "../components/Stoet.astro";
 		<!-- SLUT - VI LEGER HVER DAG -->
 
 		 <!-- START - MØD DEN VIRKELIG HELT, LAUGE -->
-		  <section class="bg-[url('/assets/mobil_blaa_boelge_legehelte.svg')] bg-center bg-cover bg-no-repeat h-310">
-			<img src="/img/lauge.webp" alt="">
-			<img src="/assets/mobil_orange_doodle.svg" alt="" class="mx-auto">
-			<div class="container mx-auto p-8">
-				<Heading htmlheading="h2" size="large" font="display" stylingclasses="text-center pt-6 pb-4">Mød den virkelige <br/> helt, Lauge</Heading>
+		  <section class="bg-[url('/assets/mobil_blaa_boelge_legehelte.svg')] bg-top bg-cover bg-no-repeat h-310 lg:grid lg:grid-cols-2 lg:bg-[url('/assets/blaa_boelge_legehelte.svg')] lg:h-235 lg:-mt-50">
+			<img src="/img/lauge.webp" alt="Lauge" class="lg:pt-10">
+			<div class="container mx-auto p-8 lg:pt-50">
+				<div class="lg:flex lg:justify-start">
+    				<!-- Mobil doodle -->
+					<img src="/assets/mobil_orange_doodle.svg" alt="" class="mx-auto block lg:hidden">
+					<!-- Desktop doodle -->
+					<img src="/assets/orange_doodle_web.svg" alt="" class="hidden lg:block lg:mx-0">
+				</div>
+				<Heading htmlheading="h2" size="large" font="display" stylingclasses="text-center pt-6 pb-4 lg:text-left">Mød den virkelige <br/> helt, Lauge</Heading>
 				<Text teksttype="brødtekst" stylingclasses="pb-4">“Legeheltene og kreaheltene gør en kæmpe forskel på sygdomsramte børn, og de er i en eller anden forstand med til at gøre dem raske, fordi det de bidrager med er glæde, og de bringer håb og normalitet ind i hverdagen i form af de aktiviteter de giver. </Text>
 				<Text teksttype="brødtekst">Jeg tror på, at hvis man har den psykiske del med, så bliver man først og fremmest hurtigere rask, men det bliver også nemmere at komme igennem sådan et forløb, ikke kun for børnene, men for hele familien.”</Text>
 				<Heading htmlheading="h4" size="small" stylingclasses="font-medium text-skyblue500 pt-2">Lauges mor</Heading>
-				<div class="flex justify-center pt-6">
+				<div class="flex justify-center pt-6 lg:justify-start">
 					<Text><Link href="" variant="secondary" size="large">Mød flere helte som Lauge</Link></Text>
 				</div>
 			</div>
@@ -87,18 +99,24 @@ import Stoet from "../components/Stoet.astro";
 		<!-- SLUT - MØD DEN VIRKELIG HELT, LAUGE -->
 
 		<!-- SECTION - LEG OG BEVÆGELSE -->
-		<section class="container mx-auto p-8 justify-center items-center">
-			<Heading htmlheading="h2" size="large" font="display" stylingclasses="text-center pt-6">Leg og Bevægelse</Heading>
-			<Text teksttype="brødtekst" stylingclasses="text-center">Leg og bevægelse er vigtigt for børns udvikling. Også når de er indlagte eller lever et liv med langvarig eller kronisk sygdom. Få indblik i den viden og forskning, som danner grundlag for Legeheltenes arbejde.</Text>
-			
-			<div class="flex flex-col gap-10 lg:flex-row justify-center items-center">
+		<section class="container mx-auto p-8 flex flex-col justify-center items-center lg:mt-20 ">
+			<div class="lg:w-150">
+				<Heading htmlheading="h2" size="large" font="display" stylingclasses="text-center pt-6 pb-4">Leg og Bevægelse</Heading>
+				<Text teksttype="brødtekst" stylingclasses="text-center pb-10 lg:pt-8 lg:pb-14">Leg og bevægelse er vigtigt for børns udvikling. Også når de er indlagte eller lever et liv med langvarig eller kronisk sygdom. Få indblik i den viden og forskning, som danner grundlag for Legeheltenes arbejde.</Text>
+			</div>
 			<!-- Vigtighden af leg -->
+			<div class="flex flex-col gap-10 justify-center items-center">
     		<details class="group">
-        		<summary class="flex flex-col items-center bg-offwhite w-80 h-80 p-4 rounded-tr-4xl rounded-bl-4xl border-4 border-transparent group-open:border-pink600 transition">
-            		<img src="/assets/leg_ikon.svg" alt="" class="scale-110 mx-auto pt-14">
-            		<Heading htmlheading="h4" size="medium" stylingclasses="font-semibold mt-auto mb-4 text-center">Vigtigheden af leg</Heading>
+        		<summary class="flex flex-row items-center bg-offwhite w-90 h-30 rounded-tr-4xl rounded-bl-4xl border-4 border-transparent group-open:border-pink600 transition lg:w-300 lg:h-40">
+            		<img src="/assets/leg_ikon.svg" alt="" class="scale-60 lg:scale-85">
+            		<Heading htmlheading="h4" size="medium" stylingclasses="font-semibold">Vigtigheden af leg</Heading>
+					<div class="ml-auto mr-4 transition-transform duration-300 group-open:rotate-180">
+						<img src="/assets/chevrondown.svg" alt="" >
+					</div>
         		</summary>
-				<div class="bg-pink200 w-100 mt-4 border-4 border-pink600 rounded-tr-4xl rounded-bl-4xl p-4">
+
+				<!-- indhold -->
+				<div class="bg-pink200 w-100 mt-4 border-4 border-pink600 rounded-tr-4xl rounded-bl-4xl p-4 lg:w-300 lg:h-100 lg:overflow-y-auto">
         			<Heading htmlheading="h3" size="large" stylingclasses="font-semibold pb-2">Vigtigheden af leg</Heading>
 					<Text teksttype="brødtekst">Legeheltene arbejder for at skabe aktiv leg for indlagte og udsatte børn, fordi leg er essentiel for børns udvikling og trivsel. Leg er et frirum, hvor børn kan være børn – selv midt i svære situationer.</Text>
 					<Heading htmlheading="h4" size="medium" stylingclasses="font-medium pb-2 pt-4">Et universelt fænomen</Heading>
@@ -114,12 +132,15 @@ import Stoet from "../components/Stoet.astro";
 			</details>
 
 			<!-- Vigtigheden af bevægelse -->
-			<details class="group">
-        		<summary class="flex flex-col items-center bg-offwhite w-80 h-80 p-4 rounded-tr-4xl rounded-bl-4xl border-4 border-transparent group-open:border-accent transition">
-            		<img src="/assets/bevaegelse_ikon.svg" alt="" class="scale-110 mx-auto pt-8">
-            		<Heading htmlheading="h3" size="medium" stylingclasses="font-semibold mt-auto mb-4 text-center">Vigtigheden af bevægelse</Heading>
+			<details class="group relative">
+        		<summary class="flex flex-row justify-between items-center  bg-offwhite w-90 h-30 p-4 rounded-tr-4xl rounded-bl-4xl border-4 border-transparent group-open:border-accent transition lg:w-300 lg:h-40 lg:justify-end">
+            		<div class="mr-auto lg:ml-4 transition-transform duration-300 group-open:rotate-180">
+						<img src="/assets/chevrondown.svg" alt="" >
+					</div>
+					<Heading htmlheading="h3" size="medium" stylingclasses="font-semibold text-center">Vigtigheden af bevægelse</Heading>
+					<img src="/assets/bevaegelse_ikon.svg" alt="" class="scale-60  lg:scale-80 lg:pt-4 lg:pl-4">
         		</summary>
-        		<div class="bg-burnedorange100 w-100 mt-4 border-4 border-accent rounded-tr-4xl rounded-bl-4xl p-4">
+        		<div class="bg-burnedorange100 w-100 mt-4 border-4 border-accent rounded-tr-4xl rounded-bl-4xl p-4 lg:overflow-y-auto lg:w-300 lg:h-100">
         			<Heading htmlheading="h3" size="large" stylingclasses="font-semibold pb-2">Vigtigheden af bevægelse</Heading>
 					<Text teksttype="brødtekst">Legeheltene hjælper børn med at komme op af sengen og bruge kroppen – også når de er syge eller indlagte. Bevægelse er fundamentalt for både trivsel, helbred og udvikling.</Text>
 					<Heading htmlheading="h4" size="medium" stylingclasses="font-medium pb-2 pt-4">Bevægelse er afgørende for udviklingen</Heading>
@@ -135,11 +156,14 @@ import Stoet from "../components/Stoet.astro";
 
 			<!-- Når børn indlægges -->
 			<details class="group">
-        		<summary class="flex flex-col items-center bg-offwhite w-80 h-80 p-4 rounded-tr-4xl rounded-bl-4xl border-4 border-transparent group-open:border-skyblue500 transition ">
-            		<img src="/assets/indlagt_ikon.svg" alt="" class="scale-110 mx-auto pt-14">
-            		<Heading htmlheading="h3" size="medium" stylingclasses="font-semibold mt-auto mb-4 text-center">Når børn indlægges</Heading>
+        		<summary class="flex flex-row items-center bg-offwhite w-90 h-30 p-2 rounded-tr-4xl rounded-bl-4xl border-4 border-transparent group-open:border-skyblue500 transition lg:w-300 lg:h-40">
+            		<img src="/assets/indlagt_ikon.svg" alt="" class="scale-60 lg:scale-80 lg:pt-4">
+            		<Heading htmlheading="h3" size="medium" stylingclasses="font-semibold">Når børn indlægges</Heading>
+					<div class="ml-auto scale-70 transition-transform duration-300 group-open:rotate-180 lg:mr-4 lg:scale-100">
+						<img src="/assets/chevrondown.svg" alt="" >
+					</div>
         		</summary>
-        		<div class="bg-dustblue200 w-100 mt-4 border-4 border-skyblue500 rounded-tr-4xl rounded-bl-4xl p-4">
+        		<div class="bg-dustblue200 w-100 mt-4 border-4 border-skyblue500 rounded-tr-4xl rounded-bl-4xl p-4 lg:w-300 lg:h-100 lg:overflow-y-auto">
         			<Heading htmlheading="h3" size="large" stylingclasses="font-semibold pb-2">Når børn bliver indlagt</Heading>
 					<Text teksttype="brødtekst">En indlæggelse er en stor omvæltning for et barn. Nye omgivelser, rutiner og fravær fra skole, venner og fritidsliv kan skabe usikkerhed. Samtidig skal barnet gennem undersøgelser og møder ofte et sprog, de ikke forstår.</Text>
 					<Heading htmlheading="h4" size="medium" stylingclasses="font-medium pb-2 pt-4">Indlagte børns trivsel</Heading>
@@ -160,12 +184,16 @@ import Stoet from "../components/Stoet.astro";
 
 			<!-- Tal og statistik -->
 			<details class="group">
-        		<summary class="flex flex-col items-center bg-offwhite w-80 h-80 p-4 rounded-tr-4xl rounded-bl-4xl border-4 border-transparent group-open:border-grassgreen700 transition">
-            		<img src="/assets/statitisk_ikon.svg" alt="" class="scale-110 mx-auto pt-10">
-            		<Heading htmlheading="h3" size="medium" stylingclasses="font-semibold mt-auto mb-4 text-center">Tal & statistik</Heading>
+        		<summary class="flex flex-row items-center bg-offwhite w-90 h-30 p-4 rounded-tr-4xl rounded-bl-4xl border-4 border-transparent group-open:border-grassgreen700 transition lg:w-300 lg:h-40 lg:justify-end">
+            		<div class="mr-auto scale-60 transition-transform duration-300 group-open:rotate-180 lg:ml-4 lg:scale-100">
+						<img src="/assets/chevrondown.svg" alt="" >
+					</div>
+					<Heading htmlheading="h3" size="medium" stylingclasses="font-semibold text-right lg:pr-4">Tal & statistik</Heading>
+					<img src="/assets/statitisk_ikon.svg" alt="" class="scale-60 lg:scale-80">
         		</summary>
-        		<div class="bg-dustgreen200 w-100 mt-4 border-4 border-grassgrenn700 rounded-tr-4xl rounded-bl-4xl p-4">
-        			<Heading htmlheading="h3" size="large" stylingclasses="font-semibold pb-2">Tal og statistik</Heading>
+        		<div class="bg-dustgreen200 w-100 mt-4 border-4 border-grassgrenn700 rounded-tr-4xl rounded-bl-4xl lg:overflow-y-auto lg:w-300 lg:h-100">
+        			<div class="p-4">
+					<Heading htmlheading="h3" size="large" stylingclasses="font-semibold pb-2">Tal og statistik</Heading>
 					<Text teksttype="brødtekst">Legeheltene arbejder for at skabe aktiv leg og bevægelse for indlagte og udsatte børn.</Text>
 					<Text teksttype="brødtekst">Her har vi samlet relevant data om:.</Text>
 					<ul class="list-disc ml-6">
@@ -179,18 +207,118 @@ import Stoet from "../components/Stoet.astro";
 						<li><Text teksttype="brødtekst">Ifølge WHO og Sundhedsstyrelsen bør børn bevæge sig 60 minutter om dagen, mens voksne kan nøjes med et minimum på 20-30 minutter om dagen (Sundhedsstyrelsen, 2006).</Text></li>
 						<li><Text teksttype="brødtekst">Ifølge et forskningsprojekt fra Center for Sund Aldring og Biomedicinsk Institut på Københavns Universitet (2025), gør 14 dages inaktivitet unge 40 år svagere. Forskningen viser, at det tager omkring seks uger at genvinde den tabte kondition og muskelmasse og endnu længere tid at genvinde muskelstyrken.</Text></li>
 					</ul>
-					<Heading htmlheading="h4" size="medium" stylingclasses="font-medium pb-2 pt-4">Data om leg og bevægelse</Heading>
+					<Heading htmlheading="h4" size="medium" stylingclasses="font-medium pb-2 pt-4">Data om indlagte børn og syge</Heading>
 					<ul class="list-disc ml-6">
 						<li><Text teksttype="brødtekst">Ifølge Danmarks Statistik bliver ca. 60.000 børn i alderen 1-14 år hvert år indlagt. </Text></li>
 						<li><Text teksttype="brødtekst">Tal fra Sundhedsdatastyrelsen (2018) viser, at ca. 35.000 børn i alderen 0-19 år hvert år er i kontakt med psykiatrien (2017). Heraf bliver en ud af 20 indlagt.</Text></li>
 						<li><Text>Hvert sjette barn i aldersgruppen 5-17 år, lider af en kronisk eller langvarig sygdom. Heraf føler 11 % sig ofte eller altid ensomme, og 17 % bliver mobbet eller holdt udenfor af deres jævnaldrende. (Danske Patienter, 2017).</Text></li>
 					</ul>
+					<Heading htmlheading="h4" size="medium" stylingclasses="font-semibold pt-8">Det siger hospitals personalet om Legeheltene</Heading>
+					</div>
+					<div class="bg-offwhite flex flex-col text-center lg:p-4 lg:flex-row lg:gap-4">
+						<div>
+							<Heading htmlheading="h2" size="large" font="display">90%</Heading>
+							<Heading htmlheading="h4" size="small" stylingclasses="font-medium pt-2">Oplevelse af legeheltene</Heading>
+							<Text teksttype="brødtekst">90,6 % har en god eller rigtig god oplevelse af Legeheltenes besøg på børneafdelingen</Text>
+						</div>
+						<div>
+							<Heading htmlheading="h2" size="large" font="display">92%</Heading>
+							<Heading htmlheading="h4" size="small" stylingclasses="font-medium pt-2">Leg og bevægelse</Heading>
+							<Text teksttype="brødtekst">92,2 % oplever, at Legeheltene bidrager med mere bevægelse og aktiv leg blandt indlagte børn.</Text>
+						</div>
+						<div>
+							<Heading htmlheading="h2" size="large" font="display">86%</Heading>
+							<Heading htmlheading="h4" size="small" stylingclasses="font-medium pt-2">Positiv oplevelse</Heading>
+							<Text teksttype="brødtekst">85,7 % mener, at Legeheltene gør indlæggelsen til en mere positiv oplevelse for børnene</Text>
+						</div>
+						<div>
+							<Heading htmlheading="h2" size="large" font="display">86%</Heading>
+							<Heading htmlheading="h4" size="small" stylingclasses="font-medium pt-2">Frirum</Heading>
+							<Text teksttype="brødtekst">85,7 % mener, at Legeheltene skaber et frirum fra sygdom for børnene</Text>
+						</div>
+					</div>
 					<img src="/img/" alt="">
 				</div>
     		</details>
 			
 			</div>
 		</section>
+		<!-- SLUT - LEG OG BEVÆGELSE -->
 
+		<!-- START - MØD LEGEHELTENE -->
+		<section class="mt-60 mb-40 ">
+			<div class="lg:flex lg:justify-start">
+    				<!-- Mobil doodle -->
+					<img src="/assets/mobil_orange_doodle.svg" alt="" class="mx-auto pb-8 block lg:hidden">
+					<!-- Desktop doodle -->
+					<img src="/assets/orange_doodle_web.svg" alt="" class="hidden lg:block lg:mx-0 mb-10 pl-14">
+				</div>
+			<Heading htmlheading="h2" size="large" font="display" stylingclasses="text-center pb-10 lg:text-left lg:pl-14">Mød legeheltene</Heading>
+			<article class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth w-full gap-60 ml-14 mt-10">
+				<div id="cecilie" class="flex-none justify-center min-w-full lg:min-w-0 snap-start lg:w-80">
+					<Legehelte
+					size="large"
+					cardimage="/img/cecilie.webp"
+					cardtitle="Cecilie N."
+					education="Uddannelse: Idræt"
+					cardtext="Legehelt på Løkkehus Børnehjem,H.C. Andersen Børne- og Ungehospital og Ronald McDonald Huset i Odense"
+					/>
+					<div class="flex flex-row gap-8 pt-6 justify-center lg:hidden">
+						<a href="#laura"><img src="/assets/orange_pil_hoejre.svg" alt=""></a>
+					</div>
+				</div>
+				<div id="laura" class="flex-none justify-center min-w-full lg:min-w-0 snap-start lg:w-80">
+					<Legehelte
+					size="large"
+					cardimage="/img/laura_legehelt.webp"
+					cardtitle="Laura b."
+					education="Uddannelse: Kandidat i Idræt"
+					cardtext="Legehelt på Aalborg Universitetshospital og Regionshospitalet Nordjylland"
+					/>
+					<div class="flex flex-row gap-8 pt-6 justify-center lg:hidden">
+						<a href="#cecilie"><img src="/assets/orange_pil_venstre.svg" alt=""></a>
+						<a href="#benjamin"><img src="/assets/orange_pil_hoejre.svg" alt=""></a>
+					</div>
+				</div>
+				<div id="benjamin" class="flex-none justify-center min-w-full lg:min-w-0  snap-start lg:w-80">
+					<Legehelte
+					size="large"
+					cardimage="/img/benjamin_legehelt.webp"
+					cardtitle="Benjamin R."
+					education="Uddannelse: Bachelor i Idræt og Sundhed"
+					cardtext="Legehelt på Skejby Sygehus og Helteakademiet i Aarhus"
+					/>
+					<div class="flex flex-row gap-8 pt-6 justify-center lg:hidden">
+						<a href="#laura"><img src="/assets/orange_pil_venstre.svg" alt=""></a>
+						<a href="#emily"><img src="/assets/orange_pil_hoejre.svg" alt=""></a>
+					</div>
+				</div>
+				<div id="emily" class="flex-none justify-center min-w-full lg:min-w-0  snap-start lg:w-80">
+					<Legehelte
+					size="large"
+					cardimage="/img/emily_legehelt.webp"
+					cardtitle="Emily D."
+					education="Uddannelse: Idrætsvidenskab"
+					cardtext="Legehelt på Aarhus Universitetshospital, Hammel neurocenter, Helteakademi AGF og Helteakademi Birkebakken"
+					/>
+					<div class="flex flex-row gap-8 pt-6 justify-center lg:hidden">
+						<a href="#benjamin"><img src="/assets/orange_pil_venstre.svg" alt=""></a>
+						<a href="#ida"><img src="/assets/orange_pil_hoejre.svg" alt=""></a>
+					</div>
+				</div>
+				<div id="ida" class="flex-none justify-center min-w-full lg:min-w-0  snap-start lg:w-80 ">
+					<Legehelte
+					size="large"
+					cardimage="/img/ida_legehelt.webp"
+					cardtitle="Ida B."
+					education="Uddannelse: Fysioterapeut"
+					cardtext="Legehelt på Aalborg Universitetshospital og Aalborg Universitetshospital Psykiatrien"
+					/>
+					<div class="flex flex-row gap-8 pt-6 justify-center lg:hidden">
+						<a href="#emily"><img src="/assets/orange_pil_venstre.svg" alt=""></a>
+					</div>
+				</div>
+			</article>
+		</section>
 	</main>
 </MainLayout>

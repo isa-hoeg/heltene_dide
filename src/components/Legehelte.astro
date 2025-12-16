@@ -1,0 +1,47 @@
+---
+import Heading from "../components/Heading.astro";
+import Text from "../components/Text.astro";
+
+const { size = "large", cardimage = "", cardimagealt = "", cardtitle = "", education = "", cardtext = "" } = Astro.props;
+
+// Billede
+const imageSize = {
+  large: "w-40 h-40 lg:w-60 lg:h-60",
+  medium: "w-32 h-32",
+  small: "w-24 h-24"
+}[size];
+
+// Card width
+const cardWidth = {
+  large: "w-80 lg:w-120",
+  medium: "w-70",
+  small: "w-60"
+}[size];
+
+// Tekstboks højde og spacing
+const cardBox = {
+  large: "-mt-16 pt-20 pb-8 px-6 h-80 lg:h-100 lg:-mt-30",
+  medium: "-mt-14 pt-16 pb-6 px-5 h-70",
+  small: "-mt-12 pt-14 pb-4 px-4 h-60"
+}[size];
+
+// Tekststørrelser
+const titleSize = {
+  large: "text-2xl",
+  medium: "text-xl",
+  small: "text-lg"
+}[size];
+---
+<article class={`relative mx-auto ${cardWidth}`}>
+    <!-- Rundt billede -->
+    <div class={`${imageSize} rounded-full overflow-hidden mx-auto relative z-10`}>
+        <img src={cardimage} alt={cardimagealt} class="w-full h-full object-cover"/>
+    </div>
+
+    <!-- Info-kortet -->
+    <div class={`${cardBox} bg-skyblue400 rounded-[32px] text-offwhite flex flex-col justify-end`}>
+        <Heading htmlheading="h3" size="medium" stylingclasses={`pb-3 font-semibold ${titleSize}`}>{cardtitle}</Heading>
+        <Text teksttype="brødtekst" stylingclasses="mb-1"><span class="font-semibold">{education}</span></Text>
+        <Text teksttype="brødtekst">{cardtext}</Text>
+    </div>
+</article>
