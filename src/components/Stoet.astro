@@ -2,31 +2,43 @@
 import Heading from "../components/Heading.astro";
 import Text from "../components/Text.astro";
 import Link from "../components/Link.astro";
+import Button from "../components/Button.astro";
 ---
 
-<article class="bg-offwhite p-8 rounded-tl-[60px] rounded-tr-[10px] rounded-br-[60px] rounded-bl-[10px] ml-15 mr-15">
-<Heading htmlheading="h3" size="medium" stylingclasses="font-semibold pb-8 pl-6">Støt alvorligt og kronisk syge børn</Heading>
-<div class="flex flex-row justify-between items-center">
-<div class="pl-6">
-    <div class="flex items-center mb-4">
-        <input id="default-radio-1" type="radio" value="" name="default-radio" class="w-6 h-6 text-neutral-primary border-default-medium bg-neutral-secondary-medium rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
-        <label for="default-radio-1" class="select-none ms-2 font-serif text-2xl"><Text teksttype="brødtekst">Enkelt</Text></label>
+<article class="bg-offwhite py-6 px-2 ml-5 mr-5 z-20 rounded-tl-[10px] rounded-tr-megetstor rounded-bl-[60px] lg:ml-15 lg:mr-15 lg:p-8  lg:rounded-tl-[60px] lg:rounded-tr-[10px] lg:rounded-br-[60px] lg:rounded-bl-[10px]">
+    <Heading htmlheading="h3" size="medium" stylingclasses="font-semibold pl-4 pb-8 lg:pl-6">Støt alvorligt og kronisk syge børn</Heading>
+    <div class="flex flex-wrap gap-2 items-center justify-between lg:flex-row lg:gap-10 ">
+        <!-- Radiobuttons -->
+        <div class="pl-4 pb-4 lg:pl-6">
+            <div class="flex items-center mb-2 lg:mb-4">
+                <input id="default-radio-1" type="radio" value="" name="default-radio" class="border-1 border-accent bg-offwhite focus:ring-accent checked:bg-accent rounded-full lg:w-6 lg:h-6">
+                <label for="default-radio-1" class="select-none ms-2 font-serif text-2xl"><Text teksttype="brødtekst">Enkelt</Text></label>
+            </div>
+            <div class="flex items-center">
+                <input checked id="default-radio-2" type="radio" value="" name="default-radio" class="border-1 border-accent bg-offwhite focus:ring-accent checked:bg-accent lg:w-6 lg:h-6">
+                <label for="default-radio-2" class="select-none ms-2 font-serif text-2xl"><Text teksttype="brødtekst">Månedligt</Text></label>
+            </div>  
+        </div>
+        <!-- Valg af beløb -->
+        <div id="amount-switch" class="inline-flex pr-4 rounded-full bg-bg">
+            <button class="switch-btn active"><Text teksttype="brødtekst">50 kr</Text></button>
+            <button class="switch-btn cursor-pointer"><Text teksttype="brødtekst">150 kr</Text></button>
+            <button class="switch-btn cursor-pointer"><Text teksttype="brødtekst">250 kr</Text></button>
+        </div>
+        <div class="flex gap-10">
+            <input id="andetbeloeb" type="text" name="andetbeloeb" placeholder="Andet beløb" class="px-4 rounded-full border-none placeholder:text-text focus:outline-accent font-serif text-base bg-bg lg:text-2xl lg:px-12 lg:py-3 " />       
+            <div class="lg:pr-6">
+                <Text><Link href="#" variant="primary" size="large" icon="/assets/stoet_ikon_web.svg" iconHover="/assets/stoet_ikon_filled.svg">Støt</Link></Text>  
+            </div> 
+        </div>
     </div>
-    <div class="flex items-center">
-        <input checked id="default-radio-2" type="radio" value="" name="default-radio" class="w-6 h-6 text-neutral-primary border-default-medium bg-neutral-secondary-medium rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
-        <label for="default-radio-2" class="select-none ms-2 font-serif text-2xl"><Text teksttype="brødtekst">Månedligt</Text></label>
-    </div>  
-</div>
-<div class="flex flex-row justify-between rounded-full bg-bg px-12">
-  <!-- Active -->
-  <button class="px-8 py-3 rounded-full border-3 border-accent bg-orange50 font-serif text-2xl">50 kr</button>
-
-  <!-- Inactive -->
-  <button class="px-6 py-2 rounded-full text-text font-serif text-2xl">150 kr</button>
-  <button class="px-6 py-2 rounded-full text-text font-serif text-2xl">250 kr</button>
-</div>
-
- <input id="andetbeloeb" type="text" name="andetbeloeb" placeholder="Andet beløb" class="px-12 py-3 rounded-full  placeholder:text-text focus:outline-accent font-serif text-2xl bg-bg" />
-<Text><Link href="#" variant="primary" size="large" icon="/assets/stoet_ikon_web.svg" iconHover="/assets/stoet_ikon_filled.svg">Støt</Link></Text>
-</div>
+    <script>
+        document.querySelectorAll(".switch-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+        document.querySelectorAll(".switch-btn")
+            .forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+         });
+        });
+    </script>
 </article>

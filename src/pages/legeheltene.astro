@@ -6,10 +6,191 @@ import thumbsup from "../assets/images/thumbsup.png";
 import Heading from "../components/Heading.astro";
 import Text from "../components/Text.astro";
 import Button from "../components/Button.astro";
+import Stoet from "../components/Stoet.astro";
 ---
 <MainLayout title="Titel">
-	<main class="container mx-auto p-4">
-		<Heading htmlheading="h1">Lav noget flot!</Heading>
-        <Text teksttype="brødtekst">Så bliver Anders glad:-)</Text>
+	<!-- container mx-auto p-4 -->
+	<main class="">
+		<!-- HERO LEGEHELTENE -->
+		<section class="bg-dustblue200">
+			<img src="/assets/mobil_blaa_doodle.svg" class="mx-auto pt-10 pb-6" alt="">
+			<div class="p-4">
+				<Heading htmlheading="h1" size="xlarge" font="display" stylingclasses="text-center">Legeheltene skaber leg, bevægelse og frirum</Heading>
+				<Text teksttype="brødtekst" stylingclasses="pt-10 text-center">Legeheltene møder børn på hospitaler, institutioner og indkvarteringssteder og skaber et frirum med leg, bevægelse og plads til at være barn igen.</Text>
+			</div>
+				<img src="/assets/legehelte_hero.svg" class="scale-80" alt="">
+			<Stoet/>
+		</section>
+		<!-- SLUT HERO LEGEHELTENE -->
+
+		<!-- START - FÅ INDBLIK I LEGEHELTENS HVERDAG -->
+		<section class=" bg-bg mt-20 mb-20">
+			<iframe class=" w-full max-w-sm mx-auto aspect-video rounded-tl-[10px] rounded-tr-[60px] rounded-bl-[60px] rounded-br-[10px]"   src="https://www.youtube.com/embed/_B3UnoStQDY?si=C43VlCX1kQQDgG7u" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+			<div class="bg-[url('/assets/blaa_boobel.svg')] bg-cover bg-no-repeat h-120 bg-center -mt-15">
+				<div class="container mx-auto p-8">
+					<Heading htmlheading="h2" size="large" font="display" stylingclasses="text-center pt-12">Få indblik i <br/>Legeheltenes arbejde</Heading>
+					<Text teksttype="brødtekst" stylingclasses="pt-8">Legeheltene skaber:</Text>
+					<ul class="list-disc ml-6">
+						<li><Text>Et trygt frirum med plads til leg og bevægelse</Text></li>
+						<li><Text>Et øjeblik, hvor børn kan være børn igen</Text></li>
+					</ul>
+					<Text teksttype="brødtekst" stylingclasses="pt-4">Vi møder børn på hospitaler, psykiatriske afdelinger, børnehjem og indkvarteringssteder for flygtninge.</Text>
+					<div class="flex justify-center mt-8">
+						<Text><Link href="/forms" variant="primary" size="medium" icon="/assets/stoet_ikon_web.svg" iconHover="/assets/stoet_ikon_filled.svg">Støt legeheltene her</Link></Text>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- SLUT - FÅ INDBLIK I LEGEHELTENS HVERDAG -->
+
+		<!-- START - VI LEGER HVER DAG -->
+		 <section class="bg-[url('/assets/mobil_orange_boelge_legehelte.svg')] bg-center bg-cover bg-no-repeat h-315 flex items-center">
+    		<div class="container mx-auto p-8 text-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-24 lg:gap-16">
+        		<div>
+            		<Heading htmlheading="h1" size="xxlarge" font="display">64</Heading>
+            		<Heading htmlheading="h2" size="large" font="display">Afdelinger</Heading>
+            		<Text teksttype="brødtekst">Legeheltene er på 64 afdelinger inden for hospitalsvæsenet, børne- og ungepsykiatrien, børnehjem og indkvarteringssteder for flygtninge.</Text>
+        		</div>
+        		<div>
+            		<Heading htmlheading="h1" size="xxlarge" font="display">3000+</Heading>
+            		<Heading htmlheading="h2" size="large" font="display">Legeheltvagter</Heading>
+            		<Text teksttype="brødtekst">Vi har mere end 3000 Legeheltevagter hvert år.</Text>
+        		</div>
+       		 <div>
+            		<Heading htmlheading="h1" size="xxlarge" font="display">12.620</Heading>
+            		<Heading htmlheading="h2" size="large" font="display">Timer</Heading>
+            		<Text teksttype="brødtekst">Vi leger 12.620 timer på et år. Det svarer til 35 timer hver eneste dag året rundt.</Text>
+        		</div>
+        		<div>
+            		<Heading htmlheading="h1" size="xxlarge" font="display">21.700+</Heading>
+            		<Heading htmlheading="h2" size="large" font="display">Børn og unge</Heading>
+            		<Text teksttype="brødtekst">Hvert år leger vi med mere end 21.700 børn og unge.</Text>
+        		</div>
+    		</div>
+		</section>
+		<!-- SLUT - VI LEGER HVER DAG -->
+
+		 <!-- START - MØD DEN VIRKELIG HELT, LAUGE -->
+		  <section class="bg-[url('/assets/mobil_blaa_boelge_legehelte.svg')] bg-center bg-cover bg-no-repeat h-310">
+			<img src="/img/lauge.webp" alt="">
+			<img src="/assets/mobil_orange_doodle.svg" alt="" class="mx-auto">
+			<div class="container mx-auto p-8">
+				<Heading htmlheading="h2" size="large" font="display" stylingclasses="text-center pt-6 pb-4">Mød den virkelige <br/> helt, Lauge</Heading>
+				<Text teksttype="brødtekst" stylingclasses="pb-4">“Legeheltene og kreaheltene gør en kæmpe forskel på sygdomsramte børn, og de er i en eller anden forstand med til at gøre dem raske, fordi det de bidrager med er glæde, og de bringer håb og normalitet ind i hverdagen i form af de aktiviteter de giver. </Text>
+				<Text teksttype="brødtekst">Jeg tror på, at hvis man har den psykiske del med, så bliver man først og fremmest hurtigere rask, men det bliver også nemmere at komme igennem sådan et forløb, ikke kun for børnene, men for hele familien.”</Text>
+				<Heading htmlheading="h4" size="small" stylingclasses="font-medium text-skyblue500 pt-2">Lauges mor</Heading>
+				<div class="flex justify-center pt-6">
+					<Text><Link href="" variant="secondary" size="large">Mød flere helte som Lauge</Link></Text>
+				</div>
+			</div>
+		</section>
+		<!-- SLUT - MØD DEN VIRKELIG HELT, LAUGE -->
+
+		<!-- SECTION - LEG OG BEVÆGELSE -->
+		<section class="container mx-auto p-8 justify-center items-center">
+			<Heading htmlheading="h2" size="large" font="display" stylingclasses="text-center pt-6">Leg og Bevægelse</Heading>
+			<Text teksttype="brødtekst" stylingclasses="text-center">Leg og bevægelse er vigtigt for børns udvikling. Også når de er indlagte eller lever et liv med langvarig eller kronisk sygdom. Få indblik i den viden og forskning, som danner grundlag for Legeheltenes arbejde.</Text>
+			
+			<div class="flex flex-col gap-10 lg:flex-row justify-center items-center">
+			<!-- Vigtighden af leg -->
+    		<details class="group">
+        		<summary class="flex flex-col items-center bg-offwhite w-80 h-80 p-4 rounded-tr-4xl rounded-bl-4xl border-4 border-transparent group-open:border-pink600 transition">
+            		<img src="/assets/leg_ikon.svg" alt="" class="scale-110 mx-auto pt-14">
+            		<Heading htmlheading="h4" size="medium" stylingclasses="font-semibold mt-auto mb-4 text-center">Vigtigheden af leg</Heading>
+        		</summary>
+				<div class="bg-pink200 w-100 mt-4 border-4 border-pink600 rounded-tr-4xl rounded-bl-4xl p-4">
+        			<Heading htmlheading="h3" size="large" stylingclasses="font-semibold pb-2">Vigtigheden af leg</Heading>
+					<Text teksttype="brødtekst">Legeheltene arbejder for at skabe aktiv leg for indlagte og udsatte børn, fordi leg er essentiel for børns udvikling og trivsel. Leg er et frirum, hvor børn kan være børn – selv midt i svære situationer.</Text>
+					<Heading htmlheading="h4" size="medium" stylingclasses="font-medium pb-2 pt-4">Et universelt fænomen</Heading>
+					<Text teksttype="brødtekst">Legeforskeren Johan Huizinga (1993) beskriver leg som ældre end kulturen og påpeger, at dyr ikke ventede på mennesker for at lære at lege. Leg rummer en særlig kraft, der kan begejstre og rive os med – noget større end os selv. Derfor har leg værdi i sig selv og skal tages alvorligt.</Text>
+					<Heading htmlheading="h4" size="medium" stylingclasses="font-medium pb-2 pt-4">Leg og trivsel</Heading>
+					<Text teksttype="brødtekst">Alle børn har ret til leg, og forskningen viser, at leg er afgørende for både deres nuværende trivsel og fremtidige udvikling. Legeforskeren Dion Sommer udtaler:</Text>
+					<Text teksttype="konsultativ">“Børn der leger mere, har mindre risiko for at blive ramt af angst, stress og depression. Det gør dem mere robuste og sætter gang i en positiv udviklingsspiral.” (Schelde, 2021)</Text>
+					<Heading htmlheading="h4" size="medium" stylingclasses="font-medium pb-2 pt-4">Effekt og potentiale</Heading>
+					<Text teksttype="brødtekst">Leg kan skabe et frirum fra sygdom og bekymringer og styrker børns fysiske, psykiske og sociale udvikling. På hospitaler hjælper leg børn med at mestre livet som syge (Gjærde et al., 2023).</Text>
+					<Text teksttype="brødtekst">Legens paradoks er, at dens store potentiale kun indfries, når legen er formålsløs – vi skal lege for legens skyld. Den udvikling vil Legeheltene være med til at styrke. At lege og føle sig i live er en del af det at blive rask.</Text>
+					<img src="/img/" alt="">
+				</div>
+			</details>
+
+			<!-- Vigtigheden af bevægelse -->
+			<details class="group">
+        		<summary class="flex flex-col items-center bg-offwhite w-80 h-80 p-4 rounded-tr-4xl rounded-bl-4xl border-4 border-transparent group-open:border-accent transition">
+            		<img src="/assets/bevaegelse_ikon.svg" alt="" class="scale-110 mx-auto pt-8">
+            		<Heading htmlheading="h3" size="medium" stylingclasses="font-semibold mt-auto mb-4 text-center">Vigtigheden af bevægelse</Heading>
+        		</summary>
+        		<div class="bg-burnedorange100 w-100 mt-4 border-4 border-accent rounded-tr-4xl rounded-bl-4xl p-4">
+        			<Heading htmlheading="h3" size="large" stylingclasses="font-semibold pb-2">Vigtigheden af bevægelse</Heading>
+					<Text teksttype="brødtekst">Legeheltene hjælper børn med at komme op af sengen og bruge kroppen – også når de er syge eller indlagte. Bevægelse er fundamentalt for både trivsel, helbred og udvikling.</Text>
+					<Heading htmlheading="h4" size="medium" stylingclasses="font-medium pb-2 pt-4">Bevægelse er afgørende for udviklingen</Heading>
+					<Text teksttype="brødtekst">Bevægelse styrker børns fysiske og mentale sundhed og kan både forebygge og behandle sygdom. Den største effekt ses, når inaktive børn bliver bare lidt mere aktive – derfor er bevægelse ekstra vigtig under en indlæggelse, hvor børn ofte er mest stillesiddende (Sundhedsstyrelsen, 2005–2011).</Text>
+					<Heading htmlheading="h4" size="medium" stylingclasses="font-medium pb-2 pt-4">Kropssyn og bevægelsesfilosofi</Heading>
+					<Text teksttype="brødtekst">Børn lærer verden og deres egen krop at kende gennem bevægelse. Det er deres første ”sprog” og tæt forbundet med leg, følelser, kreativitet og socialt samspil. Nye bevægelseserfaringer giver børn en følelse af handlekraft og styrker selvværd, robusthed og kropsfortrolighed.</Text>
+					<Text teksttype="konsultativ">Legeheltene arbejder ud fra et helhedsorienteret kropssyn, hvor krop og sind hænger sammen. Bevægelse er derfor ikke kun fysisk aktivitet, men en central del af læring, udvikling og det at være til i verden.</Text>
+					<Heading htmlheading="h4" size="medium" stylingclasses="font-medium pb-2 pt-4">Bevægelse på hospitalet</Heading>
+					<Text teksttype="brødtekst">Indlagte børn er ofte meget inaktive, og forskningen på området er begrænset. Derfor skaber Legeheltene trygge og glædesfyldte rammer for leg og bevægelse på hospitalerne. Aktiviteterne tilpasses det enkelte barns sygdom, behov og muligheder – med fokus på bevægelsesglæde, motoriske succesoplevelser og deltagelse for alle.</Text>
+					<img src="/img/" alt="">
+				</div>
+    		</details>
+
+			<!-- Når børn indlægges -->
+			<details class="group">
+        		<summary class="flex flex-col items-center bg-offwhite w-80 h-80 p-4 rounded-tr-4xl rounded-bl-4xl border-4 border-transparent group-open:border-skyblue500 transition ">
+            		<img src="/assets/indlagt_ikon.svg" alt="" class="scale-110 mx-auto pt-14">
+            		<Heading htmlheading="h3" size="medium" stylingclasses="font-semibold mt-auto mb-4 text-center">Når børn indlægges</Heading>
+        		</summary>
+        		<div class="bg-dustblue200 w-100 mt-4 border-4 border-skyblue500 rounded-tr-4xl rounded-bl-4xl p-4">
+        			<Heading htmlheading="h3" size="large" stylingclasses="font-semibold pb-2">Når børn bliver indlagt</Heading>
+					<Text teksttype="brødtekst">En indlæggelse er en stor omvæltning for et barn. Nye omgivelser, rutiner og fravær fra skole, venner og fritidsliv kan skabe usikkerhed. Samtidig skal barnet gennem undersøgelser og møder ofte et sprog, de ikke forstår.</Text>
+					<Heading htmlheading="h4" size="medium" stylingclasses="font-medium pb-2 pt-4">Indlagte børns trivsel</Heading>
+					<Text teksttype="brødtekst">Børnerådets undersøgelse (2017) viser, at børn oplever en stor afstand mellem deres almindelige liv og hospitalslivet og oftere føler sig ensomme end andre børn.</Text>
+					<Heading htmlheading="h4" size="medium" stylingclasses="font-medium pb-2 pt-4">Indlæggelser gennem tiden</Heading>
+					<Text teksttype="brødtekst">Tidligere blev børn indlagt alene, og savn blev mistolket som tilpasning. I dag ved man, at indlæggelser kan vække angst, stress, ensomhed og utryghed, og derfor indlægges børn sammen med en forælder.</Text>
+					<Heading htmlheading="h4" size="medium" stylingclasses="font-medium pb-2 pt-4">En uhensigtsmæssig hospitalskultur</Heading>
+					<Text teksttype="brødtekst">Selvom indlagte børn ofte kan mere, end man tror, holdes de tilbage af en kultur, hvor syge børn forventes at være stille og rolige. En mor fortæller:</Text>
+					<Text teksttype="konsultativ">“Jeg kan mærke, at jeg nogle gange tysser meget på ham… For hvis vi kan løbe rundt og lege, så burde vi jo sådan set ikke være her. Så er vi ikke rigtig syge.”</Text>
+					<Heading htmlheading="h5" size="xsmall">Mor til indlagt dreng</Heading>
+					<Text teksttype="brødtekst" stylingclasses="pt-4">Malene Søborg Heidemann, læge på Odense Universitetshospital, beskriver samme problematik:</Text>
+					<Text teksttype="konsultativ" stylingclasses="pt-1">“Indlagte børn er ofte begrænset af behandlinger og forældres bekymringer, og længere indlæggelser kan forstærke inaktivitet. Det kan være svært at motivere til fysisk aktivitet, bl.a. pga. forventninger til, hvordan man ‘skal’ være, når man er syg, samt rammer der ikke inviterer til bevægelse. Mobilisering er vigtig, da aktivitet og leg skaber glæde og velvære og kan forbedre indlæggelsesforløbet.”</Text>
+					<Heading htmlheading="h5" size="xsmall">Malene Søborg Heidemann, læge på Odense Universitetshospital</Heading>
+					<Heading htmlheading="h5" size="xsmall" stylingclasses="pt-4">Legeheltene arbejder for at ændre denne kultur. Bevægelse har dokumenterede positive effekter – også for indlagte børn – og derfor skaber Legeheltene sjove, trygge og aktive lege, der hjælper børn væk fra sengen og styrker deres trivsel.</Heading>
+					<img src="/img/" alt="">
+				</div>
+    		</details>
+
+			<!-- Tal og statistik -->
+			<details class="group">
+        		<summary class="flex flex-col items-center bg-offwhite w-80 h-80 p-4 rounded-tr-4xl rounded-bl-4xl border-4 border-transparent group-open:border-grassgreen700 transition">
+            		<img src="/assets/statitisk_ikon.svg" alt="" class="scale-110 mx-auto pt-10">
+            		<Heading htmlheading="h3" size="medium" stylingclasses="font-semibold mt-auto mb-4 text-center">Tal & statistik</Heading>
+        		</summary>
+        		<div class="bg-dustgreen200 w-100 mt-4 border-4 border-grassgrenn700 rounded-tr-4xl rounded-bl-4xl p-4">
+        			<Heading htmlheading="h3" size="large" stylingclasses="font-semibold pb-2">Tal og statistik</Heading>
+					<Text teksttype="brødtekst">Legeheltene arbejder for at skabe aktiv leg og bevægelse for indlagte og udsatte børn.</Text>
+					<Text teksttype="brødtekst">Her har vi samlet relevant data om:.</Text>
+					<ul class="list-disc ml-6">
+						<li><Text teksttype="brødtekst">Leg og bevægelse</Text></li>
+						<li><Text teksttype="brødtekst">Indlagte og syge børn</Text></li>
+						<li><Text teksttype="brødtekst">Data fra Legeheltenes arbejde</Text></li>
+						<li><Text teksttype="brødtekst">Hospitalspersonalets oplevelse af Legeheltenes arbejde</Text></li>
+					</ul>
+					<Heading htmlheading="h4" size="medium" stylingclasses="font-medium pb-2 pt-4">Data om leg og bevægelse</Heading>
+					<ul class="list-disc ml-6">
+						<li><Text teksttype="brødtekst">Ifølge WHO og Sundhedsstyrelsen bør børn bevæge sig 60 minutter om dagen, mens voksne kan nøjes med et minimum på 20-30 minutter om dagen (Sundhedsstyrelsen, 2006).</Text></li>
+						<li><Text teksttype="brødtekst">Ifølge et forskningsprojekt fra Center for Sund Aldring og Biomedicinsk Institut på Københavns Universitet (2025), gør 14 dages inaktivitet unge 40 år svagere. Forskningen viser, at det tager omkring seks uger at genvinde den tabte kondition og muskelmasse og endnu længere tid at genvinde muskelstyrken.</Text></li>
+					</ul>
+					<Heading htmlheading="h4" size="medium" stylingclasses="font-medium pb-2 pt-4">Data om leg og bevægelse</Heading>
+					<ul class="list-disc ml-6">
+						<li><Text teksttype="brødtekst">Ifølge Danmarks Statistik bliver ca. 60.000 børn i alderen 1-14 år hvert år indlagt. </Text></li>
+						<li><Text teksttype="brødtekst">Tal fra Sundhedsdatastyrelsen (2018) viser, at ca. 35.000 børn i alderen 0-19 år hvert år er i kontakt med psykiatrien (2017). Heraf bliver en ud af 20 indlagt.</Text></li>
+						<li><Text>Hvert sjette barn i aldersgruppen 5-17 år, lider af en kronisk eller langvarig sygdom. Heraf føler 11 % sig ofte eller altid ensomme, og 17 % bliver mobbet eller holdt udenfor af deres jævnaldrende. (Danske Patienter, 2017).</Text></li>
+					</ul>
+					<img src="/img/" alt="">
+				</div>
+    		</details>
+			
+			</div>
+		</section>
+
 	</main>
 </MainLayout>
