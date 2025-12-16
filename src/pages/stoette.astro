@@ -9,97 +9,94 @@ import Link from "../components/Link.astro";
 <MainLayout title="Støt nu">
 	<main class="">
 
-<!-- Start på hero -->
-<section
-  class="
-    w-full
-    min-h-145
-	bg-[url(/assets/mobil_regnbue_hero.svg)]
-    bg-cover bg-center bg-no-repeat
+		<!-- start på hero -->
+<section class="w-full min-h-145 bg-[url(/assets/mobil_regnbue_hero.svg)] bg-cover bg-center bg-no-repeat md:bg-[url(/assets/regnbue_hero.svg)] md:bg-cover md:bg-center  md:min-h-175
+lg:w-full lg:bg-[url(/assets/regnbue_hero.svg)] lg:bg-cover lg:bg-center">
+	
+<div class="relative">
+  <!-- Mobil -->
+  <img
+    src="/assets/mobil_orange_doodle.svg"
+    alt="Orange doodle mobil"
+    class="mx-auto block pt-12 lg:hidden lg:pt-12"
+  />
 
-    md:w-full
-    md:min-h-250
+  <!-- Desktop -->
+  <img
+    src="/assets/orange_doodle_web.svg"
+    alt="Orange doodle desktop"
+    class="hidden lg:block lg:ml-20 lg:pt-12"
+  />
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2">
 
-    lg:min-h-155 
-    lg:bg-[url(/assets/regnbue_hero.svg)]
-    lg:bg-cover"
->
-
-
-<img 
-  src="/assets/mobil_orange_doodle.svg" 
-  alt="Orange doodle mobil" 
-  class="block mt-12 md:hidden mx-auto" 
-/>
-
-<!-- Medium -->
-<img 
-  src="/assets/mobil_orange_doodle.svg" 
-  alt="Orange doodle medium" 
-  class="hidden md:block lg:hidden mx-auto"
-/>
-
-
-<!-- Desktop -->
-<img 
-  src="/assets/orange_doodle_web.svg" 
-  alt="Orange doodle desktop" 
-  class="hidden lg:block ml-20 mt-12"
-/>
-
-
-<div class="grid grid-cols-1 
-	lg:grid-cols-2 grid-rows-2">
-
- <!-- Tekst container -->
 <div class="text-center lg:text-left px-4 lg:px-20">
 
-<Heading htmlheading="h1" font="display" size="xlarge" 	stylingclasses="text-text mt-4 mb-6">Støt i dag og gør en heltegerning</Heading>
+	<Heading htmlheading="h1" size="xlarge" font="display" stylingclasses="text-text mt-4 py-2 mb-2 row-start-2 lg:row-start-1 lg:col-start-2">Støt i dag og gør en heltegerning</Heading>
 
-<Text stylingclasses="mb-8">
-   Du er ved at gøre en vaskeægte heltegerning. Med din støtte kan vi give indlagte og udsatte børn et frirum med plads til leg og fællesskab.
-</Text>
-	
-<!-- Button-komponent -->
-<Button>Støttemuligheder</Button>
+	<Text teksttype="brødtekst" stylingclasses="text-text">Du er ved at gøre en vaskeægte heltegerning. Med din støtte kan vi give indlagte og udsatte børn et frirum med plads til leg og fællesskab. </Text>
 
-</div>
-<!-- Mobil -->
+	<Text teksttype="brødtekst" stylingclasses="text-text">Af hjertet tak.</Text>
 
-<div class="">
-<img 
-  src="assets/mobil_helteikoner.svg" 
-  alt="Helteikoner mobil" 
-  class="block md:hidden w-auto max-w-full ml-32"
-/>
-
-<!-- Medium -->
-<img 
-  src="assets/mobil_helteikoner.svg" 
-  alt="Helteikoner medium" 
-  class="hidden md:block lg:hidden w-auto max-w-full ml-32"
-/>
-
-<!-- Desktop -->
-<img 
-  src="assets/helteikoner_hero.svg" 
-  alt="Helteikoner desktop" 
-  class="hidden lg:block w-auto max-w-full ml-32"
-/>
+  
+ <div class="pt-4 pb-8 lg:pt-4 lg:pb-8">
+  <Link
+    href="#støttemuligheder"
+    variant="secondary"
+    size="large"
+    className="scroll-smooth"
+  >
+    Støttemuligheder
+  </Link>
 </div>
 </div>
 
-<!-- Slut på hero -->
-<div class="-mt-20 md:-mt-28 lg:-mt-90 relative z-10">
+<img
+  src="/assets/mobil_helteikoner.svg"
+  alt="helteikoner_mobil.svg"
+  class="
+    w-full
+    max-w-xs
+    mx-auto
+    z-10
+    order-1
+
+    md:max-w-md
+    lg:hidden
+  "
+/>
+
+<img
+  src="/assets/helteikoner_hero.svg"
+  alt="hero_svg"
+  class="
+    hidden
+    lg:block
+    w-full
+    max-w-lg
+    mx-auto
+    z-10
+    lg:order-2
+  "
+/>
+
+</div>
+
+<div class="relative z-10">
   <Stoet />
 </div>
+</section>
+
+<!-- Slut på hero -->
+
 
 <!-- Start på Det går din støtte til-section -->
-<section class="bg-secondary relative z-0 pt-30 py-20 -mt-30 lg:-mt-10">
+<section class="bg-secondary relative z-0 -mt-12 lg:-mt-20 pt-12 lg:pt-20 lg:pb-6">
   <div class="container mx-auto relative z-0">
-    <!-- Doodles -->
+    
+	<!-- Doodles -->
     <img src="/assets/mobil_offwhite_doodle.svg" alt="doodle" class="mx-auto pb-2 block mt-12 lg:hidden" />
-    <img src="/assets/offwhite_doodle_web.svg" alt="doodle" class="mx-auto pb-2 hidden lg:block" />
+    <img src="/assets/offwhite_doodle_web.svg" alt="doodle" class="mx-auto pb-2 hidden lg:block lg:mt-12" />
 
     <Heading htmlheading="h2" size="large" font="display" stylingclasses="text-offwhite text-center mb-6">
       Det går din støtte til
@@ -113,14 +110,264 @@ import Link from "../components/Link.astro";
       for indlagte og udsatte børn - et vigtigt pusterum midt i en svær tid. 
     </Text>
 
- 	<Text teksttype="brødtekst" stylingclasses="text-offwhite text-center lg:px-20 pb-10">
-  	Af hjertet tak.
+    <Text teksttype="brødtekst" stylingclasses="text-offwhite text-center lg:px-20 pb-4">
+      Af hjertet tak.
     </Text>
   </div>
-
 </section>
 
-		
+<section class="bg-secondary relative z-0 py-6 lg:py-6">
+  <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+
+    <!-- Card 1 -->
+    <article class="flex flex-col bg-white shadow-md rounded-xl overflow-hidden mx-4 mb-6 lg:mx-0 lg:mb-0">
+      
+      <!-- Billede -->
+      <div class="w-full h-64">
+        <img src="/img/stoette1.webp" alt="Støt i dag" class="w-full h-full object-cover" />
+      </div>
+
+      <!-- Indhold -->
+      <div class="flex flex-col justify-between px-6 pt-6">
+        <Heading htmlheading="h3" size="medium" font="sans" stylingclasses="text-text mb-4">
+          Aktiviteter
+        </Heading>
+
+        <Text teksttype="brødtekst" stylingclasses="text-text mb-4">
+          Når du støtter Legeheltene, er du med til at give syge og udsatte børn trygge, sjove og meningsfulde oplevelser året rundt - både i hverdagen og ved særlige mærkedage. Se eksempler på aktiviteterne herunder.
+        </Text>
+
+        <!-- Punktopstilling -->
+        <div class="flex flex-col space-y-2">
+          <div class="flex flex-wrap items-baseline space-x-2">
+            <Text teksttype="brødtekst" stylingclasses="text-text font-bold">Fastelavn -</Text>
+            <Text teksttype="brødtekst" stylingclasses="text-text">Børnene slår katten af tønden</Text>
+          </div>
+          <div class="flex flex-wrap items-baseline space-x-2">
+            <Text teksttype="brødtekst" stylingclasses="text-text font-bold">Påskejagt -</Text>
+            <Text teksttype="brødtekst" stylingclasses="text-text">Find påskeharens skjulte poster</Text>
+          </div>
+          <div class="flex flex-wrap items-baseline space-x-2">
+            <Text teksttype="brødtekst" stylingclasses="text-text font-bold">Cykelsjov -</Text>
+            <Text teksttype="brødtekst" stylingclasses="text-text">Cykellege for alle</Text>
+          </div>
+          <div class="flex flex-wrap items-baseline space-x-2">
+            <Text teksttype="brødtekst" stylingclasses="text-text font-bold">Helteløb -</Text>
+            <Text teksttype="brødtekst" stylingclasses="text-text">Superkræfter og løb i heltekapper</Text>
+          </div>
+          <div class="flex flex-wrap items-baseline space-x-2">
+            <Text teksttype="brødtekst" stylingclasses="text-text font-bold">Legedysten med LEGO -</Text>
+            <Text teksttype="brødtekst" stylingclasses="text-text">Aktive lege med Six Bricks</Text>
+          </div>
+          <div class="flex flex-wrap items-baseline space-x-2">
+            <Text teksttype="brødtekst" stylingclasses="text-text font-bold">Skolernes motionsdag -</Text>
+            <Text teksttype="brødtekst" stylingclasses="text-text">Motion på hospitalsgangene</Text>
+          </div>
+          <div class="flex flex-wrap items-baseline space-x-2">
+            <Text teksttype="brødtekst" stylingclasses="text-text font-bold">Refleksdag -</Text>
+            <Text teksttype="brødtekst" stylingclasses="text-text">Refleksskattejagt i mørket</Text>
+          </div>
+          <div class="flex flex-wrap items-baseline space-x-2">
+            <Text teksttype="brødtekst" stylingclasses="text-text font-bold">Halloween Hunt -</Text>
+            <Text teksttype="brødtekst" stylingclasses="text-text">Find spøgelsets navn</Text>
+          </div>
+          <div class="flex flex-wrap items-baseline space-x-2">
+            <Text teksttype="brødtekst" stylingclasses="text-text font-bold">Julemission -</Text>
+            <Text teksttype="brødtekst" stylingclasses="text-text">Poster og julebevægelser</Text>
+          </div>
+        </div>
+
+        <!-- Knap -->
+<div class="flex justify-end pt-4 pb-8 lg:pt-4 lg:pb-8">
+  <Link
+    href="#"
+    variant="textlink"
+    size="small"
+    class="scroll-smooth"
+  >
+ Læs mere
+  </Link>
+</div>
+      </div>
+    </article>
+
+    <!-- Card 2 -->
+    <article class="flex flex-col bg-white shadow-md rounded-xl overflow-hidden mx-4 mb-6 lg:mx-0 lg:mb-0">
+      
+      <!-- Billede -->
+      <div class="w-full h-64">
+        <img src="/img/stoette2.webp" alt="Dit bidrag" class="w-full h-full object-cover" />
+      </div>
+
+      <!-- Indhold -->
+      <div class="flex flex-col justify-between px-6 pt-6">
+        <Heading htmlheading="h3" size="medium" font="sans" stylingclasses="text-text mb-4">
+          Målgrupper
+		</Heading>
+
+
+        <Text teksttype="brødtekst" stylingclasses="text-text mb-2">
+          Når du støtter, er du med til at give trygge, aktive og meningsfulde oplevelser til syge og udsatte børn og unge - samt deres familier. 
+        </Text>
+
+
+ 		<Heading htmlheading="h4" size="small" font="sans" stylingclasses="text-text mb-2">
+         Helt konkret støtter du: 
+        </Heading>
+
+
+        <!-- Punktopstilling -->
+        <div class="flex flex-col space-y-2">
+          <div class="flex flex-wrap items-baseline space-x-2">
+            <Text teksttype="brødtekst" stylingclasses="text-text">Børn og unge (0–18 år) med fysisk, kognitivt, psykisk eller sensorisk handicap.</Text>
+          </div>
+          
+  		 <div class="flex flex-wrap items-baseline space-x-2">
+            <Text teksttype="brødtekst" stylingclasses="text-text">Børn og unge med kroniske, langvarige eller alvorlige sygdomme.</Text>
+          </div>
+          
+		<div class="flex flex-wrap items-baseline space-x-2">
+            <Text teksttype="brødtekst" stylingclasses="text-text">Familier med børn, der ofte er indlagt eller bruger meget tid på hospitalet.</Text>
+          </div>
+          
+		  <div class="flex flex-wrap items-baseline space-x-2">
+            <Text teksttype="brødtekst" stylingclasses="text-text">Børn og unge (typisk 5-14 år) der deltager på Heltecamps sammen med deres familier.</Text>
+          </div>
+
+		   <div class="flex flex-wrap items-baseline space-x-2">
+            <Text teksttype="brødtekst" stylingclasses="text-text">Børn og unge på børne- og ungepsykiatriske døgn- og dagsafsnit, hvor leg og bevægelse skaber frirum og fællesskab</Text>
+          </div>
+
+		   <div class="flex flex-wrap items-baseline space-x-2">
+            <Text teksttype="brødtekst" stylingclasses="text-text"> Flygtningebørn på indkvarteringssteder, hvor fælles lege giver mulighed for at være barn.</Text>
+          </div>
+
+        </div>
+
+        <!-- Knap -->
+	<div class="flex justify-end pt-4 pb-8 lg:pt-4 lg:pb-8">
+  <Link
+    href="#"
+    variant="textlink"
+    size="small"
+    className="scroll-smooth">
+ 	Læs mere
+  </Link>
+	</div>
+      </div>
+
+    </article>
+</div>
+
+<div class="pt-4 pb-8 md:pt-4 md:pb-8 lg:pt-12 lg:pb-8 flex justify-center">
+  <Link
+    href="https://www.datocms-assets.com/104863/1757656519-arsmagasin-2024-web.pdf"
+    variant="secondary"
+    size="large"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Se vores årsrapport
+  </Link>
+</div>
+</section>
+
+<section class="bg-bg">
+  <div class="container mx-auto">
+    
+	<!-- Doodles -->
+    <img src="/assets/mobil_orange_doodle.svg" alt="doodle" class="mx-auto pb-2 block mt-12 lg:hidden" />
+    <img src="/assets/orange_doodle_web.svg" alt="doodle" class="mx-auto pb-2 hidden lg:block lg:mt-12" />
+
+    <Heading htmlheading="h2" size="large" font="display" stylingclasses="text-text text-center mb-6">
+      Sådan kan du også støtte vores arbejde
+    </Heading>
+
+<!-- Bobbel-wrapper -->
+  <div class="relative z-10 w-full flex flex-col lg:flex-row justify-center items-center lg:items-start">
+
+    <!-- Bobbel 1 -->
+    <div class="relative w-90 lg:w-100 aspect-square bg-[url(/assets/groen_bobbel.svg)] bg-no-repeat bg-center bg-contain z-30 flex flex-col items-center justify-center px-10 mx-15">
+      <Heading htmlheading="h3" size="medium" font="sans" stylingclasses="text-center text-text pb-2">
+        Arv & testamente
+      </Heading>
+      <Text teksttype="brødtekst" stylingclasses="text-center text-text pt-4">
+        Det er muligt at testamentere en del af din arv til et godt formål. På den måde sikrer du, at de værdier, der er vigtige for dig, fortsætter i fremtiden.
+      </Text>
+    </div>
+
+    <!-- Bobbel 2 (midten) -->
+    <div class="relative w-90 lg:w-100 aspect-square bg-[url(/assets/orange_bobbel.svg)] bg-no-repeat bg-center bg-contain z-20 flex flex-col items-center justify-center px-10 lg:-ml-20 mx-18 -mt-12 lg:mt-0">
+
+      <Heading htmlheading="h3" size="medium" font="sans" stylingclasses="text-center text-text pt-6 pb-6">
+      Egen indsamling
+      </Heading>
+      <Text teksttype="brødtekst" stylingclasses="text-center text-text px-4">
+       Start din egen indsamling til fordel for Legeheltene på Time2Give. Vælg kategori, klik på 'opret indsamling', og vær med til at gøre en forskel.
+      </Text>
+    </div>
+
+    <!-- Bobbel 3 -->
+    <div class="relative w-90 lg:w-100 aspect-square bg-[url(/assets/blaa_boobel.svg)] bg-no-repeat bg-center bg-contain z-10 flex flex-col items-center justify-center px-10 lg:-ml-28 mx-2 -mt-20 lg:mt-0">
+      <Heading htmlheading="h3" size="medium" font="sans" stylingclasses="text-center text-text pt-8 pb-2">
+       Events 
+      </Heading>
+      <Text teksttype="brødtekst" stylingclasses="text-center text-text pt-6">
+       Det er muligt at deltage i en række events til fordel for vores arbejde. Få en unik oplevelse sammen med familie, venner eller alene, og støt samtidig vores arbejde for indlagte og udsatte børn.
+      </Text>
+    </div>
+  </div>
+</section>
+
+
+<!-- Frivillig-section -->
+<section class="relative bg-offwhite mt-12 lg:mt-24">
+  <div class="text-center px-4 pt-8 lg:px-20 lg:pt-12">
+    <Heading htmlheading="h2" size="large" font="display" stylingclasses="text-center text-text pb-6 mt-12">
+      Interesseret i at være frivillig?
+    </Heading>
+
+ <Text teksttype="brødtekst" stylingclasses="text-text text-center lg:px-20 pb-2">
+      Både privatpersoner og virksomheder kan blive frivillige hos os ved at hjælpe til arrangementer.
+    </Text>
+
+    <Text teksttype="brødtekst" stylingclasses="text-text text-center lg:px-20 pb-2">
+      Vi elsker, når dedikerede ildsjæle vil give en hånd med, så vi sammen kan
+    </Text>
+
+    <Text teksttype="brødtekst" stylingclasses="text-text text-center pb-6 lg:px-20 lg:pb-8">
+      gøre en forskel for indlagte og udsatte børn.
+    </Text>
+
+	 <Heading htmlheading="h4" size="small" font="sans" stylingclasses="text-center text-text pb-2 lg:pb-4">
+	Vi søger frivillige inden for tre forskellige områder:
+    </Heading>
+
+
+ 	<Text teksttype="brødtekst" stylingclasses="text-text text-center lg:px-20 pb-4">
+	Heltecamps (vores sommercamps for alvorligt syge børn og deres familier, der afholdes hvert år i uge 27)</Text>
+
+    <Text teksttype="brødtekst" stylingclasses="text-text text-center lg:px-20 pb-4">
+	Indsamlingsevents såsom Charity Dinners, Charity Catwalk mm.</Text>
+
+	 <Text teksttype="brødtekst" stylingclasses="text-text text-center lg:px-20 pb-4">
+	Familiearrangementer såsom Rasmus Klump Festival, Centimeter Maraton, Kids Tour mm.</Text>
+
+  </div>
+<div class="pt-4 pb-8 md:pt-4 md:pb-8 lg:pt-12 lg:pb-8 flex justify-center">
+  <Link
+    href="#"
+    variant="secondary"
+    size="large"
+    target="_blank">
+   Udfyld formular
+  </Link>
+</div>
+</section>
+
+<section class="mb-12">
+	<img src="/assets/white_skiller.svg" alt="">
+</section>
 
 
 	</main>
