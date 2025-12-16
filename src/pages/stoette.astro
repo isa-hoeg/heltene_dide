@@ -321,7 +321,7 @@ lg:w-full lg:bg-[url(/assets/regnbue_hero.svg)] lg:bg-cover lg:bg-center">
 
 
 <!-- Frivillig-section -->
-<section class="relative bg-offwhite mt-12 lg:mt-24">
+<section class="bg-offwhite mt-12 lg:mt-24">
   <div class="text-center px-4 pt-8 lg:px-20 lg:pt-12">
     <Heading htmlheading="h2" size="large" font="display" stylingclasses="text-center text-text pb-6 mt-12">
       Interesseret i at være frivillig?
@@ -345,13 +345,13 @@ lg:w-full lg:bg-[url(/assets/regnbue_hero.svg)] lg:bg-cover lg:bg-center">
 
 
  	<Text teksttype="brødtekst" stylingclasses="text-text text-center lg:px-20 pb-4">
-	Heltecamps (vores sommercamps for alvorligt syge børn og deres familier, der afholdes hvert år i uge 27)</Text>
+	• Heltecamps (vores sommercamps for alvorligt syge børn og deres familier, der afholdes hvert år i uge 27)</Text>
 
     <Text teksttype="brødtekst" stylingclasses="text-text text-center lg:px-20 pb-4">
-	Indsamlingsevents såsom Charity Dinners, Charity Catwalk mm.</Text>
+	• Indsamlingsevents såsom Charity Dinners, Charity Catwalk mm.</Text>
 
 	 <Text teksttype="brødtekst" stylingclasses="text-text text-center lg:px-20 pb-4">
-	Familiearrangementer såsom Rasmus Klump Festival, Centimeter Maraton, Kids Tour mm.</Text>
+	• Familiearrangementer såsom Rasmus Klump Festival, Centimeter Maraton, Kids Tour mm.</Text>
 
   </div>
 <div class="pt-4 pb-8 md:pt-4 md:pb-8 lg:pt-12 lg:pb-8 flex justify-center">
@@ -367,6 +367,85 @@ lg:w-full lg:bg-[url(/assets/regnbue_hero.svg)] lg:bg-cover lg:bg-center">
 
 <section class="mb-12">
 	<img src="/assets/white_skiller.svg" alt="">
+</section>
+
+<!-- Helteshop-section -->
+
+<section class="w-full py-12 md:py-16 lg:py-24">
+  <div class="container mx-auto px-4 md:px-12 lg:px-20">
+    
+    <!-- Grid: 1 kolonne mobil, 2 kolonner desktop -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
+      
+      <!-- Venstre kolonne: doodle + tekst -->
+      <div class="flex flex-col items-center lg:items-start">
+        
+        <!-- Doodle -->
+        <div class="relative mb-6 w-full lg:w-auto">
+          <!-- Mobil -->
+          <img
+            src="/assets/mobil_orange_doodle.svg"
+            alt="Orange doodle mobil"
+            class="mx-auto block lg:hidden"
+          />
+
+          <!-- Desktop -->
+          <img
+            src="/assets/orange_doodle_web.svg"
+            alt="Orange doodle desktop"
+            class="hidden lg:block lg:ml-0"
+          />
+        </div>
+
+        <!-- Heading -->
+        <Heading htmlheading="h2" size="large" font="display" stylingclasses="text-text mb-6 text-center lg:text-left">
+         Besøg vores helteshop
+        </Heading>
+
+        <!-- Brødtekst -->
+        <Text teksttype="brødtekst" stylingclasses="text-text text-center lg:text-left mb-4">
+          Du kan også støtte Heltene ved at købe produkter i deres Helteshop. Her finder du en række sjove og meningsfulde varer, hvor overskuddet går direkte til at skabe gode oplevelser for børn med sygdom.
+        </Text>
+
+        <Text teksttype="brødtekst" stylingclasses="text-text text-center lg:text-left mb-4">
+          I shoppen kan du blandt andet købe:
+        </Text>
+
+        <!-- UL-liste -->
+    <div class="mb-6 space-y-2 text-center lg:text-left">
+  		<Text teksttype="brødtekst" stylingclasses="text-text">• Heltekappe</Text>
+  		<Text teksttype="brødtekst" stylingclasses="text-text">• Helte-T-shirt</Text>
+  		<Text teksttype="brødtekst" stylingclasses="text-text">• Bamsekappe</Text>
+  		<Text teksttype="brødtekst" stylingclasses="text-text">• Tørklæde</Text>
+  		<Text teksttype="brødtekst" stylingclasses="text-text">• Jule-skrabekalender til videresalg</Text>
+  		<Text teksttype="brødtekst" stylingclasses="text-text">• … og meget mere</Text>
+	</div>
+
+
+        <Text teksttype="brødtekst" stylingclasses="text-text text-center lg:text-left mb-6">
+        Hvert køb hjælper med at give flere børn og familier magiske helteoplevelser.
+        </Text>
+
+        <!-- Knap -->
+        <div class="flex justify-center lg:justify-start">
+          <Link
+            href="https://shop.xn--brneulykkesfonden-00b.dk/collections/heltene"
+            variant="secondary"
+            size="large"
+            className="scroll-smooth"
+          >
+            Besøg helteshoppen
+          </Link>
+        </div>
+      </div>
+
+      <!-- billede -->
+      <div class="flex justify-center lg:justify-end mt-8 lg:mt-24">
+        <img src="/assets/helteshop.svg" alt="Frivillig SVG" class="w-full md:max-w-md lg:max-w-lg" />
+      </div>
+
+    </div>
+  </div>
 </section>
 
 
