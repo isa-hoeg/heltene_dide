@@ -3,16 +3,23 @@ const { logo, number, title, text, class: extraClass = "" } = Astro.props;
 import Heading from "./Heading.astro";
 import Text from "./Text.astro";
 import '../styles/tailwind.css';
+import Link from "./Link.astro";
 ---
-<article class={`flex items-center gap-4 bg-offwhite cursor-pointer ${extraClass}`}>
-  <img src={logo} alt={`${title} logo`} class="w-60 lg:w-full object-cover" />
-  <div class="flex flex-col gap-2">
-    <Heading htmlheading="h2" size="xxlarge" font="display">{number}</Heading>
-    <Heading htmlheading="h3" size="medium" font="sans" stylingclasses="-mt-4">{title}</Heading>
-    <Text teksttype="brødtekst" stylingclasses="-mt-2">{text}</Text>
-    <a href="#" class="underline">
-      <Heading htmlheading="h4" size="xsmall" font="sans">Læs mere</Heading>
-    </a>
+
+<article class={`flex items-center gap-4 bg-offwhite cursor-pointer overflow-hidden ${extraClass}`}>
+  <img 
+    src={logo} 
+    alt={`${title} logo`} 
+    class="w-40 h-50 md:w-40 md:h-60 lg:w-70 lg:h-70 object-cover flex-shrink-0"
+  />
+
+  <div class="flex-1 min-w-0 flex flex-col px-2 md:px-4">
+    <!-- Kun tekst får padding -->
+    <div class="py-4 text-text">
+      <Heading htmlheading="h2" size="xxlarge" font="display">{number}</Heading>
+      <Heading htmlheading="h3" size="medium" font="sans">{title}</Heading>
+      <Text teksttype="brødtekst">{text}</Text>
+        <Text><Link href="#" variant="textlink" size="medium" stylingclasses="pt-12">Læs mere</Link></Text>
+    </div>
   </div>
 </article>
-
