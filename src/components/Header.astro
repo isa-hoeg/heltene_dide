@@ -7,7 +7,7 @@ import Link from "../components/Link.astro";
 <header x-data="{ showmenu: false }" class="bg-offwhite" >
     <div id="navbar" class="px-4 py-2 flex flex-row justify-between items-center">
         <div id="logo">
-            <a href="#" class="font-display text-4xl"><img class="" src="/assets/logo.svg"></a>
+            <a href="/"><img class="" src="/assets/logo.svg"></a>
         </div>
         <nav id="desktopmenu" class="hidden lg:block">
             <ul class="flex flex-row gap-6 items-center">
@@ -43,8 +43,8 @@ import Link from "../components/Link.astro";
                         </div>
                     </div>
                 </li>
-                <Text><Link href="/stoette" variant="headerlink" size="medium">DET STØTTER DU</Link></Text>
-                <Text><Link href="" variant="headerlink" size="medium">GÅ TIL BØRNEULYKKESFONDEN</Link></Text>
+                <Text><Link href="/stoette" variant="headerlink" size="medium" font="sans">DET STØTTER DU</Link></Text>
+                <Text><Link href="https://xn--brneulykkesfonden-00b.dk/forside" variant="headerlink" size="medium">GÅ TIL BØRNEULYKKESFONDEN</Link></Text>
                 <li class=""><Link href="/forms" variant="primary" size="large" icon="/assets/stoet_ikon_web.svg" iconHover="/assets/stoet_ikon_filled.svg">Støt</Link></li>
             </ul>
         </nav>
@@ -90,7 +90,7 @@ import Link from "../components/Link.astro";
                 </details>
             </li>
             <li><Text><Link href="/stoette" variant="headerlink" size="medium">DET STØTTER DU</Link></Text></li>
-            <li><Text><Link href="" variant="headerlink" size="medium">GÅ TIL BØRNEULYKKESFONDEN</Link></Text></li>
+            <li><Text><Link href="https://xn--brneulykkesfonden-00b.dk/forside" variant="headerlink" size="medium">GÅ TIL BØRNEULYKKESFONDEN</Link></Text></li>
                 
         </ul>
     </nav>
