@@ -2,6 +2,7 @@
 import Heading from "../components/Heading.astro";
 import Text from "../components/Text.astro";
 import Link from "../components/Link.astro";
+import Button from "../components/Button.astro";
 ---
 <footer class="bg-dustblue200 px-6">
     <div class="pt-4 lg:px-10 lg:pt-10 ">
@@ -12,11 +13,11 @@ import Link from "../components/Link.astro";
             <div>
                 <Heading htmlheading="h1" size="large" font="display">Følg med i små og store helteøjeblikke</Heading>
                 <Text teksttype="brødtekst">Tilmeld dig vores nyhedsbrev her!</Text>
-                <form class="py-2 mb-6">
+                <form class="py-2 mb-6 flex gap-4 items-center">
                     <input type="email" class="rounded-full border-none p-3" placeholder="Email">
-                    <button type="submit">Tilmeld dig!</button>
+                    <Button variant="primary" size="medium">Tilmeld dig!</Button>
                 </form>
-                <div class="py-2">
+                <div class="py-2 lg:w-100">
                     <Text teksttype="brødtekst">Legeheltene, Kreaheltene, Helteakademiet, Heltecamps og Heltekaravanen er en del af Børneulykkesfonden.</Text>
                 </div>
                 <div class="py-2">

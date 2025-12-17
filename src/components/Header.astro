@@ -13,7 +13,7 @@ import Link from "../components/Link.astro";
             <ul class="flex flex-row gap-6 items-center">
                 <!-- dropdown 1 -->
                 <li class="relative z-10" x-data="{ open: false }">
-                    <button @click="open = !open" class="text-xl hover:text-accent font-semibold">+ HELTEINITIATIVER</button>
+                    <button @click="open = !open" class="text-xl hover:text-accent font-semibold cursor-pointer">+ HELTEINITIATIVER</button>
                     <div x-show="open" @click.outside="open = false" x-transition class="absolute bg-offwhite flex flex-col mt-2 px-6 py-4 rounded-br-[50px]">
                         <Text><Link href="/legeheltene" variant="headerlink2" size="large">Legeheltene</Link></Text>
                         <Text><Link href="/legeheltene" variant="headerlink2" size="large">Kreaheltene</Link></Text>
@@ -23,7 +23,7 @@ import Link from "../components/Link.astro";
                 </li>
                 <!-- dropdown 2 -->
                 <li class="relative z-10" x-data="{ open: false }">
-                    <button @click="open = !open" class="text-xl hover:text-accent font-semibold">+ OM OS</button>
+                    <button @click="open = !open" class="text-xl hover:text-accent font-semibold cursor-pointer">+ OM OS</button>
                     <div x-show="open" @click.outside="open = false" x-transition class="absolute bg-offwhite  mt-2 px-6 py-4 rounded-br-[50px] grid grid-cols-2 min-w-lg">
                         <div class="">
                         <p class="text-xl text-grey500">DET GØR VI</p>
@@ -43,14 +43,14 @@ import Link from "../components/Link.astro";
                         </div>
                     </div>
                 </li>
-                <li><Text><Link href="/stoette" variant="headerlink" size="medium" font="sans">DET STØTTER DU</Link></Text></li>
-                <li><Text><Link href="https://xn--brneulykkesfonden-00b.dk/forside" variant="headerlink" size="medium">GÅ TIL BØRNEULYKKESFONDEN</Link></Text></li>
-                <li class=""><Link href="/forms" variant="primary" size="large" icon="/assets/stoet_ikon_web.svg" iconHover="/assets/stoet_ikon_filled.svg">Støt</Link></li>
+                <li><Link href="/stoette" variant="headerlink" size="medium" font="sans">DET STØTTER DU</Link></li>
+                <li><Link href="https://xn--brneulykkesfonden-00b.dk/forside" variant="headerlink" size="medium">GÅ TIL BØRNEULYKKESFONDEN</Link></li>
+                <li class=""><Link href="/form1" variant="primary" size="large" icon="/assets/stoet_ikon_web.svg" iconHover="/assets/stoet_ikon_filled.svg">Støt</Link></li>
             </ul>
         </nav>
         <!-- Burgermenu -->
          <div class="lg:hidden">
-            <Link href="/forms" variant="primary" size="large" icon="/assets/stoet_ikon_web.svg" iconHover="/assets/stoet_ikon_filled.svg">Støt</Link>
+            <Link href="/form1" variant="primary" size="large" icon="/assets/stoet_ikon_web.svg" iconHover="/assets/stoet_ikon_filled.svg">Støt</Link>
         </div>
          <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-10">
   <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
