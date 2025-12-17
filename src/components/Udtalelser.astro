@@ -1,0 +1,29 @@
+---
+import Heading from "../components/Heading.astro";
+import Text from "../components/Text.astro";
+
+const { 
+  cardimage = "", 
+  cardimagealt = "", 
+  cardtitle = "", 
+  person = "", 
+  cardtext = "",
+    cardtext2 = ""
+
+} = Astro.props;
+---
+
+<article class="relative w-72 mx-auto">
+  <!-- Rundt billede -->
+  <div class="w-40 h-40 rounded-full overflow-hidden mx-auto relative z-10">
+    <img src={cardimage} alt={cardimagealt} class="w-full h-full object-cover"/>
+  </div>
+
+  <!-- Info-kortet -->
+  <div class="-mt-16 pt-10 w-80 h-115 pb-8 px-4 bg-offwhite rounded-2xl flex flex-col justify-end">
+    <Text teksttype="brødtekst" stylingclasses="px-2 mt-6 lg:mt-8">{cardtext}</Text>
+    <Text teksttype="brødtekst" stylingclasses="px-2 mt-6 lg:mt-8">{cardtext2}</Text>
+    <Heading htmlheading="h4" size="small" font="sans" stylingclasses="mt-4 pb-2 text-text px-2">{cardtitle}</Heading>
+    <Heading htmlheading="h4" size="xsmall" font="sans" stylingclasses="text-grey500 pb-10 px-2">{person}</Heading>
+  </div>
+</article>
