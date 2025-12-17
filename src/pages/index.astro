@@ -8,324 +8,188 @@ import Text from "../components/Text.astro";
 import Button from "../components/Button.astro";
 import Stoet from "../components/Stoet.astro";
 import InitiativeCard from "../components/InitiativeCard.astro";
+import Udtalelser from "../components/Udtalelser.astro";	
 ---
 <MainLayout title="Heltene">
 <main class="">
 <!-- start på hero -->
-<section class="w-full min-h-145 bg-[url(/assets/mobil_regnbue_hero.svg)] bg-cover bg-center bg-no-repeat lg:w-full lg:bg-[url(/assets/regnbue_hero.svg)] lg:bg-cover lg:bg-center">
-	<div class="pt-12"><img src="/assets/mobil_orange_doodle.svg" alt="doodle" class=" mx-auto pb-2 block lg:hidden" />
-	<img src="/assets/orange_doodle_web.svg" alt="doodle" class="lg:px-20 hidden lg:block" />
-	<img src="/assets/orange_doodle_web.svg" alt="doodle" class="mx-auto hidden md:block lg:hidden" /></div>
-<div class="grid grid-cols-1 lg:grid-cols-2">
-
-<div class="text-center lg:text-left px-4 lg:px-20">
-<Heading htmlheading="h1" size="xlarge" font="display" stylingclasses="text-text mt-4 py-2 row-start-2 lg:row-start-1 lg:col-start-2">Sammen kan vi give børn smil og styrke i en svær tid</Heading>
-<Text teksttype="brødtekst" stylingclasses="text-text">Vi arbejder for at skabe et liv med mere leg, bevægelse og fællesskab for syge, indlagte og udsatte børn og deres familier.</Text>
-<Text teksttype="brødtekst" stylingclasses="text-text">Gør en heltegerning, og støt vores arbejde.</Text>
-
-<div class="flex flex-row items-center gap-5 py-8 lg:flex-row lg:items-start px-10 lg:px-0">
-  <Link href="#" variant="primary" size="large" icon="/assets/stoet_ikon_web.svg" iconHover="/assets/stoet_ikon_filled.svg">
-    Støt
-  </Link>
-
-  <Link href="#helteinitiativer" variant="secondary" size="large" className="mt-4 lg:mt-0 scroll-smooth">
-    Helteinitiativer
-  </Link>
-</div>
-</div>
-<img
-    src="/img/forside_hero.webp"
-    class="w-100 mx-auto z-10 -order-1 lg:order-1"
-    alt="hero_img"
-/>
-</div>
-<div class="z-10">
-  <Stoet />
-</div>
-</section>
-
-<!-- Start på helteinitiativer -->
-
-<div class="z-0">
- <section id="helteinitiativer" class="bg-secondary pt-45 py-20 -mt-16 z-0">
-	<div class="container mx-auto">
-		<img src="/assets/mobil_offwhite_doodle.svg" alt="doodle" class="mx-auto pb-2 block lg:hidden" />
-		<img src="/assets/offwhite_doodle_web.svg" alt="doodle" class="mx-auto pb-2 hidden lg:block" />
-	<Heading htmlheading="h2" size="large" font="display" stylingclasses="text-offwhite text-center p-2">Vores fire helteinitiativer</Heading>
-	<Text teksttype="brødtekst" stylingclasses="text-offwhite text-center lg:px-20 pb-10">Vi skaber leg, bevægelse og fællesskab for syge og sårbare børn på hospitaler, i psykiatrien, på børnehjem og indkvarteringssteder. Gennem Legeheltene, Kreaheltene, Helteakademiet og Heltecamps skaber vi aktiviteter og gode oplevelser.</Text>
-	</div>
-	<div class="container mx-auto p-4 grid grid-cols-1 gap-6 md:grid-cols-2">
- 		 <InitiativeCard
-	 	class="rounded-tl-3xl rounded-br-3xl flex-row-reverse hover:bg-skyblue100 transition-colors duration-300"
-		logo="/assets/legehelte_initiativ.svg"
-		number="20"
-		title="Legehelte"
-		text="er dagligt til stede på børneafdelinger i hele landet"
-		/>
-		<InitiativeCard
-		class="rounded-tr-3xl rounded-bl-3xl hover:bg-lime200 transition-colors duration-300"
-		logo="/assets/heltecamps_initiativ.svg"
-		number="7"
-		title="Heltecamps"
-		text="afholdes hver sommer for syge børn i hele Danmark"
-		/>
-		<InitiativeCard
-		class="rounded-tr-3xl rounded-bl-3xl hover:bg-pink200 transition-colors duration-300"
-		logo="/assets/kreahelte_initiativ.svg"
-		number="20"
-		title="Kreahelte"
-		text="inviterer dagligt børnene ind i deres kreative værksteder"
-		/>
-		<InitiativeCard
-		class="rounded-tl-3xl rounded-br-3xl flex-row-reverse hover:bg-grassgreen300 transition-colors duration-300"
-		logo="/assets/helteakademi_initiativ.svg"
-		number="18"
-		title="Helteakademier"
-		text="sørger hver uge boldspil mm. for børn med sygdom og handicap"
-		/>
-	</div>
-	<div class="flex justify-center mt-10">
-  <Link href="/stoette" variant="secondary" size="large" className="mt-4 lg:mt-0 scroll-smooth">
-Det går din støtte til
-  </Link>
-</section>
-
-
-</div>
-<!-- Slut på helteinitiativer -->
-
-<!-- Start på "det siger forældre" -->
- <section class="container mx-auto">
-	<Heading htmlheading="h2" size="large" font="display" stylingclasses="text-text text-center py-20">Det siger forældre og fagfolk om os</Heading>.
-	<!-- <section class="w-full py-12">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> -->
-    <!-- Carousel container -->
-    <!-- <div class="flex space-x-6 overflow-x-auto snap-x snap-mandatory scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100"> -->
-      
-      <!-- Carousel item 1 -->
-      <!-- <div class="flex-shrink-0 h-150 w-80 md:w-96 snap-center  bg-offwhite opacity-70 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
-        <div class="h-48 rounded-t-xl bg-center bg-cover relative" style="background-image: url(/img/udtalelser_1.webp)">
-          <div class="absolute inset-0 bg-offwhite flex items-center justify-center text-text text-center p-4 rounded-2xl">
-            <h3 class="text-lg font-bold"></h3>
-          </div>
-        </div>
-        <div class="p-6 flex flex-col gap-2 bg-url(/img/udtalelser_1.webp)">
-		<Text teksttype="brødtekst">“Legeheltene bidrager til meningsfulde pauser på hospitalet. Pauser, hvor børn kan få et smil på læben, komme ud at røre sig, måske møde andre børn og på den måde skabe gode minder. Legeheltene har mulighed for at møde børnene uden underliggende klinisk agenda, men udelukkende som motivatorer og sjove afbræk. En god kontakt med Legeheltene smitter med stor sandsynlighed også af på det sygdoms- og behandlingsmæssige forløb på hospitalet.”</Text>
-		<Heading htmlheading="h4" size="small" font="sans" stylingclasses="mt-4 text-text">Christina</Heading>
-		<Heading htmlheading="h4" size="xsmall" font="sans" stylingclasses="text-grey500">Mor til Elias, som spiller i Helteakademiet</Heading>
-        </div>
-      </div> -->
-	      <!-- Carousel item 2 -->
-      <!-- <div class="flex-shrink-0 w-80 md:w-96 snap-center bg-offwhite rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
-        <div class="h-48 rounded-t-xl bg-center bg-cover relative" style="background-image: url(/img/udtalelser_1.webp)">
-          <div class="absolute inset-0 bg-offwhite flex items-center justify-center text-text text-center p-4 rounded-2xl">
-            <h3 class="text-lg font-bold"></h3>
-          </div>
-        </div>
-        <div class="p-6 flex flex-col gap-2">
-		<Text teksttype="brødtekst">“Vi har en datter med en alvorlig, progressiv sygdom og lever derfor i konstant beredskab, samtidig med at vi forsøger at nyde livet med hende. Vi har været med på Heltecamp to gange, og hun elsker det – især fordi hun, som hun selv siger: “På Heltecamp er jeg ikke anderledes.”  For os som forældre betyder fællesskabet på campen allermest. Her skabes minder, tryghed og venskaber, som også varer ved efter campen.”</Text>
-
-		<Text teksttype="brødtekst">For os som forældre betyder fællesskabet på campen allermest. Her skabes minder, tryghed og venskaber, som også varer ved efter campen.”</Text>
-		<Heading htmlheading="h4" size="small" font="sans" stylingclasses="mt-4 text-text">Dorthe</Heading>
-		<Heading htmlheading="h4" size="xsmall" font="sans" stylingclasses="text-grey500">Mor til Luna, der har deltaget på heltecamp</Heading>
-        </div>
-      </div> -->
-      <!-- Carousel item 3 -->
-      <!-- <div class="flex-shrink-0 h-150 w-80 md:w-96 snap-center bg-offwhite opacity-70 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
-        <div class="h-48 rounded-t-xl bg-center bg-cover relative" style="background-image: url(/img/udtalelser_1.webp)">
-          <div class="absolute inset-0 bg-offwhite  flex items-center justify-center text-text text-center p-4 rounded-2xl">
-            <h3 class="text-lg font-bold"></h3>
-          </div>
-        </div>
-        <div class="p-6 flex flex-col gap-2">
-		<Text teksttype="brødtekst">“De fjollede rundt, og der blev kastet lidt med en badebold, men det vigtigste var, at de fjollede og grinede og havde det sjovt, og Jessica glemte jo så lige alt om, at hun faktisk ikke havde det ret godt.”</Text>
-		<Heading htmlheading="h4" size="small" font="sans" stylingclasses="mt-4 text-text">Lise</Heading>
-		<Heading htmlheading="h4" size="xsmall" font="sans" stylingclasses="text-grey500">Mor til Jessica, der har leget med Legeheltene og Kreaheltene</Heading>
-        </div>
-      </div> -->
-      <!-- Carousel item 4 -->
-      <!-- <div class="flex-shrink-0 h-150 w-80 md:w-96 snap-center bg-offwhite opacity-70 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
-        <div class="h-48 rounded-t-xl bg-center bg-cover relative" style="background-image: url(/img/udtalelser_1.webp)">
-          <div class="absolute inset-0 bg-offwhite  flex items-center justify-center text-text text-center p-4 rounded-2xl">
-            <h3 class="text-lg font-bold"></h3>
-          </div>
-        </div>
-        <div class="p-6 flex flex-col gap-2">
-		<Text teksttype="brødtekst">“De fjollede rundt, og der blev kastet lidt med en badebold, men det vigtigste var, at de fjollede og grinede og havde det sjovt, og Jessica glemte jo så lige alt om, at hun faktisk ikke havde det ret godt.”</Text>
-		<Heading htmlheading="h4" size="small" font="sans" stylingclasses="mt-4 text-text">Lise</Heading>
-		<Heading htmlheading="h4" size="xsmall" font="sans" stylingclasses="text-grey500">Mor til Jessica, der har leget med Legeheltene og Kreaheltene</Heading>
-        </div>
-      </div> -->
-      <!-- Carousel item 5 -->
-      <!-- <div class="flex-shrink-0 h-150 w-80 md:w-96 snap-center bg-offwhite opacity-70 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
-        <div class="h-48 rounded-t-xl bg-center bg-cover relative" style="background-image: url(/img/udtalelser_1.webp)">
-          <div class="absolute inset-0 bg-offwhite  flex items-center justify-center text-text text-center p-4 rounded-2xl">
-            <h3 class="text-lg font-bold"></h3>
-          </div>
-        </div>
-        <div class="p-6 flex flex-col gap-2">
-		<Text teksttype="brødtekst">“De fjollede rundt, og der blev kastet lidt med en badebold, men det vigtigste var, at de fjollede og grinede og havde det sjovt, og Jessica glemte jo så lige alt om, at hun faktisk ikke havde det ret godt.”</Text>
-		<Heading htmlheading="h4" size="small" font="sans" stylingclasses="mt-4 text-text">Lise</Heading>
-		<Heading htmlheading="h4" size="xsmall" font="sans" stylingclasses="text-grey500">Mor til Jessica, der har leget med Legeheltene og Kreaheltene</Heading>
-        </div>
-      </div>
-     </div>
+<section class="w-full min-h-145 bg-[url(/assets/mobil_regnbue_hero.svg)] bg-cover bg-center bg-no-repeat lg:w-full lg:bg-[url(/assets/regnbue_hero.svg)] lg:bg-cover lg:bg-right">
+  <!-- Doodles -->
+  <div class="pt-12">
+    <img src="/assets/mobil_orange_doodle.svg" alt="doodle" class="mx-auto pb-2 block lg:hidden" />
+    <img src="/assets/orange_doodle_web.svg" alt="doodle" class="lg:px-20 hidden lg:block" />
+    <img src="/assets/orange_doodle_web.svg" alt="doodle" class="mx-auto hidden md:block lg:hidden" />
   </div>
-</section> -->
 
+  <!-- Grid med tekst og billede -->
+  <div class="grid grid-cols-1 lg:grid-cols-2">
+    <!-- Tekstkolonne -->
+    <div class="text-center lg:text-left px-4 lg:px-20">
+      <Heading 
+        htmlheading="h1" 
+        size="xlarge" 
+        font="display" 
+        stylingclasses="text-text mt-25 lg:mt-0 py-2 row-start-2 lg:row-start-1 lg:col-start-2"
+      >
+        Sammen kan vi give børn smil og styrke i en svær tid
+      </Heading>
 
-<section class="w-full py-12">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <!-- Carousel container -->
-    <div class="flex space-x-6 overflow-x-auto snap-x snap-mandatory scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
+      <Text teksttype="brødtekst" stylingclasses="text-text">
+        Vi arbejder for at skabe et liv med mere leg, bevægelse og fællesskab for syge, indlagte og udsatte børn og deres familier.
+      </Text>
 
-      <!-- Carousel item 1 -->
-      <div class="relative flex-shrink-0 w-80 md:w-96 snap-center bg-offwhite rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300 overflow-visible">
-        <!-- Billede ovenpå, fuldt synligt -->
-        <img src="/img/udtalelser_1.webp" alt="Christina"
-             class="absolute -top-20 left-1/2 -translate-x-1/2 w-56 h-56 object-contain z-20" />
-        <!-- Tekst -->
-        <div class="p-6 flex flex-col gap-2 mt-32">
-          <Text teksttype="brødtekst">“Legeheltene bidrager til meningsfulde pauser på hospitalet. Pauser, hvor børn kan få et smil på læben, komme ud at røre sig, måske møde andre børn og på den måde skabe gode minder. Legeheltene har mulighed for at møde børnene uden underliggende klinisk agenda, men udelukkende som motivatorer og sjove afbræk. En god kontakt med Legeheltene smitter med stor sandsynlighed også af på det sygdoms- og behandlingsmæssige forløb på hospitalet.”</Text>
-          <Heading htmlheading="h4" size="small" font="sans" stylingclasses="mt-4 text-text">Christina</Heading>
-          <Heading htmlheading="h4" size="xsmall" font="sans" stylingclasses="text-grey500">Mor til Elias, som spiller i Helteakademiet</Heading>
-        </div>
+      <Text teksttype="brødtekst" stylingclasses="text-text">
+        Gør en heltegerning, og støt vores arbejde.
+      </Text>
+
+      <div class="flex flex-row items-center gap-5 py-8 lg:flex-row lg:items-start px-10 lg:px-0">
+        <Text><Link href="/stoette" variant="primary" size="large" icon="/assets/stoet_ikon_web.svg" iconHover="/assets/stoet_ikon_filled.svg">Støt</Link></Text>
+
+        <Text>
+          <Link href="#helteinitiativer" variant="secondary" size="large">
+            Helteinitiativer
+          </Link>
+        </Text>
       </div>
+    </div>
 
-      <!-- Carousel item 2 -->
-      <div class="relative flex-shrink-0 w-80 md:w-96 snap-center bg-offwhite rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300 overflow-visible">
-        <img src="/img/udtalelser_2.webp" alt="Dorthe"
-             class="absolute -top-20 left-1/2 -translate-x-1/2 w-56 h-56 object-contain z-20" />
-        <div class="p-6 flex flex-col gap-2 mt-32">
-          <Text teksttype="brødtekst">“Vi har en datter med en alvorlig, progressiv sygdom og lever derfor i konstant beredskab, samtidig med at vi forsøger at nyde livet med hende. Vi har været med på Heltecamp to gange, og hun elsker det – især fordi hun, som hun selv siger: “På Heltecamp er jeg ikke anderledes.”  For os som forældre betyder fællesskabet på campen allermest. Her skabes minder, tryghed og venskaber, som også varer ved efter campen.”</Text>
-          <Text teksttype="brødtekst">For os som forældre betyder fællesskabet på campen allermest. Her skabes minder, tryghed og venskaber, som også varer ved efter campen.”</Text>
-          <Heading htmlheading="h4" size="small" font="sans" stylingclasses="mt-4 text-text">Dorthe</Heading>
-          <Heading htmlheading="h4" size="xsmall" font="sans" stylingclasses="text-grey500">Mor til Luna, der har deltaget på heltecamp</Heading>
-        </div>
-      </div>
-
-      <!-- Carousel item 3 -->
-      <div class="relative flex-shrink-0 w-80 md:w-96 snap-center bg-offwhite rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300 overflow-visible">
-        <img src="/img/udtalelser_3.webp" alt="Lise"
-             class="absolute -top-20 left-1/2 -translate-x-1/2 w-56 h-56 object-contain z-20" />
-        <div class="p-6 flex flex-col gap-2 mt-32">
-          <Text teksttype="brødtekst">“De fjollede rundt, og der blev kastet lidt med en badebold, men det vigtigste var, at de fjollede og grinede og havde det sjovt, og Jessica glemte jo så lige alt om, at hun faktisk ikke havde det ret godt.”</Text>
-          <Heading htmlheading="h4" size="small" font="sans" stylingclasses="mt-4 text-text">Lise</Heading>
-          <Heading htmlheading="h4" size="xsmall" font="sans" stylingclasses="text-grey500">Mor til Jessica, der har leget med Legeheltene og Kreaheltene</Heading>
-        </div>
-      </div>
-
-      <!-- Carousel item 4 -->
-      <div class="relative flex-shrink-0 w-80 md:w-96 snap-center bg-offwhite rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300 overflow-visible">
-        <img src="/img/udtalelser_4.webp" alt="Lise"
-             class="absolute -top-20 left-1/2 -translate-x-1/2 w-56 h-56 object-contain z-20" />
-        <div class="p-6 flex flex-col gap-2 mt-32">
-          <Text teksttype="brødtekst">“De fjollede rundt, og der blev kastet lidt med en badebold, men det vigtigste var, at de fjollede og grinede og havde det sjovt, og Jessica glemte jo så lige alt om, at hun faktisk ikke havde det ret godt.”</Text>
-          <Heading htmlheading="h4" size="small" font="sans" stylingclasses="mt-4 text-text">Lise</Heading>
-          <Heading htmlheading="h4" size="xsmall" font="sans" stylingclasses="text-grey500">Mor til Jessica, der har leget med Legeheltene og Kreaheltene</Heading>
-        </div>
-      </div>
-
-      <!-- Carousel item 5 -->
-      <div class="relative flex-shrink-0 w-80 md:w-96 snap-center bg-offwhite rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300 overflow-visible">
-        <img src="/img/udtalelser_5.webp" alt="Lise"
-             class="absolute -top-20 left-1/2 -translate-x-1/2 w-56 h-56 object-contain z-20" />
-        <div class="p-6 flex flex-col gap-2 mt-32">
-          <Text teksttype="brødtekst">“De fjollede rundt, og der blev kastet lidt med en badebold, men det vigtigste var, at de fjollede og grinede og havde det sjovt, og Jessica glemte jo så lige alt om, at hun faktisk ikke havde det ret godt.”</Text>
-          <Heading htmlheading="h4" size="small" font="sans" stylingclasses="mt-4 text-text">Lise</Heading>
-          <Heading htmlheading="h4" size="xsmall" font="sans" stylingclasses="text-grey500">Mor til Jessica, der har leget med Legeheltene og Kreaheltene</Heading>
-        </div>
-      </div>
-
+    <!-- Billedkolonne -->
+    <div>
+      <img
+        src="/img/forside_hero.webp" 
+        class="w-100 mx-auto z-10 -order-1 lg:order-1 object-cover" 
+        alt="heroimg"
+      />
     </div>
   </div>
 </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	<div class="flex overflow-x-auto snap-x snap-mandatory mt-12">
-    <!-- -- SLIDE 1 -- -->
-    <article id="article1" class="grid grid-cols-3 grid-rows-2 max-h-120 bg-offwhite rounded-2xl">
-        
-    <a href="#article2" class="pb-4 group">
-          <img src="/assets/orange_pil_hoejre.svg" alt="" class="w-20 h-20 block group-hover:hidden">
-          <img src="/assets/orange_pil_venstre.svg" alt="" class="w-20 h-20 hidden group-hover:block">
-        </a>
-</article>
-
-<!-- SLIDE 2 -->
-    <article id="article2" class="grid grid-cols-3 grid-rows-2 max-h-[120vh]">
-         
-        <a href="#article3" class="pb-4 group">
-                    <img src="/svg/arrowright.svg" alt="" class="w-20 h-20 block group-hover:hidden">
-                    <img src="/svg/arrowright_orange.svg" alt="" class="w-20 h-20 hidden group-hover:block">
-                </a>
-            
-                    <a href="#article1" class="col-start-1 col-span-3 row-start-8 pb-4 group">
-                        <img src="/svg/arrowleft.svg" alt="" class="w-20 h-20 block group-hover:hidden">
-                        <img src="/svg/arrowleft_orange.svg" alt="" class="w-20 h-20 hidden group-hover:block">
-                    </a>
-        </article>
-
-<!-- SLIDE 3 -->
-     <article id="article3" class="grid grid-cols-3 grid-rows-2 max-h-[120vh]">
-      
-        <a href="#article4" class="col-start-58 col-span-3 row-start-8 pb-4 group">
-                    <img src="/svg/arrowright.svg" alt="" class="w-20 h-20 block group-hover:hidden">
-                    <img src="/svg/arrowright_orange.svg" alt="" class="w-20 h-20 hidden group-hover:block">
-                </a>
-            
-                    <a href="#article2" class="col-start-1 col-span-3 row-start-8 pb-4 group">
-                        <img src="/svg/arrowleft.svg" alt="" class="w-20 h-20 block group-hover:hidden">
-                        <img src="/svg/arrowleft_orange.svg" alt="" class="w-20 h-20 hidden group-hover:block">
-                    </a>
-        </article>
-
-        <!-- SLIDE 4 -->
-        <article id="article4" class="grid grid-cols-3 grid-rows-2 max-h-[120vh]">
-
-    <img src="/svg/costarica.svg" class="col-start-35 col-span-20 row-start-5" alt="">
-    <img src="/img/program7.webp" class="col-start-49 col-span-7 row-start-5" alt="">
-    <img src="/img/program8.webp" class="col-start-32 col-span-9 row-start-9" alt="">
-        <a href="#article5" class="col-start-58 col-span-3 row-start-8 pb-4 group">
-                    <img src="/svg/arrowright.svg" alt="" class="w-20 h-20 block group-hover:hidden">
-                    <img src="/svg/arrowright_orange.svg" alt="" class="w-20 h-20 hidden group-hover:block">
-                </a>
-            
-                    <a href="#article3" class="col-start-1 col-span-3 row-start-8 pb-4 group">
-                        <img src="/svg/arrowleft.svg" alt="" class="w-20 h-20 block group-hover:hidden">
-                        <img src="/svg/arrowleft_orange.svg" alt="" class="w-20 h-20 hidden group-hover:block">
-                    </a>
-        </article>
+<div class="relative z-10 lg:-mt-23">
+  <Stoet />
 </div>
 
+<!-- Start på helteinitiativer -->
+
+<div class="z-0 relative">
+  <section id="helteinitiativer" class="bg-secondary pt-45 py-20 -mt-26">
+    <div class="container mx-auto">
+      <img src="/assets/mobil_offwhite_doodle.svg" alt="doodle" class="mx-auto pb-2 block lg:hidden" />
+      <img src="/assets/offwhite_doodle_web.svg" alt="doodle" class="mx-auto pb-2 hidden lg:block" />
+      <Heading htmlheading="h2" size="large" font="display" stylingclasses="text-offwhite text-center p-2">
+        Vores fire helteinitiativer
+      </Heading>
+      <Text teksttype="brødtekst" stylingclasses="text-offwhite text-center lg:px-20 pb-10">
+        Vi skaber leg, bevægelse og fællesskab for syge og sårbare børn på hospitaler, i psykiatrien, på børnehjem og indkvarteringssteder. Gennem Legeheltene, Kreaheltene, Helteakademiet og Heltecamps skaber vi aktiviteter og gode oplevelser.
+      </Text>
+    </div>
+
+    <div class="container mx-auto p-4 grid grid-cols-1 gap-6 md:grid-cols-2">
+      <InitiativeCard
+        class="rounded-tl-3xl rounded-br-3xl flex-row-reverse hover:bg-skyblue100 transition-colors duration-300"
+        logo="/assets/legehelte_initiativ.svg"
+        number="20"
+        title="Legehelte"
+        text="er dagligt til stede på børneafdelinger i hele landet"
+        href="/legeheltene"
+      />
+      <InitiativeCard
+        class="rounded-tr-3xl rounded-bl-3xl hover:bg-lime200 transition-colors duration-300"
+        logo="/assets/heltecamps_initiativ.svg"
+        number="7"
+        title="Heltecamps"
+        text="afholdes hver sommer for syge børn i hele Danmark"
+      />
+      <InitiativeCard
+        class="rounded-tr-3xl rounded-bl-3xl hover:bg-pink200 transition-colors duration-300"
+        logo="/assets/kreahelte_initiativ.svg"
+        number="20"
+        title="Kreahelte"
+        text="inviterer dagligt børnene ind i deres kreative værksteder"
+      />
+      <InitiativeCard
+        class="rounded-tl-3xl rounded-br-3xl flex-row-reverse hover:bg-grassgreen300 transition-colors duration-300"
+        logo="/assets/helteakademi_initiativ.svg"
+        number="18"
+        title="Helteakademier"
+        text="sørger hver uge boldspil mm. for børn med sygdom og handicap"
+      />
+    </div>
+
+    <div class="flex justify-center mt-10">
+      <Text>
+        <Link href="/stoette" variant="secondary" size="large">Det går din støtte til</Link>
+      </Text>
+    </div>
+  </section>
+</div>
+
+<!-- Slut på helteinitiativer -->
+
+<!-- START PÅ UDTALELSER -->
+
+<section class="container mx-auto py-20">
+  <Heading htmlheading="h2" size="large" font="display" stylingclasses="text-text text-center px-10 mb-10">
+    Det siger forældre og fagfolk om os
+  </Heading>
+  	<div class="lg:flex lg:justify-start">
+    				<!-- Mobil doodle -->
+					<img src="/assets/mobil_orange_doodle.svg" alt="" class="mx-auto pb-8 block lg:hidden">
+					<!-- Desktop doodle -->
+					<img src="/assets/orange_doodle_web.svg" alt="" class="hidden lg:block lg:mx-auto pt-10">
+				</div>
+  <div class="-my-10 lg:my-10 ">
+			<article class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth w-full gap-60 ml-0 lg:ml-14 mt-10 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200">
+				<div id="christina" class="flex-none justify-center min-w-full lg:min-w-0 snap-start lg:w-80">
+					<Udtalelser
+					size="large"
+					cardimage="/img/udtalelser_1.webp"
+					cardtitle="Christina"
+					cardtext="Legeheltene bidrager til meningsfulde pauser på hospitalet. Pauser, hvor børn kan få et smil på læben, komme ud at røre sig, måske møde andre børn og på den måde skabe gode minder. Legeheltene har mulighed for at møde børnene uden underliggende klinisk agenda, men udelukkende som motivatorer og sjove afbræk. En god kontakt med Legeheltene smitter med stor sandsynlighed også af på det sygdoms- og behandlingsmæssige forløb på hospitalet."
+					cardundertitle="Mor til Elias, som spiller i Helteakademiet"
+					/>
+				</div>
+				<div id="dorhte" class="flex-none justify-center min-w-full lg:min-w-0 snap-start lg:w-80">
+					<Udtalelser
+					size="large"
+					cardimage="/img/udtalelser_2.webp"
+					cardtitle="Dorthe"
+					cardtext="Vi har en datter med en alvorlig, progressiv sygdom og lever derfor i konstant beredskab, samtidig med at vi forsøger at nyde livet med hende. Vi har været med på Heltecamp to gange, og hun elsker det – især fordi hun, som hun selv siger: “På Heltecamp er jeg ikke anderledes.” For os som forældre betyder fællesskabet på campen allermest. Her skabes minder, tryghed og venskaber, som også varer ved efter campen."
+					cardundertitle="Mor til Luna, der har deltaget på heltecamp"
+					/>
+				</div>
+				<div id="lise" class="flex-none justify-center min-w-full lg:min-w-0 snap-start lg:w-80">
+					<Udtalelser
+					size="large"
+					cardimage="/img/udtalelser_3.webp"
+					cardtitle="Lise"
+					cardtext="De fjollede rundt, og der blev kastet lidt med en badebold, men det vigtigste var, at de fjollede og grinede og havde det sjovt, og Jessica glemte jo så lige alt om, at hun faktisk ikke havde det ret godt. Det var super fantastisk at opleve, og det er nogle skønne initiativer!"
+					cardundertitle="Mor til Jessica, der har leget med Legeheltene og Kreaheltene"
+					/>
+				</div>
+				<div id="ella" class="flex-none justify-center min-w-full lg:min-w-0 snap-start lg:w-80">
+					<Udtalelser
+					size="large"
+					cardimage="/img/udtalelser_4.webp"
+					cardtitle="Ella"
+					cardtext="Lege- og Kreaheltene forandrer hverdagen for forældre med syge børn og børn med alvorlige sygdomme. Det gør en verden til forskel med nogen, der tænker på børnenes interesser og andet en sygdom. Det er en verden til forskel."
+					cardundertitle="Mor til Thor, der har leget med Legeheltene og Kreaheltene mange gange"
+					/>
+				</div>
+				<div id="susanne" class="flex-none justify-center min-w-full lg:min-w-0 snap-start lg:w-80">
+					<Udtalelser
+					size="large"
+					cardimage="/img/udtalelser_5.webp"
+					cardtitle="Susanne"
+					cardtext="Lege- og Kreaheltene skaber små øjeblikke af glæde og tryghed for børn med alvorlige sygdomme og deres forældre. Det betyder alverden at have nogen, der ser børnene som børn først – med leg, kreativitet og nærvær – og ikke kun som patienter. Det gør en verden til forskel."
+					cardundertitle="Mor til Elias, som spiller i helteakademiet"
+					/>
+				</div>
+			</article>
+		</div>
+
+</section>
 
 
-
-
-
- </section>
-
+<!-- SLUT PÅ UDTALELSER -->
 
 
 
