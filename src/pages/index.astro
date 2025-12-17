@@ -29,7 +29,7 @@ import Udtalelser from "../components/Udtalelser.astro";
         htmlheading="h1" 
         size="xlarge" 
         font="display" 
-        stylingclasses="text-text mt-25 lg:mt-0 py-2 row-start-2 lg:row-start-1 lg:col-start-2"
+        stylingclasses="text-text mt-5 lg:mt-0 py-2 row-start-2 lg:row-start-1 lg:col-start-2"
       >
         Sammen kan vi give børn smil og styrke i en svær tid
       </Heading>
@@ -187,9 +187,103 @@ import Udtalelser from "../components/Udtalelser.astro";
 		</div>
 
 </section>
-
-
 <!-- SLUT PÅ UDTALELSER -->
+
+<!-- START PÅ NYHEDER -->
+<section class="container mx-auto pb-20 my-10">
+  <Heading htmlheading="h2" size="large" font="display" stylingclasses="text-text text-center">
+    Nyheder
+  </Heading>
+
+  <div class="mx-4 lg:mx-0 gap-6 flex space-x-4 snap-x snap-mandatory overflow-x-auto px-2 lg:grid lg:grid-cols-3 lg:grid-rows-3 lg:auto-rows-fr lg:overflow-visible lg:space-x-0 my-10">
+
+    <!-- STORT FEATURE -->
+  <div class="flex-none snap-start w-90 sm:w-96 lg:w-full flex flex-col my-6 rounded-tr-3xl rounded-bl-3xl bg-offwhite overflow-hidden row-start-1 row-span-2 lg:h-full">
+    <img src="/img/nyheder_prisvinder.webp" class="w-full h-36 lg:h-150 object-cover">
+      <div class="p-4 flex flex-col h-full justify-between">
+        <div>
+          <Heading htmlheading="h4" size="xsmall">12-11-2025</Heading>
+          <Heading htmlheading="h3" size="small" stylingclasses="leading-6">Legeheltene vinder Børn i byen Prisen...</Heading>
+          <Text teksttype="brødtekst" stylingclasses="lg:pt-4">
+            Kreaheltene har vundet Børn i byen Prisen 2025 som Årets Velgørenhedsorganisation. Prisen minder os om, hvorfor vi gør det, vi gør: De helt særlige små øjeblikke, hvor et barn...
+          </Text>
+        </div>
+        <Link href="https://xn--brneulykkesfonden-00b.dk/heltene/nyheder" variant="textlink" size="medium">Læs mere</Link>
+      </div>
+    </div>
+
+    <!-- LILLE -->
+    <div class="flex-none snap-start w-75 sm:w-72 lg:w-full flex flex-col my-6 rounded-tr-3xl rounded-bl-3xl bg-offwhite overflow-hidden lg:h-full">
+      <img src="/img/nyheder_kreahelte.webp" class="w-full h-36 lg:h-full object-cover">
+      <div class="p-4 flex flex-col h-full justify-between">
+        <div>
+          <Heading htmlheading="h4" size="xsmall">12-11-2025</Heading>
+          <Heading htmlheading="h3" size="small" stylingclasses="leading-6">Kreaheltene skaber kreative frirum på Nordsjællands Hospital</Heading>
+        </div>
+        <Link href="https://xn--brneulykkesfonden-00b.dk/heltene/nyheder" variant="textlink" size="medium">Læs mere</Link>
+      </div>
+    </div>
+
+    <!-- HORIZONTAL -->
+    <div class="flex-none snap-start w-90 sm:w-96 lg:w-full flex flex-col lg:flex-row items-stretch my-6 rounded-tr-3xl rounded-bl-3xl bg-offwhite overflow-hidden row-start-2 col-start-2 col-span-2 lg:h-full">
+      <img src="/img/nyheder_kasper_fisker.webp" class="w-full h-36 lg:w-1/2 lg:h-full object-cover">
+      <div class="p-4 flex flex-col h-full justify-between">
+        <div>
+          <Heading htmlheading="h4" size="xsmall">12-11-2025</Heading>
+          <Heading htmlheading="h3" size="small" stylingclasses="leading-6">Kasper Fisker og Kasper Kirkegaard samler over en million kroner ind til Legeheltene</Heading>
+          <Text teksttype="brødtekst" stylingclasses="lg:pt-4" >
+            Kreaheltene har vundet Børn i byen Prisen 2025 som Årets Velgørenhedsorganisation. Prisen minder os om, hvorfor vi gør det, vi gør: De helt særlige små øjeblikke, hvor et barn...
+          </Text>
+        </div>
+        <Link href="https://xn--brneulykkesfonden-00b.dk/heltene/nyheder" variant="textlink" size="medium">Læs mere</Link>
+      </div>
+    </div>
+
+    <!-- HORIZONTAL -->
+    <div class="flex-none snap-start w-90 sm:w-96 lg:w-full flex flex-col lg:flex-row items-stretch my-6 rounded-tr-3xl rounded-bl-3xl bg-offwhite overflow-hidden row-start-3 col-start-1 col-span-2 lg:h-full">
+      <img src="/img/nyheder_dgi.webp" class="w-full h-36 lg:w-1/2 lg:h-full object-cover">
+      <div class="p-4 flex flex-col h-full justify-between">
+        <div>
+          <Heading htmlheading="h4" size="xsmall">12-11-2025</Heading>
+          <Heading htmlheading="h3" size="small" stylingclasses="leading-6">Legeheltene til DGI Landsstævne med børnene fra Bifrost</Heading>
+          <Text teksttype="brødtekst" stylingclasses="lg:pt-4">
+           I år var Vejle værtsby for DGI Landsstævne, så naturligvis skulle Legeheltene og Bifrost deltage i festlighederne i selveste Parasportens Hovedstad.
+        </div>
+        <Link href="https://xn--brneulykkesfonden-00b.dk/heltene/nyheder" variant="textlink" size="medium">Læs mere</Link>
+      </div>
+    </div>
+
+    <!-- SMÅ -->
+    <div class="flex-none snap-start w-75 sm:w-72 lg:w-full flex flex-col my-6 rounded-tr-3xl rounded-bl-3xl bg-offwhite overflow-hidden lg:h-full">
+      <img src="/img/nyheder_kreahelte_2.webp" class="w-full h-36 lg:h-full object-cover">
+      <div class="p-4 flex flex-col h-full justify-between">
+        <div>
+          <Heading htmlheading="h4" size="xsmall">12-11-2025</Heading>
+          <Heading htmlheading="h3" size="small" stylingclasses="leading-6">Legeheltene rykker ind på Nordsjællands Hospital i Hillerød</Heading>
+        </div>
+        <Link href="https://xn--brneulykkesfonden-00b.dk/heltene/nyheder" variant="textlink" size="medium">Læs mere</Link>
+      </div>
+    </div>
+
+    <div class="flex-none snap-start w-75 sm:w-72 lg:w-full flex flex-col my-6 rounded-tr-3xl rounded-bl-3xl bg-offwhite overflow-hidden lg:h-full">
+      <img src="/img/nyheder_kreahelte.webp" class="w-full h-36 lg:h-full object-cover">
+      <div class="p-4 flex flex-col h-full justify-between">
+        <div>
+          <Heading htmlheading="h4" size="xsmall">12-11-2025</Heading>
+          <Heading htmlheading="h3" size="small" stylingclasses="leading-6">Kreaheltene åbner kreativt tilbud på Nordsjællands Hospital i Hillerød</Heading>
+        </div>
+        <Link href="https://xn--brneulykkesfonden-00b.dk/heltene/nyheder" variant="textlink" size="medium">Læs mere</Link>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+<!-- SLUT PÅ NYHEDER -->
 
 
 
