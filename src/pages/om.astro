@@ -229,84 +229,108 @@ import Stoet from "../components/Stoet.astro";
 
 	<!--START PÅ TIDSLINJE -->
 	<section class="container mx-auto">
-		<Heading htmlheading="h2" size="large" font="display" stylingclasses="text-text text-center px-4 mt-20">
+		<Heading htmlheading="h2" size="large" font="display" stylingclasses="text-text text-center px-4 mt-5 lg:mt-20">
 			Vores udvikling
 		</Heading>
-		<div class="grid grid-cols-30 grid-rows-16">
-			<img src="/assets/tidslinje.svg" alt="tidslinje" class="col-start-15 col-span-2 row-start-2 row-span-13 w-full h-full"/>
-			<div class="col-start-7 row-start-2 col-span-9">
+		<div class="grid grid-cols-30 grid-rows-16 lg:grid-rows-11 lg:h-500">
+			<img src="/assets/tidslinje.svg" alt="tidslinje" class="col-start-15 col-span-2 row-start-2 row-span-13 lg:row-start-2 lg:row-span-9 w-full h-full"/>
+			<div class="col-start-7 row-start-2 col-span-9 lg:col-start-9">
 				<Text teksttype="brødtekst">2016 december</Text>
 				<Heading htmlheading="h4" size="medium" font="sans" stylingclasses="-mt-3">Idéen opstår</Heading>
 			</div>
-			<img src="/assets/bulb.svg" alt="bulb" class="col-start-2 col-span-4 row-start-2 -rotate-20 w-full h-auto"/>
-			<div class="col-start-18 row-start-4 col-span-8">
+			<img src="/assets/bulb.svg" alt="bulb" class="col-start-2 col-span-4 row-start-2 -rotate-20 w-full h-auto lg:w-20 lg:col-start-7 lg:row-start-2 lg:col-span-2"/>
+			<div class="col-start-18 row-start-4 col-span-8 lg:row-start-3">
 				<Text teksttype="brødtekst">2016/2017</Text>
 				<Heading htmlheading="h4" size="medium" font="sans" stylingclasses="-mt-3">Pilotprojekt</Heading>
 				<Heading htmlheading="h5" size="xsmall" font="sans" stylingclasses="leading-4">Lancering på OUH</Heading>
 			</div>
-			<img src="/assets/hospital.svg" alt="hospital" class="col-start-26 col-span-3 row-start-4 w-full h-auto"/>
-			<div class="col-start-3 row-start-5 row-span-2 col-span-12">
+			<img src="/assets/hospital.svg" alt="hospital" class="col-start-26 col-span-3 row-start-4 w-full h-auto lg:row-start-3 lg:col-start-23 lg:w-20"/>
+			<div class="col-start-3 row-start-5 row-span-2 col-span-12 lg:col-start-7 lg:col-span-8 lg:row-start-4">
 				<Text teksttype="brødtekst">2018</Text>
 				<Heading htmlheading="h4" size="medium" font="sans" stylingclasses="-mt-3">10 Legehelte</Heading>
 				<Heading htmlheading="h5" size="xsmall" font="sans" stylingclasses="">7 børneafdelinger</Heading>
 				<Text teksttype="brødtekst">Herlev, Hvidovre, Aarhus, Aalborg Nord, Herning & Viborg</Text>
 			</div>
-			<img src="/assets/legehelte_tidslinje.svg" alt="hospital" class="col-start-11 col-span-5 row-start-5 w-full h-auto"/>
-			<div class="col-start-17 row-start-7 row-span-2 col-span-15">
+			<img src="/assets/legehelte_tidslinje.svg" alt="legehelte" class="col-start-11 col-span-5 row-start-5 w-full h-auto lg:row-start-4 lg:col-start-13 lg:w-25"/>
+			<div class="col-start-17 row-start-7 row-span-2 col-span-15 lg:row-start-5">
 				<Text teksttype="brødtekst">2019</Text>
 				<Heading htmlheading="h4" size="medium" font="sans" stylingclasses="-mt-3">16 Legehelte</Heading>
 				<Heading htmlheading="h5" size="xsmall" font="sans" stylingclasses="">11 børneafdelinger</Heading>
 				<Text teksttype="brødtekst">Rigshospitalet, Aabenraa, Slagelse & Færøerne</Text>
 			</div>
-			<img src="/assets/legehelte_tidslinje.svg" alt="hospital" class="col-start-25 col-span-5 -rotate-50 row-start-7 w-full h-auto"/>
-			<div class="col-start-3 row-start-9 row-span-2 col-span-12">
+			<img src="/assets/legehelte_tidslinje.svg" alt="legehelte" class="col-start-25 col-span-5 -rotate-50 row-start-7 w-full h-auto lg:w-25 lg:row-start-5 lg:col-start-22"/>
+			<div class="col-start-3 row-start-9 row-span-2 col-span-12 lg:row-start-6 lg:col-start-7 lg:pt-3">
 				<Text teksttype="brødtekst">2020</Text>
 				<Heading htmlheading="h4" size="medium" font="sans" stylingclasses="-mt-3">Lancering af</Heading>
 				<Heading htmlheading="h5" size="xsmall" font="sans" stylingclasses="leading-5">Helteakademiet og Kreaheltene</Heading>
 			</div>
-			<img src="/assets/kreahelte_tidslinje.svg" alt="hospital" class="col-start-7 col-span-5 row-start-8 w-full h-auto"/>
-			<img src="/assets/helteakademi_tidslinje.svg" alt="hospital" class="col-start-4 col-span-5 row-start-8 w-full h-auto"/>
-			<div class="col-start-17 row-start-10 row-span-3 col-span-15">
+			<img src="/assets/kreahelte_tidslinje.svg" alt="kreahelte" class="col-start-7 col-span-5 row-start-8 w-full h-auto lg:w-25 lg:row-start-6 lg:col-start-13"/>
+			<img src="/assets/helteakademi_tidslinje.svg" alt="helteakademi" class="col-start-4 col-span-5 row-start-8 w-full h-auto lg:w-20 lg:row-start-6 lg:col-start-12"/>
+			<div class="col-start-17 row-start-10 row-span-3 col-span-15 lg:row-start-7">
 				<Text teksttype="brødtekst">2020</Text>
 				<Heading htmlheading="h4" size="medium" font="sans" stylingclasses="-mt-3">20 Legehelte</Heading>
 				<Heading htmlheading="h5" size="xsmall" font="sans" stylingclasses="">13 børneafdelinger</Heading>
 			</div>
-			<img src="/assets/legehelte_tidslinje.svg" alt="hospital" class="col-start-25 col-span-5 row-start-10 w-full h-auto"/>
-			<div class="col-start-3 row-start-11 row-span-3 col-span-13">
+			<img src="/assets/legehelte_tidslinje.svg" alt="legehelte" class="col-start-25 col-span-5 row-start-10 w-full h-auto lg:w-25 lg:row-start-7 lg:col-start-22"/>
+			<div class="col-start-3 row-start-11 row-span-3 col-span-12 lg:row-start-8 lg:col-span-7 lg:col-start-7">
 				<Text teksttype="brødtekst">2021</Text>
 				<Heading htmlheading="h4" size="medium" font="sans" stylingclasses="-mt-3">26 Legehelte</Heading>
 				<Heading htmlheading="h5" size="xsmall" font="sans" stylingclasses="">19 børneafdelinger</Heading>
 				<Text teksttype="brødtekst">Aalborg Syd, Aalborg, psykiatri, Roskilde, Randers, Rønde & Esbjerg</Text>
 			</div>
-			<img src="/assets/legehelte_tidslinje.svg" alt="hospital" class="col-start-11 -rotate-45 col-span-5 row-start-11 w-full h-auto"/>
-			<div class="col-start-17 row-start-13 row-span-4 col-span-15">
-				<Text teksttype="brødtekst">2022</Text>
-				<Heading htmlheading="h4" size="medium" font="sans" stylingclasses="-mt-3 leading-6">Lancering af Heltecamps</Heading>
-				<Text teksttype="brødtekst">Hjørring & Filadelfia</Text>
+			<img src="/assets/legehelte_tidslinje.svg" alt="legehelte" class="col-start-11 -rotate-45 col-span-5 row-start-11 w-full h-auto lg:w-25 lg:row-start-8 lg:col-start-12"/>
+			<div class="col-start-17 row-start-13 row-span-4 col-span-15 lg:row-start-9">
+				<Text teksttype="brødtekst" stylingclasses="lg:pl-2">2022</Text>
+				<Heading htmlheading="h4" size="medium" font="sans" stylingclasses="-mt-3 leading-6 lg:leading-9 lg:pl-2">Lancering af Heltecamps</Heading>
+				<Text teksttype="brødtekst" stylingclasses="lg:pl-2">Hjørring & Filadelfia</Text>
 			</div>
-			<img src="/assets/heltecamps_tidslinje.svg" alt="hospital" class="col-start-25 col-span-5 row-start-13 w-full h-auto"/>
-						<div class="col-start-3 row-start-14 row-span-4 col-span-12">
+			<img src="/assets/heltecamps_tidslinje.svg" alt="heltecamp" class="col-start-25 col-span-5 row-start-13 w-full h-auto lg:w-25 lg:row-start-9 lg:col-start-26 lg:pl-5"/>
+						<div class="col-start-3 row-start-14 row-span-4 col-span-12 lg:row-start-10 lg:col-start-7 lg:pt-4">
 				<Text teksttype="brødtekst">2022</Text>
 				<Heading htmlheading="h4" size="medium" font="sans" stylingclasses="-mt-3">29 Legehelte</Heading>
 				<Heading htmlheading="h5" size="xsmall" font="sans" stylingclasses="leading-4">Et børnehjem og 4 modtagecentre</Heading>
 				<Text teksttype="brødtekst">Aarhus, Aalborg, Odense & København</Text>
 			</div>
-			<img src="/assets/legehelte_tidslinje.svg" alt="hospital" class="col-start-11 col-span-5 row-start-14 w-full h-auto"/>
+			<img src="/assets/legehelte_tidslinje.svg" alt="legehelte" class="col-start-11 col-span-5 row-start-14 w-full h-auto lg:w-25 lg:row-start-10 lg:col-start-13"/>
 		</div>
-
-
-
-
 	</section>
-
-
-
-
-
-
-
-
 	<!--SLUT PÅ TIDSLINJE -->
+
+	<!-- START PÅ ÅRSRAPPORT -->
+<section class="container mx-auto mb-30 bg-secondary rounded-tr-3xl rounded-bl-3xl">
+  <div class="grid lg:grid-cols-2">
+
+    <!-- TEKST -->
+    <div class="lg:mt-30 order-1 lg:order-2">
+      <Heading htmlheading="h2" size="large" font="display" stylingclasses="text-center lg:text-start text-offwhite px-10 mt-10 pb-5">
+        Årsrapport 2024
+      </Heading>
+      <Text teksttype="brødtekst" stylingclasses="text-offwhite px-10 pb-5">
+        Takket være støtte fra private donorer, virksomheder, fonde, og samarbejdspartnere har Børneulykkesfonden i 2024 haft flere aktiviteter end nogensinde før.
+      </Text>
+      <Text teksttype="brødtekst" stylingclasses="text-offwhite px-10">
+        Læs mere om dette og årets resultater i årsrapporten her.
+      </Text>
+      <div class="pt-12">
+        <img src="/assets/mobil_offwhite_doodle.svg" alt="doodle" class="mx-auto block pb-8 lg:hidden" />
+        <img src="/assets/offwhite_doodle_web.svg" alt="doodle" class="hidden lg:block lg:px-10 pb-10" />
+      </div>
+     <div class="text-center lg:text-start px-10 lg:pb-10">
+  	<Link href="https://www.datocms-assets.com/104863/1757656519-arsmagasin-2024-web.pdf" variant="secondary" size="large">
+    Læs mere
+  	</Link>
+</div>
+
+    </div>
+
+    <!-- BILLEDE -->
+    <img src="/img/aarsrapport.webp" alt="foto_til_aarsrapport" class="w-full h-full order-2 lg:order-1 object-cover" />
+
+  </div>
+</section>
+
+
+	<!-- SLUT PÅ ÅRSRAPPORT -->
 
 
 
