@@ -8,215 +8,188 @@ import Text from "../components/Text.astro";
 import Button from "../components/Button.astro";
 import Stoet from "../components/Stoet.astro";
 import InitiativeCard from "../components/InitiativeCard.astro";
-import Udtalelser from "../components/Udtalelser.astro";
+import Udtalelser from "../components/Udtalelser.astro";	
 ---
 <MainLayout title="Heltene">
 <main class="">
 <!-- start på hero -->
 <section class="w-full min-h-145 bg-[url(/assets/mobil_regnbue_hero.svg)] bg-cover bg-center bg-no-repeat lg:w-full lg:bg-[url(/assets/regnbue_hero.svg)] lg:bg-cover lg:bg-right">
-	<div class="pt-12"><img src="/assets/mobil_orange_doodle.svg" alt="doodle" class=" mx-auto pb-2 block lg:hidden" />
-	<img src="/assets/orange_doodle_web.svg" alt="doodle" class="lg:px-20 hidden lg:block" />
-	<img src="/assets/orange_doodle_web.svg" alt="doodle" class="mx-auto hidden md:block lg:hidden" />
-	</div>
-<div class="grid grid-cols-1 lg:grid-cols-2">
+  <!-- Doodles -->
+  <div class="pt-12">
+    <img src="/assets/mobil_orange_doodle.svg" alt="doodle" class="mx-auto pb-2 block lg:hidden" />
+    <img src="/assets/orange_doodle_web.svg" alt="doodle" class="lg:px-20 hidden lg:block" />
+    <img src="/assets/orange_doodle_web.svg" alt="doodle" class="mx-auto hidden md:block lg:hidden" />
+  </div>
 
-<div class="text-center lg:text-left px-4 lg:px-20">
-<Heading htmlheading="h1" size="xlarge" font="display" stylingclasses="text-text mt-25 lg:mt-0 py-2 row-start-2 lg:row-start-1 lg:col-start-2">Sammen kan vi give børn smil og styrke i en svær tid</Heading>
-<Text teksttype="brødtekst" stylingclasses="text-text">Vi arbejder for at skabe et liv med mere leg, bevægelse og fællesskab for syge, indlagte og udsatte børn og deres familier.</Text>
-<Text teksttype="brødtekst" stylingclasses="text-text">Gør en heltegerning, og støt vores arbejde.</Text>
+  <!-- Grid med tekst og billede -->
+  <div class="grid grid-cols-1 lg:grid-cols-2">
+    <!-- Tekstkolonne -->
+    <div class="text-center lg:text-left px-4 lg:px-20">
+      <Heading 
+        htmlheading="h1" 
+        size="xlarge" 
+        font="display" 
+        stylingclasses="text-text mt-25 lg:mt-0 py-2 row-start-2 lg:row-start-1 lg:col-start-2"
+      >
+        Sammen kan vi give børn smil og styrke i en svær tid
+      </Heading>
 
-<div class="flex flex-row items-center gap-5 py-8 lg:flex-row lg:items-start px-10 lg:px-0">
-<Text><Link href="/stoette" variant="primary" size="large" icon="/assets/stoet_ikon_web.svg" iconHover="/assets/stoet_ikon_filled.svg">Støt</Link></Text>
+      <Text teksttype="brødtekst" stylingclasses="text-text">
+        Vi arbejder for at skabe et liv med mere leg, bevægelse og fællesskab for syge, indlagte og udsatte børn og deres familier.
+      </Text>
 
-<Text><Link href="#helteinitiativer" variant="secondary" size="large">Helteinitiativer</Link></Text>
-</div>
-</div>
-<img
-    src="/img/forside_hero.webp"
-    class="w-100 mx-auto z-10 -order-1 lg:order-1"
-    alt="heroimg"
-/>
-</div>
+      <Text teksttype="brødtekst" stylingclasses="text-text">
+        Gør en heltegerning, og støt vores arbejde.
+      </Text>
+
+      <div class="flex flex-row items-center gap-5 py-8 lg:flex-row lg:items-start px-10 lg:px-0">
+        <Text><Link href="/stoette" variant="primary" size="large" icon="/assets/stoet_ikon_web.svg" iconHover="/assets/stoet_ikon_filled.svg">Støt</Link></Text>
+
+        <Text>
+          <Link href="#helteinitiativer" variant="secondary" size="large">
+            Helteinitiativer
+          </Link>
+        </Text>
+      </div>
+    </div>
+
+    <!-- Billedkolonne -->
+    <div>
+      <img
+        src="/img/forside_hero.webp" 
+        class="w-100 mx-auto z-10 -order-1 lg:order-1 object-cover" 
+        alt="heroimg"
+      />
+    </div>
+  </div>
 </section>
-<div class="relative z-10 -mt-23">
+<div class="relative z-10 lg:-mt-23">
   <Stoet />
 </div>
 
 <!-- Start på helteinitiativer -->
 
 <div class="z-0 relative">
- <section id="helteinitiativer" class="bg-secondary pt-45 py-20 -mt-26">
-	<div class="container mx-auto">
-		<img src="/assets/mobil_offwhite_doodle.svg" alt="doodle" class="mx-auto pb-2 block lg:hidden" />
-		<img src="/assets/offwhite_doodle_web.svg" alt="doodle" class="mx-auto pb-2 hidden lg:block" />
-	<Heading htmlheading="h2" size="large" font="display" stylingclasses="text-offwhite text-center p-2">Vores fire helteinitiativer</Heading>
-	<Text teksttype="brødtekst" stylingclasses="text-offwhite text-center lg:px-20 pb-10">Vi skaber leg, bevægelse og fællesskab for syge og sårbare børn på hospitaler, i psykiatrien, på børnehjem og indkvarteringssteder. Gennem Legeheltene, Kreaheltene, Helteakademiet og Heltecamps skaber vi aktiviteter og gode oplevelser.</Text>
-	</div>
-	<div class="container mx-auto p-4 grid grid-cols-1 gap-6 md:grid-cols-2">
- 		 <InitiativeCard
-	 	class="rounded-tl-3xl rounded-br-3xl flex-row-reverse hover:bg-skyblue100 transition-colors duration-300"
-		logo="/assets/legehelte_initiativ.svg"
-		number="20"
-		title="Legehelte"
-		text="er dagligt til stede på børneafdelinger i hele landet"
-		/>
-		<InitiativeCard
-		class="rounded-tr-3xl rounded-bl-3xl hover:bg-lime200 transition-colors duration-300"
-		logo="/assets/heltecamps_initiativ.svg"
-		number="7"
-		title="Heltecamps"
-		text="afholdes hver sommer for syge børn i hele Danmark"
-		/>
-		<InitiativeCard
-		class="rounded-tr-3xl rounded-bl-3xl hover:bg-pink200 transition-colors duration-300"
-		logo="/assets/kreahelte_initiativ.svg"
-		number="20"
-		title="Kreahelte"
-		text="inviterer dagligt børnene ind i deres kreative værksteder"
-		/>
-		<InitiativeCard
-		class="rounded-tl-3xl rounded-br-3xl flex-row-reverse hover:bg-grassgreen300 transition-colors duration-300"
-		logo="/assets/helteakademi_initiativ.svg"
-		number="18"
-		title="Helteakademier"
-		text="sørger hver uge boldspil mm. for børn med sygdom og handicap"
-		/>
-	</div>
-	<div class="flex justify-center mt-10">
-            <Text><Link href="/stoette" variant="secondary" size="large">Det går din støtte til</Link></Text>
-</section>
+  <section id="helteinitiativer" class="bg-secondary pt-45 py-20 -mt-26">
+    <div class="container mx-auto">
+      <img src="/assets/mobil_offwhite_doodle.svg" alt="doodle" class="mx-auto pb-2 block lg:hidden" />
+      <img src="/assets/offwhite_doodle_web.svg" alt="doodle" class="mx-auto pb-2 hidden lg:block" />
+      <Heading htmlheading="h2" size="large" font="display" stylingclasses="text-offwhite text-center p-2">
+        Vores fire helteinitiativer
+      </Heading>
+      <Text teksttype="brødtekst" stylingclasses="text-offwhite text-center lg:px-20 pb-10">
+        Vi skaber leg, bevægelse og fællesskab for syge og sårbare børn på hospitaler, i psykiatrien, på børnehjem og indkvarteringssteder. Gennem Legeheltene, Kreaheltene, Helteakademiet og Heltecamps skaber vi aktiviteter og gode oplevelser.
+      </Text>
+    </div>
+
+    <div class="container mx-auto p-4 grid grid-cols-1 gap-6 md:grid-cols-2">
+      <InitiativeCard
+        class="rounded-tl-3xl rounded-br-3xl flex-row-reverse hover:bg-skyblue100 transition-colors duration-300"
+        logo="/assets/legehelte_initiativ.svg"
+        number="20"
+        title="Legehelte"
+        text="er dagligt til stede på børneafdelinger i hele landet"
+        href="/legeheltene"
+      />
+      <InitiativeCard
+        class="rounded-tr-3xl rounded-bl-3xl hover:bg-lime200 transition-colors duration-300"
+        logo="/assets/heltecamps_initiativ.svg"
+        number="7"
+        title="Heltecamps"
+        text="afholdes hver sommer for syge børn i hele Danmark"
+      />
+      <InitiativeCard
+        class="rounded-tr-3xl rounded-bl-3xl hover:bg-pink200 transition-colors duration-300"
+        logo="/assets/kreahelte_initiativ.svg"
+        number="20"
+        title="Kreahelte"
+        text="inviterer dagligt børnene ind i deres kreative værksteder"
+      />
+      <InitiativeCard
+        class="rounded-tl-3xl rounded-br-3xl flex-row-reverse hover:bg-grassgreen300 transition-colors duration-300"
+        logo="/assets/helteakademi_initiativ.svg"
+        number="18"
+        title="Helteakademier"
+        text="sørger hver uge boldspil mm. for børn med sygdom og handicap"
+      />
+    </div>
+
+    <div class="flex justify-center mt-10">
+      <Text>
+        <Link href="/stoette" variant="secondary" size="large">Det går din støtte til</Link>
+      </Text>
+    </div>
+  </section>
 </div>
+
 <!-- Slut på helteinitiativer -->
 
+<!-- START PÅ UDTALELSER -->
+
 <section class="container mx-auto py-20">
-  <Heading htmlheading="h2" size="large" font="display" stylingclasses="text-text text-center mb-10">
+  <Heading htmlheading="h2" size="large" font="display" stylingclasses="text-text text-center px-10 mb-10">
     Det siger forældre og fagfolk om os
   </Heading>
-  <div class="flex gap-12 px-4 overflow-x-auto scrollbar-hide lg:grid lg:grid-cols-3 lg:gap-10">
-<Udtalelser
-  cardimage="/img/udtalelser_2.webp"
-  cardimagealt="clara"
-  cardtitle="Christina"
-  person="Mor til Clara, som spiller i Helteakademiet"
-  cardtext="“Legeheltene bidrager til meningsfulde pauser på hospitalet. Pauser, hvor børn kan få et smil på læben, komme ud at røre sig, måske møde andre børn og på den måde skabe gode minder."
-  cardtext2="Legeheltene har mulighed for at møde børnene uden underliggende klinisk agenda, men udelukkende som motivatorer og sjove afbræk. En god kontakt med Legeheltene smitter med stor sandsynlighed også af på det sygdoms- og behandlingsmæssige forløb på hospitalet.”"
-/>
-<Udtalelser
-  cardimage="/img/udtalelser_1.webp"
-  cardimagealt="andrea"
-  cardtitle="Andrea"
-  education="Mor til Andrea"
-  cardtext="Her skriver du kortets tekst"
-/>
-
-
-</div>
-
-
-
-	
-
-
-
-
-
-
-		<!-- Card 1-->
-    	<article class="relative w-72 mx-auto">
-				<!-- Rundt billede -->
-    			<div class="w-40 h-40 rounded-full overflow-hidden mx-auto relative z-10">
-        			<img src="/img/udtalelser_2.webp" alt="clara" class="w-full h-full object-cover"/>
-    			</div>
-
-   				 <!-- Info-kortet -->
-    			<div class="-mt-16 pt-10 w-80 h-115 pb-8 px-4 bg-offwhite rounded-2xl">
-				<Text teksttype="brødtekst" stylingclasses="px-2 mt-6 lg:mt-8">
-					“Legeheltene bidrager til meningsfulde pauser på hospitalet. Pauser, hvor børn kan få et smil på læben, komme ud at røre sig, måske møde andre børn og på den måde skabe gode minder.
-				</Text>
-				<Text teksttype="brødtekst" stylingclasses="px-2 pt-3">
-					
-				</Text>
-        		 <Heading htmlheading="h4" size="small" font="sans" stylingclasses="mt-4 pb-2 text-text px-2">Christina</Heading>
-      			<Heading htmlheading="h4" size="xsmall" font="sans" stylingclasses="text-grey500 pb-10 px-2">
-       				 Mor til Clara, som spiller i Helteakademiet
-      			</Heading>
-    			</div>
+  	<div class="lg:flex lg:justify-start">
+    				<!-- Mobil doodle -->
+					<img src="/assets/mobil_orange_doodle.svg" alt="" class="mx-auto pb-8 block lg:hidden">
+					<!-- Desktop doodle -->
+					<img src="/assets/orange_doodle_web.svg" alt="" class="hidden lg:block lg:mx-auto pt-10">
+				</div>
+  <div class="-my-10 lg:my-10 ">
+			<article class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth w-full gap-60 ml-0 lg:ml-14 mt-10 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200">
+				<div id="christina" class="flex-none justify-center min-w-full lg:min-w-0 snap-start lg:w-80">
+					<Udtalelser
+					size="large"
+					cardimage="/img/udtalelser_1.webp"
+					cardtitle="Christina"
+					cardtext="Legeheltene bidrager til meningsfulde pauser på hospitalet. Pauser, hvor børn kan få et smil på læben, komme ud at røre sig, måske møde andre børn og på den måde skabe gode minder. Legeheltene har mulighed for at møde børnene uden underliggende klinisk agenda, men udelukkende som motivatorer og sjove afbræk. En god kontakt med Legeheltene smitter med stor sandsynlighed også af på det sygdoms- og behandlingsmæssige forløb på hospitalet."
+					cardundertitle="Mor til Elias, som spiller i Helteakademiet"
+					/>
+				</div>
+				<div id="dorhte" class="flex-none justify-center min-w-full lg:min-w-0 snap-start lg:w-80">
+					<Udtalelser
+					size="large"
+					cardimage="/img/udtalelser_2.webp"
+					cardtitle="Dorthe"
+					cardtext="Vi har en datter med en alvorlig, progressiv sygdom og lever derfor i konstant beredskab, samtidig med at vi forsøger at nyde livet med hende. Vi har været med på Heltecamp to gange, og hun elsker det – især fordi hun, som hun selv siger: “På Heltecamp er jeg ikke anderledes.” For os som forældre betyder fællesskabet på campen allermest. Her skabes minder, tryghed og venskaber, som også varer ved efter campen."
+					cardundertitle="Mor til Luna, der har deltaget på heltecamp"
+					/>
+				</div>
+				<div id="lise" class="flex-none justify-center min-w-full lg:min-w-0 snap-start lg:w-80">
+					<Udtalelser
+					size="large"
+					cardimage="/img/udtalelser_3.webp"
+					cardtitle="Lise"
+					cardtext="De fjollede rundt, og der blev kastet lidt med en badebold, men det vigtigste var, at de fjollede og grinede og havde det sjovt, og Jessica glemte jo så lige alt om, at hun faktisk ikke havde det ret godt. Det var super fantastisk at opleve, og det er nogle skønne initiativer!"
+					cardundertitle="Mor til Jessica, der har leget med Legeheltene og Kreaheltene"
+					/>
+				</div>
+				<div id="ella" class="flex-none justify-center min-w-full lg:min-w-0 snap-start lg:w-80">
+					<Udtalelser
+					size="large"
+					cardimage="/img/udtalelser_4.webp"
+					cardtitle="Ella"
+					cardtext="Lege- og Kreaheltene forandrer hverdagen for forældre med syge børn og børn med alvorlige sygdomme. Det gør en verden til forskel med nogen, der tænker på børnenes interesser og andet en sygdom. Det er en verden til forskel."
+					cardundertitle="Mor til Thor, der har leget med Legeheltene og Kreaheltene mange gange"
+					/>
+				</div>
+				<div id="susanne" class="flex-none justify-center min-w-full lg:min-w-0 snap-start lg:w-80">
+					<Udtalelser
+					size="large"
+					cardimage="/img/udtalelser_5.webp"
+					cardtitle="Susanne"
+					cardtext="Lege- og Kreaheltene skaber små øjeblikke af glæde og tryghed for børn med alvorlige sygdomme og deres forældre. Det betyder alverden at have nogen, der ser børnene som børn først – med leg, kreativitet og nærvær – og ikke kun som patienter. Det gør en verden til forskel."
+					cardundertitle="Mor til Elias, som spiller i helteakademiet"
+					/>
+				</div>
 			</article>
-			   <!-- Card 2 -->
-    	<article class="relative w-72 mx-auto">
-				<!-- Rundt billede -->
-    			<div class="w-40 h-40 rounded-full overflow-hidden mx-auto relative z-10">
-        			<img src="/img/udtalelser_1.webp" alt="andrea" class="w-full h-full object-cover"/>
-    			</div>
+		</div>
 
-   				 <!-- Info-kortet -->
-    			<div class="-mt-16 pt-10 w-80 h-115 pb-8 px-4 bg-offwhite rounded-2xl">
-				<Text teksttype="brødtekst" stylingclasses="px-2 mt-6 lg:mt-8">
-					“Vi har en datter med en alvorlig, progressiv sygdom og lever derfor i konstant beredskab, samtidig med at vi forsøger at nyde livet med hende. Vi har været med på Heltecamp to gange, og hun elsker det – især fordi hun, som hun selv siger: “På Heltecamp er jeg ikke anderledes.
-				</Text>
-				<Text teksttype="brødtekst" stylingclasses="px-2 pt-3">
-					For os som forældre betyder fællesskabet på campen allermest. Her skabes minder, tryghed og venskaber, som også varer ved efter campen.”
-				</Text>
-        		 <Heading htmlheading="h4" size="small" font="sans" stylingclasses="mt-4 pb-2 text-text px-2">Christina</Heading>
-      			<Heading htmlheading="h4" size="xsmall" font="sans" stylingclasses="text-grey500 pb-10 px-2">
-       				 Mor til Clara, som spiller i Helteakademiet
-      			</Heading>
-    			</div>
-			</article>
-		<!-- Card 3-->
-		<article class="relative w-72 mx-auto">
-				<!-- Rundt billede -->
-    			<div class="w-40 h-40 rounded-full overflow-hidden mx-auto relative z-10">
-        			<img src="/img/udtalelser_2.webp" alt="elias" class="w-full h-full object-cover"/>
-    			</div>
-
-   				 <!-- Info-kortet -->
-    			<div class="-mt-16 pt-10 w-80 h-115 pb-8 px-4 bg-offwhite rounded-2xl">
-				<Text teksttype="brødtekst" stylingclasses="px-6 mt-6 lg:mt-8">
-					De fjollede rundt, og der blev kastet lidt med en badebold, men det vigtigste var, at de fjollede og grinede og havde det sjovt, og Jessica glemte jo så lige alt om, at hun faktisk ikke havde det ret godt.
-				</Text>
-        		 <Heading htmlheading="h4" size="small" font="sans" stylingclasses="mt-4 pb-2 text-text px-6">Christina</Heading>
-      			<Heading htmlheading="h4" size="xsmall" font="sans" stylingclasses="text-grey500 pb-10 px-6">
-       				 Mor til Elias, som spiller i Helteakademiet
-      			</Heading>
-    			</div>
-			</article>
-  </div>
 </section>
-<!-- start på faktabokse -->
-<section class="container mx-auto relative py-10 lg:pr-30">
-	<div class="relative w-full h-full flex flex-col lg:flex-row justify-center items-center lg:items-start">
-		<!-- We render three larger bubble cards. On mobile they stack; on md+ they sit in a row and overlap. -->
 
-		<!-- Bobbel 1 (forrest) -->
-		<div class="relative w-90 lg:w-100 aspect-square bg-[url(/assets/groen_bobbel.svg)] bg-no-repeat bg-center bg-contain z-30 flex flex-col items-center justify-center px-10 mx-15">
-			<Heading htmlheading="h3" size="xxlarge" font="display" stylingclasses="text-center text-text">100%</Heading>
-			<Heading htmlheading="h4" size="medium" font="sans" stylingclasses="text-center text-text leading-7 pb-2">Glade forældre</Heading>
-			<Text teksttype="brødtekst" stylingclasses="text-center text-text px-4">
-				Alle forældre vurderede Kreaheltenes aktiviteter som “Rigtig god” eller “God”.
-			</Text>
-		</div>
 
-		<!-- Bobbel 2 (midten -->
-		<div class="relative w-90 lg:w-100 aspect-square bg-[url(/assets/orange_bobbel.svg)] bg-no-repeat bg-center bg-contain z-20 flex flex-col items-center justify-center px-10 lg:-ml-20 mx-18 -mt-12 lg:mt-0">
-			<Heading htmlheading="h3" size="xxlarge" font="display" stylingclasses="text-center text-text">88%</Heading>
-			<Heading htmlheading="h4" size="medium" font="sans" stylingclasses="text-center text-text leading-7 pb-2">Oplever stort behov for frirum</Heading>
-			<Text teksttype="brødtekst" stylingclasses="text-center text-text px-4">
-			Størstedelen af sygehuspersonalet vurderer, at børn i høj eller meget høj grad har brug for det frirum, Legeheltene skaber.
-			</Text>
-		</div>
-
-		<!-- Bobbel 3 (bagerst) -->
-		<div class="relative w-90 lg:w-100 aspect-square bg-[url(/assets/blaa_boobel.svg)] bg-no-repeat bg-center bg-contain z-10 flex flex-col items-center justify-center px-10 lg:-ml-28 mx-2 -mt-20 lg:mt-0">
-			<Heading htmlheading="h3" size="xxlarge" font="display" stylingclasses="text-center text-text">91%</Heading>
-			<Heading htmlheading="h4" size="medium" font="sans" stylingclasses="text-center text-text leading-7 pb-2">Ser en effekt på aktivitetsniveauet</Heading>
-			<Text teksttype="brødtekst" stylingclasses="text-center text-text px-4">
-			Størstedelen af hospitalspersonalet svarer “Ja” til, at Legeheltene bidrager til mere aktiv leg og bevægelse blandt indlagte børn.
-			</Text>
-		</div>
-	</div>
-</section>
-<!-- Slut på faktabokse -->
+<!-- SLUT PÅ UDTALELSER -->
 
 
 
