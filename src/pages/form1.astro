@@ -1,0 +1,83 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Link from "../components/Link.astro";
+import Heading from "../components/Heading.astro";
+import Text from "../components/Text.astro";
+import Button from "../components/Button.astro";
+---
+<MainLayout title="Støt">
+	<main class="container mx-auto p-8">
+		<section class="lg:mt-15">
+    		<Heading htmlheading="h1" size="xlarge" font="display" stylingclasses="text-center">Tak fordi du støtter Heltene</Heading>
+    		<div class="relative w-full mx-auto mt-10 lg:mt-20">
+        		<!-- Linjen -->
+        		<div class="h-2 bg-offwhite w-73 mx-auto lg:w-200"></div>
+        		<!-- Cirkler ovenpå linjen -->
+        		<div class="absolute -bottom-2 left-9 flex justify-between w-73 lg:w-200 mx-auto lg:left-52 lg:-bottom-3">
+            		<div class="bg-burnedorange100 border-3 border-accent rounded-full h-7 w-7 lg:h-10 lg:w-10"></div>
+            		<div class="bg-offwhite border-3 border-accent rounded-full h-7 w-7 lg:h-10 lg:w-10"></div>
+            		<div class="bg-offwhite border-3 border-accent rounded-full h-7 w-7 lg:h-10 lg:w-10"></div>
+            		<div class="bg-offwhite border-3 border-accent rounded-full h-7 w-7 lg:h-10 lg:w-10"></div>
+        		</div>
+    		</div>
+			<div class="grid grid-cols-4 items-center text-center gap-6 mt-4 lg:mx-29">
+				<Text teksttype="brødtekst">Beløb</Text>
+				<Text teksttype="brødtekst">Oplysninger</Text>
+				<Text teksttype="brødtekst">Betal</Text>
+				<Text teksttype="brødtekst">Bekræftelse</Text>
+			</div>
+			<!-- Valg af beløb -->
+			 <div class="flex justify-center">
+			 	<div x-data="{ amount: '50', contribution: 'monthly', type: 'privat', payment: 'mobilepay' }" class="flex flex-col items-center lg:items-start justify-center">
+					<div class=" mt-8 mb-4 w-80">
+						<Heading htmlheading="h4" size="small" font="sans" stylingclasses="font-medium">Type af bidrag</Heading>
+				 		<!-- Radiobuttons -->
+        				<div class="flex flex-row gap-6 pt-2 lg:justify-start">
+            				<div class="flex items-center">
+                				<input id="default-radio-1" type="radio" value="" name="default-radio" @change="contribution = 'single'" class="border-1 border-accent bg-offwhite focus:ring-accent checked:bg-accent rounded-full lg:w-6 lg:h-6">
+                				<label for="default-radio-1" class="select-none ms-2 font-serif text-2xl"><Text teksttype="brødtekst">Enkelt</Text></label>
+            				</div>
+            				<div class="flex items-center">
+                				<input checked id="default-radio-2" type="radio" value="" name="default-radio" @change="contribution = 'monthly'" class="border-1 border-accent bg-offwhite focus:ring-accent checked:bg-accent lg:w-6 lg:h-6">
+                				<label for="default-radio-2" class="select-none ms-2 font-serif text-2xl "><Text teksttype="brødtekst">Månedligt</Text></label>
+            				</div>  
+        				</div>
+					</div>
+
+					<div class="flex justify-between text-center items-center rounded-full bg-offwhite h-10 w-80 lg:h-12">
+						<button type="button" @click="amount = '50'" :class="amount === '50' ? 'active' : ''" class="switch-btn flex-1 h-full"><Text teksttype="brødtekst">50 kr</Text></button>
+						<button type="button" @click="amount = '150'" :class="amount === '150' ? 'active' : ''" class="switch-btn flex-1 h-full"><Text teksttype="brødtekst">150 kr</Text></button>
+						<button type="button" @click="amount = '250'" :class="amount === '250' ? 'active' : ''" class="switch-btn flex-1 h-full"><Text teksttype="brødtekst">250 kr</Text></button>
+					</div>
+
+					<!-- Andet beløb -->
+       	 			<div class="flex gap-10 pt-4">
+            			<input id="andetbeloeb" type="text" name="andetbeloeb" placeholder="Andet beløb" class="text-center w-80 px-4 rounded-full border-none placeholder:text-grey500 focus:outline-accent font-serif bg-offwhite text-base  lg:text-2xl lg:px-12 lg:py-3 lg:h-12" /> 
+        			</div>
+					<!-- Privat/virksomhed -->
+		 			<div class="flex justify-between text-center items-center rounded-full bg-offwhite h-10 w-80 mt-4 lg:h-12">
+						<button type="button" @click="type = 'privat'" :class="type === 'privat' ? 'active' : ''" class="switch-btn flex-1 h-full"><Text teksttype="brødtekst">Privat</Text></button>
+						<button type="button" @click="type = 'monthly'" :class="type === 'monthly' ? 'active' : ''" class="switch-btn flex-1 h-full"><Text teksttype="brødtekst">Månedligt</Text></button>
+					</div>
+
+					<!-- Betal -->
+					 <Heading htmlheading="h4" size="small" font="sans" stylingclasses="font-medium mt-4">Betal med</Heading>
+			 		<div class="flex justify-between mt-2 text-center items-center rounded-full bg-offwhite h-10 w-80 lg:h-12">
+						<button type="button" @click="payment = 'mobilepay'" :class="payment === 'mobilepay' ? 'active' : ''" class="switch-btn flex-1 h-full"><Text teksttype="brødtekst">Mobilepay</Text></button>
+  						<button type="button" @click="payment = 'kort'" :class="payment === 'kort' ? 'active' : ''" class="switch-btn flex-1 h-full"><Text teksttype="brødtekst">Kort</Text></button>
+					</div>
+
+					<!-- Pil navigation -->
+					<div class="flex justify-end mt-8 w-80">
+  						<a x-show="payment === 'mobilepay'" href="/mpform" class="cursor-pointer">
+    						<img src="/assets/orange_pil_hoejre.svg" class="scale-80">
+  						</a>
+  						<a x-show="payment === 'kort'" href="/form3" class="cursor-pointer">
+    						<img src="/assets/orange_pil_hoejre.svg" class="scale-80">
+  						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+</MainLayout>
