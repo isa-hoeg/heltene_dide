@@ -3,6 +3,7 @@ const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1); // remove the first "/"
 import Text from "../components/Text.astro";
 import Link from "../components/Link.astro";
+import Heading from "./Heading.astro";
 ---
 <header x-data="{ showmenu: false }" class="bg-offwhite" >
     <div id="navbar" class="px-2 py-2 flex flex-row justify-between items-center lg:px-4">
@@ -26,7 +27,7 @@ import Link from "../components/Link.astro";
                     <button @click="open = !open" class="text-xl hover:text-accent font-semibold cursor-pointer">+ OM OS</button>
                     <div x-show="open" @click.outside="open = false" x-transition class="absolute bg-offwhite  mt-2 px-6 py-4 rounded-br-[50px] grid grid-cols-2 min-w-lg">
                         <div class="">
-                            <p class="text-xl text-grey500">DET GØR VI</p>
+                            <Heading htmlheading="h4" size="xsmall" font="sans" stylingclasses="text-grey500">DET GØR VI</Heading>
                             <Text><Link href="/om" variant="headerlink2" size="large">Om os</Link></Text>
                             <Text><Link href="" variant="headerlink2" size="large">Organisationen</Link></Text>
                             <Text><Link href="" variant="headerlink2" size="large">Ansvarlighed</Link></Text>
@@ -35,7 +36,7 @@ import Link from "../components/Link.astro";
                             <Text><Link href="" variant="headerlink2" size="large">Find os</Link></Text>
                         </div>
                         <div class="">
-                            <p class="text-xl text-grey500">HELTEVENNER</p>
+                            <Heading htmlheading="h4" size="xsmall" font="sans" stylingclasses="text-grey500">DET GØR ANDRE</Heading>
                             <Text><Link href="" variant="headerlink2" size="large">Sponsorer</Link></Text>
                             <Text><Link href="" variant="headerlink2" size="large">Samarbejdspartnere</Link></Text>
                             <Text><Link href="" variant="headerlink2" size="large">Ambassadørfamilier</Link></Text>
@@ -71,7 +72,7 @@ import Link from "../components/Link.astro";
                 <details>
                     <summary class="text-lg hover:text-accent font-semibold">OM OS</summary>
                     <div class="">
-                        <p class="text-lg lg:text-xl text-grey500">DET GØR VI</p>
+                        <Heading htmlheading="h4" size="xsmall" font="sans" stylingclasses="text-grey500">DET GØR VI</Heading>
                         <Text><Link href="/om" variant="headerlink2" size="large">Om os</Link></Text>
                         <Text><Link href="" variant="headerlink2" size="large">Organisationen</Link></Text>
                         <Text><Link href="" variant="headerlink2" size="large">Ansvarlighed</Link></Text>
@@ -80,7 +81,7 @@ import Link from "../components/Link.astro";
                         <Text><Link href="" variant="headerlink2" size="large">Find os</Link></Text>
                     </div>
                     <div class="">
-                        <p class="text-lg lg:text-xl text-grey500">HELTEVENNER</p>
+                        <Heading htmlheading="h4" size="xsmall" font="sans" stylingclasses="text-grey500">DET GØR ANDRE</Heading>
                         <Text><Link href="" variant="headerlink2" size="large">Sponsorer</Link></Text>
                         <Text><Link href="" variant="headerlink2" size="large">Samarbejdspartnere</Link></Text>
                         <Text><Link href="" variant="headerlink2" size="large">Ambassadørfamilier</Link></Text>
