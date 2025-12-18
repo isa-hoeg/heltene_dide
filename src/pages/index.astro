@@ -10,307 +10,253 @@ import Udtalelser from "../components/Udtalelser.astro";
 <MainLayout title="Heltene">
 <main class="">
 <div class="progress-bar h-6 z-110 fixed w-full bg-[url('/assets/regnbue_hover.svg')] left-0 origin-top-left top-0 right-0"></div>
-<!-- start på hero -->
-<section class="w-full min-h-145 bg-[url(/assets/mobil_regnbue_hero.svg)] bg-cover bg-center bg-no-repeat md:bg-[url(/assets/regnbue_hero.svg)] md:bg-cover md:bg-center md:min-h-175 lg:w-full lg:bg-[url(/assets/baggrund.svg)] lg:bg-cover lg:bg-right">
-  
-  
-  <div class="2xl:max-width-bscreen mx-auto">
-    <!-- Doodles -->
-    <div class="pt-12">
-      <img src="/assets/mobil_orange_doodle.svg" alt="doodle" class="mx-auto pb-2 block md:hidden lg:hidden" />
-      <img src="/assets/orange_doodle_web.svg" alt="doodle" class="hidden md:block lg:hidden mx-auto" />
-      <img src="/assets/orange_doodle_web.svg" alt="doodle" class="lg:px-20 hidden lg:block" />
-    </div>
+  <!-- START PÅ HERO -->
+  <section class="w-full min-h-145 bg-[url(/assets/mobil_regnbue_hero.svg)] bg-cover bg-center bg-no-repeat md:bg-[url(/assets/regnbue_hero.svg)] md:bg-cover md:bg-center md:min-h-175 lg:w-full lg:bg-[url(/assets/baggrund.svg)] lg:bg-cover lg:bg-right">
+    <div class="2xl:max-width-bscreen mx-auto">
+      <!-- Doodles -->
+      <div class="pt-12">
+        <img src="/assets/mobil_orange_doodle.svg" alt="doodle" class="mx-auto pb-2 block md:hidden lg:hidden" />
+        <img src="/assets/orange_doodle_web.svg" alt="doodle" class="hidden md:block lg:hidden mx-auto" />
+        <img src="/assets/orange_doodle_web.svg" alt="doodle" class="lg:px-20 hidden pb-2 lg:block" />
+      </div>
 
-    <!-- Grid med tekst og billede -->
-    <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2">
-      <!-- Tekstkolonne -->
-      <div class="text-center md:text-center lg:text-left px-4 md:px-10 lg:px-20">
-        <Heading 
-          htmlheading="h1" 
-          size="xlarge" 
-          font="display" 
-          stylingclasses="text-text mt-5 md:mt-10 lg:mt-0 py-2 row-start-2 lg:row-start-1 lg:col-start-2 intersect:animate-fade-right animate-once animate-duration-800ms"
-        >
-          Sammen kan vi give børn smil og styrke i en svær tid
-        </Heading>
-
-        <Text teksttype="brødtekst" stylingclasses="text-text mx-10 lg:mx-0 lg:w-115 mt-4 md:mt-6 lg:mt-2 intersect:animate-fade-right animate-once animate-duration-800ms">
-          Vi arbejder for at skabe et liv med mere leg, bevægelse og fællesskab for syge, indlagte og udsatte børn og deres familier.
-        </Text>
-
-        <Text teksttype="brødtekst" stylingclasses="text-text mt-2 md:mt-4 lg:mt-2 intersect:animate-fade-right animate-once animate-duration-800ms">
-          Gør en heltegerning, og støt vores arbejde.
-        </Text>
-
-        <div class="flex flex-row md:flex-row justify-center md:justify-center gap-5 py-8 lg:flex-row lg:justify-start px-10 md:px-10 lg:px-0">
-          <Text><Link href="/form1" variant="primary" size="large" icon="/assets/stoet_ikon_web.svg" iconHover="/assets/stoet_ikon_filled.svg">Støt</Link></Text>
-
-          <Text>
-            <Link href="#helteinitiativer" variant="secondary" size="large">
-              Helteinitiativer
-            </Link>
-          </Text>
+      <!-- Grid med tekst og billede -->
+      <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2">
+        <div class="text-center md:text-center lg:text-left px-4 md:px-10 lg:px-20">
+            <Heading htmlheading="h1" size="xlarge" font="display" stylingclasses="text-text mt-5 md:mt-10 lg:mt-0 py-2 row-start-2 lg:row-start-1 lg:col-start-2 intersect:animate-fade-right animate-once animate-duration-800ms">Sammen kan vi give børn smil og styrke i en svær tid</Heading>
+            <Text teksttype="brødtekst" stylingclasses="text-text mx-10 lg:mx-0 lg:w-115 mt-4 md:mt-6 lg:mt-2 intersect:animate-fade-right animate-once animate-duration-800ms">
+              Vi arbejder for at skabe et liv med mere leg, bevægelse og fællesskab for syge, indlagte og udsatte børn og deres familier.
+            </Text>
+            <Text teksttype="brødtekst" stylingclasses="text-text mt-2 md:mt-4 lg:mt-2 intersect:animate-fade-right animate-once animate-duration-800ms">
+              Gør en heltegerning, og støt vores arbejde.
+            </Text>
+          <div class="flex flex-row md:flex-row justify-center md:justify-center gap-5 py-8 lg:flex-row lg:justify-start px-10 md:px-10 lg:px-0">
+            <Link href="/form1" variant="primary" size="large" icon="/assets/stoet_ikon_web.svg" iconHover="/assets/stoet_ikon_filled.svg">Støt</Link>
+            <Link href="#helteinitiativer" variant="secondary" size="large">Helteinitiativer</Link>
+          </div>
+        </div>
+        <div class="mt-10 md:mt-12 lg:mt-0">
+            <img src="/img/forside_hero.webp" class="w-100 mx-auto z-10 -order-1 md:order-1 lg:order-1 object-cover intersect:animate-fade-left animate-once animate-duration-800ms" alt="heroimg"/>
         </div>
       </div>
-
-      <!-- Billedkolonne -->
-      <div class="mt-10 md:mt-12 lg:mt-0">
-        <img
-          src="/img/forside_hero.webp" 
-          class="w-100 mx-auto z-10 -order-1 md:order-1 lg:order-1 object-cover" 
-          alt="heroimg"
-        />
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="relative z-10 lg:-mt-50">
-  <Stoet />
-</div>
-
-<!-- Start på helteinitiativer -->
-
-<div class="z-0 relative">
-  <section id="helteinitiativer" class="bg-secondary pt-45 py-20 -mt-26">
-    <div class="container mx-auto 2xl:max-width-bscreen">
-      <img src="/assets/mobil_offwhite_doodle.svg" alt="doodle" class="mx-auto pb-2 block lg:hidden" />
-      <img src="/assets/offwhite_doodle_web.svg" alt="doodle" class="mx-auto pb-2 hidden lg:block" />
-  <Heading htmlheading="h2" size="large" font="display" stylingclasses="text-offwhite text-center p-2 intersect:animate-fade-right animate-once animate-duration-800ms">
-  Vores fire helteinitiativer
-</Heading>
-<Text teksttype="brødtekst" stylingclasses="text-offwhite text-center my-8 md:my-6 lg:my-4 max-w-xl mx-auto pb-10 intersect:animate-fade-left animate-once animate-duration-800ms">
-  Vores fire helteinitiativer giver indlagte og udsatte børn mere leg, bevægelse og fællesskab. Vi møder dem dér, hvor de er, og styrker deres udvikling gennem aktiv og kreativ leg.
-</Text>
-
-    </div>
-
-    <div class="container mx-auto px-6 grid grid-cols-1 gap-6 md:grid-cols-2">
-      <InitiativeCard
-        class="rounded-tl-50 rounded-br-50 rounded-tr-md rounded-bl-md flex-row-reverse hover:bg-skyblue100 transition-colors duration-300 intersect:animate-fade-up animate-once animate-duration-800ms"
-        logo="/assets/legehelte_initiativ.svg"
-        number="20"
-        title="Legehelte"
-        text="er dagligt til stede på børneafdelinger i hele landet"
-        href="/legeheltene"
-      />
-      <InitiativeCard
-        class="rounded-tl-md rounded-br-md rounded-tr-50 rounded-bl-50 hover:bg-lime200 transition-colors duration-300 intersect:animate-fade-down animate-once animate-duration-800ms"
-        logo="/assets/heltecamps_initiativ.svg"
-        number="7"
-        title="Heltecamps"
-        text="afholdes hver sommer for syge børn i hele Danmark"
-      />
-      <InitiativeCard
-        class="rounded-tl-md rounded-br-md rounded-tr-50 rounded-bl-50 hover:bg-pink200 transition-colors duration-300 intersect:animate-fade-left animate-once animate-duration-800ms"
-        logo="/assets/kreahelte_initiativ.svg"
-        number="20"
-        title="Kreahelte"
-        text="inviterer dagligt børnene ind i deres kreative værksteder"
-      />
-      <InitiativeCard
-        class="rounded-tl-50 rounded-br-50 rounded-tr-md rounded-bl-md flex-row-reverse hover:bg-grassgreen300 transition-colors duration-300 intersect:animate-fade-right animate-once animate-duration-800ms"
-        logo="/assets/helteakademi_initiativ.svg"
-        number="18"
-        title="Helteakademier"
-        text="sørger hver uge boldspil mm. for børn med sygdom og handicap"
-      />
-    </div>
-
-    <div class="flex justify-center mt-10">
-      <Text>
-        <Link href="/stoette" variant="secondary" size="large">Det går din støtte til</Link>
-      </Text>
     </div>
   </section>
-</div>
 
-<!-- Slut på helteinitiativer -->
+  <div class="relative z-10 lg:-mt-50">
+    <Stoet />
+  </div>
+  <!-- SLUT PÅ HERO -->
 
-<!-- START PÅ UDTALELSER -->
+  <!-- START PÅ HELTEINITIATIVER -->
+  <div class="z-0 relative">
+    <section id="helteinitiativer" class="bg-secondary pt-45 py-20 -mt-26">
+      <div class="container mx-auto 2xl:max-width-bscreen">
+        <img src="/assets/mobil_offwhite_doodle.svg" alt="doodle" class="mx-auto pb-2 block lg:hidden" />
+        <img src="/assets/offwhite_doodle_web.svg" alt="doodle" class="mx-auto pb-2 hidden lg:block" />
+        <Heading htmlheading="h2" size="large" font="display" stylingclasses="text-offwhite text-center p-2 intersect:animate-fade-right animate-once animate-duration-800ms">Vores fire helteinitiativer</Heading>
+        <Text teksttype="brødtekst" stylingclasses="text-offwhite text-center my-8 md:my-6 lg:my-4 max-w-xl mx-auto pb-10 intersect:animate-fade-left animate-once animate-duration-800ms">
+          Vores fire helteinitiativer giver indlagte og udsatte børn mere leg, bevægelse og fællesskab. Vi møder dem dér, hvor de er, og styrker deres udvikling gennem aktiv og kreativ leg.
+        </Text>
+      </div>
 
-<section class="container mx-auto py-20 2xl:max-width-bscreen">
-  <Heading htmlheading="h2" size="large" font="display" stylingclasses="text-text text-center px-10 mb-10 intersect:animate-fade-right animate-once animate-duration-800ms">
-    Det siger forældre og fagfolk om os
-  </Heading>
-  	<div class="lg:flex lg:justify-start">
-    				<!-- Mobil doodle -->
+      <div class="container mx-auto px-6 grid grid-cols-1 gap-6 md:grid-cols-2">
+        <InitiativeCard
+          class="rounded-tl-50 rounded-br-50 rounded-tr-md rounded-bl-md flex-row-reverse hover:bg-skyblue100 transition-colors duration-300 intersect:animate-fade-up animate-once animate-duration-800ms"
+          logo="/assets/legehelte_initiativ.svg"
+          number="20"
+          title="Legehelte"
+          text="er dagligt til stede på børneafdelinger i hele landet"
+          href="/legeheltene"
+        />
+        <InitiativeCard
+          class="rounded-tl-md rounded-br-md rounded-tr-50 rounded-bl-50 hover:bg-lime200 transition-colors duration-300 intersect:animate-fade-down animate-once animate-duration-800ms"
+          logo="/assets/heltecamps_initiativ.svg"
+          number="7"
+          title="Heltecamps"
+          text="afholdes hver sommer for syge børn i hele Danmark"
+        />
+        <InitiativeCard
+          class="rounded-tl-md rounded-br-md rounded-tr-50 rounded-bl-50 hover:bg-pink200 transition-colors duration-300 intersect:animate-fade-left animate-once animate-duration-800ms"
+          logo="/assets/kreahelte_initiativ.svg"
+          number="20"
+          title="Kreahelte"
+          text="inviterer dagligt børnene ind i deres kreative værksteder"
+        />
+        <InitiativeCard
+          class="rounded-tl-50 rounded-br-50 rounded-tr-md rounded-bl-md flex-row-reverse hover:bg-grassgreen300 transition-colors duration-300 intersect:animate-fade-right animate-once animate-duration-800ms"
+          logo="/assets/helteakademi_initiativ.svg"
+          number="18"
+          title="Helteakademier"
+          text="sørger hver uge boldspil mm. for børn med sygdom og handicap"
+        />
+      </div>
+
+      <div class="flex justify-center mt-10">
+          <Link href="/stoette" variant="secondary" size="large">Det går din støtte til</Link>
+      </div>
+    </section>
+  </div>
+  <!-- SLUT PÅ HELTEINITIATIVER -->
+
+  <!-- START PÅ UDTALELSER -->
+  <section class="container mx-auto py-20 2xl:max-width-bscreen">
+      <Heading htmlheading="h2" size="large" font="display" stylingclasses="text-text text-center px-10 mb-10 intersect:animate-fade-right animate-once animate-duration-800ms">Det siger forældre og fagfolk om os</Heading>
+  	  <div class="lg:flex lg:justify-start">
+    			<!-- Mobil doodle -->
 					<img src="/assets/mobil_orange_doodle.svg" alt="" class="mx-auto pb-8 block lg:hidden">
 					<!-- Desktop doodle -->
 					<img src="/assets/orange_doodle_web.svg" alt="" class="hidden lg:block lg:mx-auto pt-10">
-				</div>
-  <div class="-my-10 lg:my-5 mx-6">
-			<article class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth w-full gap-6 lg:gap-60 ml-0 lg:ml-14 mt-10 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200 intersect:animate-fade-up animate-once animate-duration-800ms">
-				<div id="christina" class="flex-none justify-center lg:min-w-0 snap-start lg:w-80">
-					<Udtalelser
-					size="large"
-					cardimage="/img/udtalelser_1.webp"
-					cardtitle="Christina"
-					cardtext="Legeheltene bidrager til meningsfulde pauser på hospitalet. Pauser, hvor børn kan få et smil på læben, komme ud at røre sig, måske møde andre børn og på den måde skabe gode minder. Legeheltene har mulighed for at møde børnene uden underliggende klinisk agenda, men udelukkende som motivatorer og sjove afbræk. En god kontakt med Legeheltene smitter med stor sandsynlighed også af på det sygdoms- og behandlingsmæssige forløb på hospitalet."
-					cardundertitle="Mor til Elias, som spiller i Helteakademiet"
-					/>
-				</div>
-				<div id="dorhte" class="flex-none justify-center lg:min-w-0 snap-start lg:w-80">
-					<Udtalelser
-					size="large"
-					cardimage="/img/udtalelser_2.webp"
-					cardtitle="Dorthe"
-					cardtext="Vi har en datter med en alvorlig, progressiv sygdom og lever derfor i konstant beredskab, samtidig med at vi forsøger at nyde livet med hende. Vi har været med på Heltecamp to gange, og hun elsker det – især fordi hun, som hun selv siger: “På Heltecamp er jeg ikke anderledes.” For os som forældre betyder fællesskabet på campen allermest. Her skabes minder, tryghed og venskaber, som også varer ved efter campen."
-					cardundertitle="Mor til Luna, der har deltaget på heltecamp"
-					/>
-				</div>
-				<div id="lise" class="flex-none justify-center lg:min-w-0 snap-start lg:w-80">
-					<Udtalelser
-					size="large"
-					cardimage="/img/udtalelser_3.webp"
-					cardtitle="Lise"
-					cardtext="De fjollede rundt, og der blev kastet lidt med en badebold, men det vigtigste var, at de fjollede og grinede og havde det sjovt, og Jessica glemte jo så lige alt om, at hun faktisk ikke havde det ret godt. Det var super fantastisk at opleve, og det er nogle skønne initiativer!"
-					cardundertitle="Mor til Jessica, der har leget med Legeheltene og Kreaheltene"
-					/>
-				</div>
-				<div id="ella" class="flex-none justify-center lg:min-w-0 snap-start lg:w-80">
-					<Udtalelser
-					size="large"
-					cardimage="/img/udtalelser_4.webp"
-					cardtitle="Ella"
-					cardtext="Lege- og Kreaheltene forandrer hverdagen for forældre med syge børn og børn med alvorlige sygdomme. Det gør en verden til forskel med nogen, der tænker på børnenes interesser og andet en sygdom. Det er en verden til forskel."
-					cardundertitle="Mor til Thor, der har leget med Legeheltene og Kreaheltene mange gange"
-					/>
-				</div>
-				<div id="susanne" class="flex-none justify-center lg:min-w-0 snap-start lg:w-80">
-					<Udtalelser
-					size="large"
-					cardimage="/img/udtalelser_5.webp"
-					cardtitle="Susanne"
-					cardtext="Lege- og Kreaheltene skaber små øjeblikke af glæde og tryghed for børn med alvorlige sygdomme og deres forældre. Det betyder alverden at have nogen, der ser børnene som børn først – med leg, kreativitet og nærvær – og ikke kun som patienter. Det gør en verden til forskel."
-					cardundertitle="Mor til Elias, som spiller i helteakademiet"
-					/>
-				</div>
-			</article>
-		</div>
+			</div>
+      <div class="-my-10 lg:my-5 mx-6">
+			  <article class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth w-full gap-6 lg:gap-60 ml-0 lg:ml-14 mt-10 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200 intersect:animate-fade-up animate-once animate-duration-800ms">
+          <div id="christina" class="flex-none justify-center lg:min-w-0 snap-start lg:w-80">
+            <Udtalelser
+            size="large"
+            cardimage="/img/udtalelser_1.webp"
+            cardtitle="Christina"
+            cardtext="Legeheltene bidrager til meningsfulde pauser på hospitalet. Pauser, hvor børn kan få et smil på læben, komme ud at røre sig, måske møde andre børn og på den måde skabe gode minder. Legeheltene har mulighed for at møde børnene uden underliggende klinisk agenda, men udelukkende som motivatorer og sjove afbræk. En god kontakt med Legeheltene smitter med stor sandsynlighed også af på det sygdoms- og behandlingsmæssige forløb på hospitalet."
+            cardundertitle="Mor til Elias, som spiller i Helteakademiet"
+            />
+          </div>
+          <div id="dorhte" class="flex-none justify-center lg:min-w-0 snap-start lg:w-80">
+            <Udtalelser
+            size="large"
+            cardimage="/img/udtalelser_2.webp"
+            cardtitle="Dorthe"
+            cardtext="Vi har en datter med en alvorlig, progressiv sygdom og lever derfor i konstant beredskab, samtidig med at vi forsøger at nyde livet med hende. Vi har været med på Heltecamp to gange, og hun elsker det – især fordi hun, som hun selv siger: “På Heltecamp er jeg ikke anderledes.” For os som forældre betyder fællesskabet på campen allermest. Her skabes minder, tryghed og venskaber, som også varer ved efter campen."
+            cardundertitle="Mor til Luna, der har deltaget på heltecamp"
+            />
+          </div>
+          <div id="lise" class="flex-none justify-center lg:min-w-0 snap-start lg:w-80">
+            <Udtalelser
+            size="large"
+            cardimage="/img/udtalelser_3.webp"
+            cardtitle="Lise"
+            cardtext="De fjollede rundt, og der blev kastet lidt med en badebold, men det vigtigste var, at de fjollede og grinede og havde det sjovt, og Jessica glemte jo så lige alt om, at hun faktisk ikke havde det ret godt. Det var super fantastisk at opleve, og det er nogle skønne initiativer!"
+            cardundertitle="Mor til Jessica, der har leget med Legeheltene og Kreaheltene"
+            />
+          </div>
+          <div id="ella" class="flex-none justify-center lg:min-w-0 snap-start lg:w-80">
+            <Udtalelser
+            size="large"
+            cardimage="/img/udtalelser_4.webp"
+            cardtitle="Ella"
+            cardtext="Lege- og Kreaheltene forandrer hverdagen for forældre med syge børn og børn med alvorlige sygdomme. Det gør en verden til forskel med nogen, der tænker på børnenes interesser og andet en sygdom. Det er en verden til forskel."
+            cardundertitle="Mor til Thor, der har leget med Legeheltene og Kreaheltene mange gange"
+            />
+          </div>
+          <div id="susanne" class="flex-none justify-center lg:min-w-0 snap-start lg:w-80">
+            <Udtalelser
+            size="large"
+            cardimage="/img/udtalelser_5.webp"
+            cardtitle="Susanne"
+            cardtext="Lege- og Kreaheltene skaber små øjeblikke af glæde og tryghed for børn med alvorlige sygdomme og deres forældre. Det betyder alverden at have nogen, der ser børnene som børn først – med leg, kreativitet og nærvær – og ikke kun som patienter. Det gør en verden til forskel."
+            cardundertitle="Mor til Elias, som spiller i helteakademiet"
+            />
+          </div>
+			  </article>
+		  </div>
+  </section>
+  <!-- SLUT PÅ UDTALELSER -->
 
-</section>
-<!-- SLUT PÅ UDTALELSER -->
-
-<!-- START PÅ NYHEDER -->
-<section class="container mx-auto pb-20 my-10 2xl:max-width-bscreen">
-  <Heading htmlheading="h2" size="large" font="display" stylingclasses="text-text text-center intersect:animate-fade-left animate-once animate-duration-800ms">
-    Seneste nyheder
-  </Heading>
-
-  <div class="mx-6 lg:mx-0 gap-6 flex space-x-4 snap-x snap-mandatory overflow-x-auto px-2 lg:grid lg:grid-cols-3 lg:grid-rows-3 lg:auto-rows-fr lg:overflow-visible lg:space-x-0 my-10">
-
-    <!-- STORT FEATURE -->
-  <div class="flex-none snap-start w-90 sm:w-96 lg:w-full flex flex-col my-6 rounded-tl-md rounded-br-md rounded-tr-50 rounded-bl-50 bg-offwhite overflow-hidden row-start-1 row-span-2 lg:h-full intersect:animate-fade-right animate-once animate-duration-800ms">
-    <img src="/img/nyheder_prisvinder.webp" class="w-full h-36 lg:h-150 object-cover">
-      <div class="p-4 flex flex-col h-full justify-between">
-        <div>
-          <Heading htmlheading="h4" size="xsmall">12-11-2025</Heading>
-          <Heading htmlheading="h3" size="small" stylingclasses="leading-6">Legeheltene vinder Børn i byen Prisen...</Heading>
-          <Text teksttype="brødtekst" stylingclasses="lg:pt-4">
-            Kreaheltene har vundet Børn i byen Prisen 2025 som Årets Velgørenhedsorganisation. Prisen minder os om, hvorfor vi gør det, vi gør: De helt særlige små øjeblikke, hvor et barn...
-          </Text>
+  <!-- START PÅ NYHEDER -->
+  <section class="container mx-auto pb-20 my-10 2xl:max-width-bscreen">
+    <Heading htmlheading="h2" size="large" font="display" stylingclasses="text-text text-center intersect:animate-fade-left animate-once animate-duration-800ms">Seneste nyheder</Heading>
+    <div class="mx-6 lg:mx-0 gap-6 flex space-x-4 snap-x snap-mandatory overflow-x-auto px-2 lg:grid lg:grid-cols-3 lg:grid-rows-3 lg:auto-rows-fr lg:overflow-visible lg:space-x-0 my-10">
+      <div class="flex-none snap-start w-90 sm:w-96 lg:w-full flex flex-col my-6 rounded-tl-md rounded-br-md rounded-tr-50 rounded-bl-50 bg-offwhite overflow-hidden row-start-1 row-span-2 lg:h-full intersect:animate-fade-right animate-once animate-duration-800ms">
+        <img src="/img/nyheder_prisvinder.webp" class="w-full h-36 lg:h-150 object-cover">
+        <div class="p-4 flex flex-col h-full justify-between">
+          <div>
+            <Heading htmlheading="h4" size="xsmall">12-11-2025</Heading>
+            <Heading htmlheading="h3" size="small" stylingclasses="leading-6">Legeheltene vinder Børn i byen Prisen...</Heading>
+            <Text teksttype="brødtekst" stylingclasses="lg:pt-4">Kreaheltene har vundet Børn i byen Prisen 2025 som Årets Velgørenhedsorganisation. Prisen minder os om, hvorfor vi gør det, vi gør: De helt særlige små øjeblikke, hvor et barn...</Text>
+          </div>
+          <div class="self-end">
+            <Link href="https://xn--brneulykkesfonden-00b.dk/heltene/nyheder" variant="textlink" size="medium">Læs mere</Link>
+          </div>
         </div>
-        <div class="self-end">
-          <Link href="https://xn--brneulykkesfonden-00b.dk/heltene/nyheder" variant="textlink" size="medium">Læs mere</Link>
+      </div>
+
+      <!-- LILLE -->
+      <div class="flex-none snap-start w-75 sm:w-72 lg:w-full flex flex-col my-6 rounded-tl-md rounded-br-md rounded-tr-50 rounded-bl-50 bg-offwhite overflow-hidden lg:h-full intersect:animate-fade-up animate-once animate-duration-800ms">
+        <img src="/img/nyheder_kreahelte.webp" class="w-full h-36 lg:h-full object-cover">
+        <div class="p-4 flex flex-col h-full justify-between">
+          <div>
+            <Heading htmlheading="h4" size="xsmall">12-11-2025</Heading>
+            <Heading htmlheading="h3" size="small" stylingclasses="leading-6">Kreaheltene skaber kreative frirum på Nordsjællands Hospital</Heading>
+          </div>
+          <div class="self-end">
+            <Link href="https://xn--brneulykkesfonden-00b.dk/heltene/nyheder" variant="textlink" size="medium">Læs mere</Link>
+          </div>
+        </div>
+      </div>
+
+      <!-- HORISONTAL -->
+      <div class="flex-none snap-start w-90 sm:w-96 lg:w-full flex flex-col lg:flex-row items-stretch my-6 rounded-tl-md rounded-br-md rounded-tr-50 rounded-bl-50 bg-offwhite overflow-hidden row-start-2 col-start-2 col-span-2 lg:h-full intersect:animate-fade-left animate-once animate-duration-800ms">
+        <img src="/img/nyheder_kasper_fisker.webp" class="w-full h-36 lg:w-1/2 lg:h-full object-cover">
+        <div class="p-4 flex flex-col h-full justify-between">
+          <div>
+            <Heading htmlheading="h4" size="xsmall">12-11-2025</Heading>
+            <Heading htmlheading="h3" size="small" stylingclasses="leading-6">Kasper Fisker og Kasper Kirkegaard samler over en million kroner ind til Legeheltene</Heading>
+            <Text teksttype="brødtekst" stylingclasses="lg:pt-4">Kreaheltene har vundet Børn i byen Prisen 2025 som Årets Velgørenhedsorganisation. Prisen minder os om, hvorfor vi gør det, vi gør: De helt særlige små øjeblikke, hvor et barn...</Text>
+          </div>
+          <div class="self-end">
+              <Link href="https://xn--brneulykkesfonden-00b.dk/heltene/nyheder" variant="textlink" size="medium">Læs mere</Link>
+          </div>
+        </div>
+      </div>
+
+      <!-- HORISONTAL -->
+      <div class="flex-none snap-start w-90 sm:w-96 lg:w-full flex flex-col lg:flex-row items-stretch my-6 rounded-tl-md rounded-br-md rounded-tr-50 rounded-bl-50 bg-offwhite overflow-hidden row-start-3 col-start-1 col-span-2 lg:h-full intersect:animate-fade-right animate-once animate-duration-800ms">
+        <img src="/img/nyheder_dgi.webp" class="w-full h-36 lg:w-1/2 lg:h-full object-cover">
+        <div class="p-4 flex flex-col h-full justify-between">
+          <div>
+            <Heading htmlheading="h4" size="xsmall">12-11-2025</Heading>
+            <Heading htmlheading="h3" size="small" stylingclasses="leading-6">Legeheltene til DGI Landsstævne med børnene fra Bifrost</Heading>
+            <Text teksttype="brødtekst" stylingclasses="lg:pt-4">I år var Vejle værtsby for DGI Landsstævne, så naturligvis skulle Legeheltene og Bifrost deltage i festlighederne i selveste Parasportens Hovedstad.
+          </div>
+          <div class="self-end">
+              <Link href="https://xn--brneulykkesfonden-00b.dk/heltene/nyheder" variant="textlink" size="medium">Læs mere</Link>
+          </div>
+        </div>
+      </div>
+
+      <!-- SMÅ -->
+      <div class="flex-none snap-start w-75 sm:w-72 lg:w-full flex flex-col my-6 rounded-tl-md rounded-br-md rounded-tr-50 rounded-bl-50 bg-offwhite overflow-hidden lg:h-full intersect:animate-fade-right animate-once animate-duration-800ms">
+        <img src="/img/nyheder_kreahelte_2.webp" class="w-full h-36 lg:h-full object-cover">
+        <div class="p-4 flex flex-col h-full justify-between">
+          <div>
+            <Heading htmlheading="h4" size="xsmall">12-11-2025</Heading>
+            <Heading htmlheading="h3" size="small" stylingclasses="leading-6">Legeheltene rykker ind på Nordsjællands Hospital i Hillerød</Heading>
+          </div>
+          <div class="self-end">
+            <Link href="https://xn--brneulykkesfonden-00b.dk/heltene/nyheder" variant="textlink" size="medium">Læs mere</Link>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex-none snap-start w-75 sm:w-72 lg:w-full flex flex-col my-6 rounded-tl-md rounded-br-md rounded-tr-50 rounded-bl-50 bg-offwhite overflow-hidden lg:h-full intersect:animate-fade-down animate-once animate-duration-800ms">
+        <img src="/img/nyheder_kreahelte.webp" class="w-full h-36 lg:h-full object-cover">
+        <div class="p-4 flex flex-col h-full justify-between">
+          <div>
+            <Heading htmlheading="h4" size="xsmall">12-11-2025</Heading>
+            <Heading htmlheading="h3" size="small" stylingclasses="leading-6">Kreaheltene åbner kreativt tilbud på Nordsjællands Hospital i Hillerød</Heading>
+          </div>
+          <div class="self-end">
+           <Link href="https://xn--brneulykkesfonden-00b.dk/heltene/nyheder" variant="textlink" size="medium">Læs mere</Link>
+          </div>
         </div>
       </div>
     </div>
-
-    <!-- LILLE -->
-    <div class="flex-none snap-start w-75 sm:w-72 lg:w-full flex flex-col my-6 rounded-tl-md rounded-br-md rounded-tr-50 rounded-bl-50 bg-offwhite overflow-hidden lg:h-full intersect:animate-fade-up animate-once animate-duration-800ms">
-      <img src="/img/nyheder_kreahelte.webp" class="w-full h-36 lg:h-full object-cover">
-      <div class="p-4 flex flex-col h-full justify-between">
-        <div>
-          <Heading htmlheading="h4" size="xsmall">12-11-2025</Heading>
-          <Heading htmlheading="h3" size="small" stylingclasses="leading-6">Kreaheltene skaber kreative frirum på Nordsjællands Hospital</Heading>
-        </div>
-        <div class="self-end">
-          <Link href="https://xn--brneulykkesfonden-00b.dk/heltene/nyheder" variant="textlink" size="medium">Læs mere</Link>
-        </div>
-      </div>
-    </div>
-
-    <!-- HORIZONTAL -->
-    <div class="flex-none snap-start w-90 sm:w-96 lg:w-full flex flex-col lg:flex-row items-stretch my-6 rounded-tl-md rounded-br-md rounded-tr-50 rounded-bl-50 bg-offwhite overflow-hidden row-start-2 col-start-2 col-span-2 lg:h-full intersect:animate-fade-left animate-once animate-duration-800ms">
-      <img src="/img/nyheder_kasper_fisker.webp" class="w-full h-36 lg:w-1/2 lg:h-full object-cover">
-      <div class="p-4 flex flex-col h-full justify-between">
-        <div>
-          <Heading htmlheading="h4" size="xsmall">12-11-2025</Heading>
-          <Heading htmlheading="h3" size="small" stylingclasses="leading-6">Kasper Fisker og Kasper Kirkegaard samler over en million kroner ind til Legeheltene</Heading>
-          <Text teksttype="brødtekst" stylingclasses="lg:pt-4" >
-            Kreaheltene har vundet Børn i byen Prisen 2025 som Årets Velgørenhedsorganisation. Prisen minder os om, hvorfor vi gør det, vi gør: De helt særlige små øjeblikke, hvor et barn...
-          </Text>
-        </div>
-        <div class="self-end">
-          <Link href="https://xn--brneulykkesfonden-00b.dk/heltene/nyheder" variant="textlink" size="medium">Læs mere</Link>
-        </div>
-      </div>
-    </div>
-
-    <!-- HORIZONTAL -->
-    <div class="flex-none snap-start w-90 sm:w-96 lg:w-full flex flex-col lg:flex-row items-stretch my-6 rounded-tl-md rounded-br-md rounded-tr-50 rounded-bl-50 bg-offwhite overflow-hidden row-start-3 col-start-1 col-span-2 lg:h-full intersect:animate-fade-right animate-once animate-duration-800ms">
-      <img src="/img/nyheder_dgi.webp" class="w-full h-36 lg:w-1/2 lg:h-full object-cover">
-      <div class="p-4 flex flex-col h-full justify-between">
-        <div>
-          <Heading htmlheading="h4" size="xsmall">12-11-2025</Heading>
-          <Heading htmlheading="h3" size="small" stylingclasses="leading-6">Legeheltene til DGI Landsstævne med børnene fra Bifrost</Heading>
-          <Text teksttype="brødtekst" stylingclasses="lg:pt-4">
-           I år var Vejle værtsby for DGI Landsstævne, så naturligvis skulle Legeheltene og Bifrost deltage i festlighederne i selveste Parasportens Hovedstad.
-        </div>
-        <div class="self-end">
-          <Link href="https://xn--brneulykkesfonden-00b.dk/heltene/nyheder" variant="textlink" size="medium">Læs mere</Link>
-        </div>
-      </div>
-    </div>
-
-    <!-- SMÅ -->
-    <div class="flex-none snap-start w-75 sm:w-72 lg:w-full flex flex-col my-6 rounded-tl-md rounded-br-md rounded-tr-50 rounded-bl-50 bg-offwhite overflow-hidden lg:h-full intersect:animate-fade-right animate-once animate-duration-800ms">
-      <img src="/img/nyheder_kreahelte_2.webp" class="w-full h-36 lg:h-full object-cover">
-      <div class="p-4 flex flex-col h-full justify-between">
-        <div>
-          <Heading htmlheading="h4" size="xsmall">12-11-2025</Heading>
-          <Heading htmlheading="h3" size="small" stylingclasses="leading-6">Legeheltene rykker ind på Nordsjællands Hospital i Hillerød</Heading>
-        </div>
-        <div class="self-end">
-          <Link href="https://xn--brneulykkesfonden-00b.dk/heltene/nyheder" variant="textlink" size="medium">Læs mere</Link>
-        </div>
-      </div>
-    </div>
-
-    <div class="flex-none snap-start w-75 sm:w-72 lg:w-full flex flex-col my-6 rounded-tl-md rounded-br-md rounded-tr-50 rounded-bl-50 bg-offwhite overflow-hidden lg:h-full intersect:animate-fade-down animate-once animate-duration-800ms">
-      <img src="/img/nyheder_kreahelte.webp" class="w-full h-36 lg:h-full object-cover">
-      <div class="p-4 flex flex-col h-full justify-between">
-        <div>
-          <Heading htmlheading="h4" size="xsmall">12-11-2025</Heading>
-          <Heading htmlheading="h3" size="small" stylingclasses="leading-6">Kreaheltene åbner kreativt tilbud på Nordsjællands Hospital i Hillerød</Heading>
-        </div>
-       <div class="self-end">
-          <Link href="https://xn--brneulykkesfonden-00b.dk/heltene/nyheder" variant="textlink" size="medium">Læs mere</Link>
-        </div>
-      </div>
-    </div>
-    
-  </div>
-  <div class="flex justify-center pt-14">
-    <Link href="/stoette" variant="secondary" size="large">Er du klar til at støtte?</Link>
-  </div>
-</section>
-
-
-
-
-
-<!-- SLUT PÅ NYHEDER -->
-
-
-
-
-	</main>
+     <div class="flex justify-center pt-14">
+        <Link href="/stoette" variant="secondary" size="large">Er du klar til at støtte?</Link>
+     </div>
+  </section>
+  <!-- SLUT PÅ NYHEDER -->
+</main>
 </MainLayout>
 <script>
-import { animate, stagger, inView, scroll } from "motion";
+  import { animate, stagger, inView, scroll } from "motion";
 
 	/*Progress-baren/læseindikatoren */
 	scroll( animate(".progress-bar", { scaleX: [0, 1] }));
