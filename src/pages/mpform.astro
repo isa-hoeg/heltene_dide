@@ -9,7 +9,7 @@ import Button from "../components/Button.astro";
 <MainLayout title="Titel">
     <main class="container mx-auto p-8 2xl:max-w-bscreen" x-data="{ confirmed: false }">
         <section x-show="!confirmed" x-transition>
-            <Heading htmlheading="h1" size="xlarge" font="display" stylingclasses="text-center">Tak fordi du støtter Heltene</Heading>
+            <Heading htmlheading="h1" size="xlarge" font="display" stylingclasses="text-center mt-10">Tak fordi du støtter Heltene</Heading>
 			<div class="relative w-full mx-auto mt-10 lg:mt-20">
         		<!-- Linjen -->
         		<div class="h-2 bg-offwhite w-73 mx-auto lg:w-200"></div>
@@ -42,8 +42,8 @@ import Button from "../components/Button.astro";
                 	    <input id="default-radio-1" type="radio" value="" name="default-radio" class="border-1 border-accent bg-offwhite focus:ring-accent checked:bg-accent rounded-full lg:w-6 lg:h-6">
                 	    <label for="default-radio-1" class="select-none ms-2 font-serif text-xl"><Text teksttype="brødtekst">Husk mit nummer</Link></Text></label>
             	    </div>
-                    <div class="mt-10 flex justify-center">
-                    <Button type="button" @click.prevent="confirmed = true" variant="secondary" size="medium" icon="/assets/stoet_ikon_web.svg" iconHover="/assets/stoet_ikon_filled.svg">Betal</Button>
+                    <div class="mt-10 flex justify-center mb-5">
+                    	<Button type="button" @click.prevent="confirmed = true" variant="primary" size="medium" icon="/assets/stoet_ikon_web.svg" iconHover="/assets/stoet_ikon_filled.svg">Betal</Button>
                     </div>	
                 </div>
             </div>
