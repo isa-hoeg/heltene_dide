@@ -44,6 +44,7 @@ import Button from "../components/Button.astro";
         				</div>
 					</div>
 
+					<!-- Denne komponent er vibecodet med hjælp fra Copilot og demonstrerer, hvordan et interaktivt beløbsvælger-UI kan fungere ved hjælp af Alpine.js og Tailwind CSS.  -->
 					<div class="flex justify-between text-center items-center rounded-full bg-offwhite h-10 w-80 lg:h-12">
 						<button type="button" @click="amount = '50'" :class="amount === '50' ? 'active' : ''" class="switch-btn flex-1 h-full"><Text teksttype="brødtekst">50 kr</Text></button>
 						<button type="button" @click="amount = '150'" :class="amount === '150' ? 'active' : ''" class="switch-btn flex-1 h-full"><Text teksttype="brødtekst">150 kr</Text></button>
@@ -54,12 +55,16 @@ import Button from "../components/Button.astro";
        	 			<div class="flex gap-10 pt-4">
             			<input id="andetbeloeb" type="text" name="andetbeloeb" placeholder="Andet beløb" class="text-center w-80 px-4 rounded-full border-none placeholder:text-grey500 focus:outline-accent font-serif bg-offwhite text-base  lg:text-2xl lg:px-12 lg:py-3 lg:h-12" /> 
         			</div>
+					<!-- Denne komponent er vibecodet med hjælp fra Copilot og demonstrerer, hvordan et interaktivt beløbsvælger-UI kan fungere ved hjælp af Alpine.js og Tailwind CSS.  -->
 					<!-- Privat/virksomhed -->
 		 			<div class="flex justify-between text-center items-center rounded-full bg-offwhite h-10 w-80 mt-4 lg:h-12">
 						<button type="button" @click="type = 'privat'" :class="type === 'privat' ? 'active' : ''" class="switch-btn flex-1 h-full"><Text teksttype="brødtekst">Privat</Text></button>
 						<button type="button" @click="type = 'monthly'" :class="type === 'monthly' ? 'active' : ''" class="switch-btn flex-1 h-full"><Text teksttype="brødtekst">Månedligt</Text></button>
 					</div>
 
+					<!-- Denne komponent er vibecodet med hjælp fra Copilot og viser en interaktiv betalingsvælger, 
+					 hvor brugeren kan vælge mellem MobilePay og kort. Valget bruges efterfølgende til at sende brugeren 
+					 videre til den relevante betalingsside afhængigt af det valgte betalingsmiddel. -->
 					<!-- Betal -->
 					 <Heading htmlheading="h4" size="small" font="sans" stylingclasses="font-medium mt-4">Betal med</Heading>
 			 		<div class="flex justify-between mt-2 text-center items-center rounded-full bg-offwhite h-10 w-80 lg:h-12">
