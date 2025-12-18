@@ -12,7 +12,7 @@ import Stoet from "../components/Stoet.astro";
 <MainLayout title="Om os">
 <main class="">
 	<!-- HERO OM OS -->
-	<section class="bg-secondary pb-15">
+	<section class="bg-secondary pb-15 2xl:max-width-bscreen">
   		<!-- Doodles -->
 		<div class="pt-12">
 			<img src="/assets/mobil_offwhite_doodle.svg" alt="doodle" class="mx-auto pb-2 block lg:hidden" />
@@ -42,7 +42,7 @@ import Stoet from "../components/Stoet.astro";
 
 
 	<!-- START PÅ VORES VÆRDIER -->
-	<section class="container mx-auto relative py-10 overflow-hidden min-h-135">
+	<section class="container mx-auto relative py-10 overflow-hidden min-h-135 2xl:max-width-bscreen">
 
 		<!-- Regnbue (bag alt) -->
 		<div class="absolute top-0 left-0 w-full h-full z-0 pointer-events-none overflow-hidden">
@@ -94,6 +94,7 @@ import Stoet from "../components/Stoet.astro";
 	<!-- START PÅ HELTEINITIATIVER -->
 	<div class="z-0 relative">
  	<section id="helteinitiativer" class="bg-secondary py-20">
+		<div class="2xl:max-width-bscreen">
 		<div class="container mx-auto">
 			<img src="/assets/mobil_offwhite_doodle.svg" alt="doodle" class="mx-auto pb-2 block lg:hidden" />
 			<img src="/assets/offwhite_doodle_web.svg" alt="doodle" class="mx-auto pb-2 hidden lg:block" />
@@ -131,14 +132,16 @@ import Stoet from "../components/Stoet.astro";
 			text="sørger hver uge boldspil mm. for børn med sygdom og handicap"
 			/>
 		</div>
+		
 		<div class="flex justify-center mt-10">
             <Text><Link href="/stoette" variant="secondary" size="large">Det går din støtte til</Link></Text>
+		</div>
 		</div>
 	</section>
 	<!-- SLUT PÅ HELTEINITIATIVER -->
 
 	<!--START PÅ HISTORIEN BAG -->
-	<section class="container mx-auto relative pb-110 lg:pb-150">
+	<section class="container mx-auto relative pb-110 lg:pb-150 2xl:max-width-bscreen">
 
   	<!-- Grid til billede + tekst -->
   	<div class="grid grid-cols-1 lg:grid-cols-2">
@@ -229,7 +232,7 @@ import Stoet from "../components/Stoet.astro";
 
 
 	<!--START PÅ TIDSLINJE -->
-	<section class="container mx-auto">
+	<section class="container mx-auto 2xl:max-width-bscreen">
 		<Heading htmlheading="h2" size="large" font="display" stylingclasses="text-text text-center px-4 mt-5 lg:mt-20">
 			Vores udvikling
 		</Heading>
@@ -298,7 +301,7 @@ import Stoet from "../components/Stoet.astro";
 	<!--SLUT PÅ TIDSLINJE -->
 
 	<!-- START PÅ ÅRSRAPPORT -->
-<section class="container mx-auto mb-30 bg-secondary rounded-tr-3xl rounded-bl-3xl">
+<section class="container mx-auto mb-30 bg-secondary rounded-tl-md rounded-br-md rounded-tr-50 rounded-bl-50 2xl:max-width-bscreen">
   <div class="grid lg:grid-cols-2">
 
     <!-- TEKST -->

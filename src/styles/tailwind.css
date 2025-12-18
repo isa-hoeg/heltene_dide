@@ -51,12 +51,16 @@
   --font-serif: "Faustina", serif;
 
   /*radius*/
-  --radius-megetstor: 60px;
+  --radius-50: 50px;
+
+  /* max-width på større skærme end 1536px */
+--max-width-bscreen: 1600px;
 }
 
 
 
 @layer base {
+  
   
 }
 

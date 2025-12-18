@@ -3,15 +3,15 @@
 const { href="#", target="_self", variant= "textlink", size = "default", icon = null, iconHover = null } = Astro.props; 
  
 //Definer den styling (Tailwind classes, der gør sig gældende for alle links
-const linkStyling = "rounded-full text-sans inline-flex items-center gap-2"; 
+const linkStyling = "rounded-full font-sans py-2 inline-flex items-center gap-2 transition-all duration-500"; 
  
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskellige varianter 
 const variantClasses = {
 "textlink": "serif underline text-text hover:text-accent", /* text-primary-500 */
-"primary": "font-sans inline-block px-12 py-3 bg-accent text-offwhite hover:bg-[url('/assets/regnbue_hover.svg')]", /* border-primary-500 */
-"secondary": "font-sans inline-block border-4 px-12 py-3 border-accent bg-burnedorange100 text-accent hover:bg-accent hover:text-offwhite", /* border-secondary-500 */
-"headerlink": "font-sans text-text hover:text-accent font-semibold",
-"headerlink2": "font-sans text-text hover:text-accent"
+"primary": "inline-block bg-accent px-6 border-4 border-accent text-offwhite hover:bg-[url('/assets/regnbue_hover.svg')] hover:scale-102", /* border-primary-500 */
+"secondary": " inline-block border-4 px-6 border-accent bg-burnedorange100 text-accent hover:bg-accent hover:text-offwhite hover:scale-102", /* border-secondary-500 */
+"headerlink": " text-text hover:text-accent font-semibold",
+"headerlink2": " text-text hover:text-accent"
 };
  
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskelligeog størrelser.
