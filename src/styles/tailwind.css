@@ -69,8 +69,9 @@
 
 @layer utilities {
   .switch-btn {
-  @apply px-4 py-2 lg:px-6 lg:py-4 rounded-full transition;
+  @apply flex items-center justify-center px-4 py-2 lg:px-6 lg:py-4 rounded-full transition;
 }
+
 
 .switch-btn.active {
   @apply bg-burnedorange100 border-3 border-accent ;
