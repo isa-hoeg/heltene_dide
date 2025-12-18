@@ -12,29 +12,24 @@ import Stoet from "../components/Stoet.astro";
 <MainLayout title="Om os">
 <main class="">
 	<!-- HERO OM OS -->
-	<section class="bg-secondary pb-15 2xl:max-width-bscreen">
-  		<!-- Doodles -->
-		<div class="pt-12">
-			<img src="/assets/mobil_offwhite_doodle.svg" alt="doodle" class="mx-auto pb-2 block lg:hidden" />
-			<img src="/assets/offwhite_doodle_web.svg" alt="doodle" class="hidden lg:block lg:px-20" />
-			<img src="/assets/offwhite_doodle_web.svg" alt="doodle" class="hidden md:block lg:hidden mx-auto" />
-		</div>
-		<div class="grid grid-cols-1 lg:grid-cols-2 items-center">
-  			<!-- Tekst -->
-  			<div class="text-center lg:text-left px-4 lg:px-20">
-				<Heading htmlheading="h1" size="xlarge" font="display" stylingclasses="text-offwhite mt-5 lg:-mt-15 py-2">
-				Hos Heltene skaber vi glæde i en svær hverdag
-				</Heading>
-				<Text teksttype="brødtekst" stylingclasses="text-offwhite my-8 lg:my-4">
-				Vores fire helteinitiativer giver indlagte og udsatte børn mere leg, bevægelse og fællesskab. Vi møder dem dér, hvor de er, og styrker deres udvikling gennem aktiv og kreativ leg.
-				</Text>
-  			</div>
-  			<!-- Hero billede -->
-  			<div class="flex justify-center lg:justify-end pb-10 lg:pb-0 px-4 lg:px-20">
-   			 <img src="/img/om_os_hero.webp" alt="gruppefoto" class="w-full max-w-md lg:max-w-lg xl:max-w-xl h-auto rounded-lg" />
-  			</div>
-		</div>
-	</section>
+<section class="bg-secondary pb-15 2xl:max-width-bscreen">
+  <div class="pt-12 md:pt-16">
+    <img src="/assets/mobil_offwhite_doodle.svg" alt="doodle" class="mx-auto pb-2 block md:hidden" />
+    <img src="/assets/offwhite_doodle_web.svg" alt="doodle" class="hidden md:block lg:hidden mx-auto md:px-16" />
+    <img src="/assets/offwhite_doodle_web.svg" alt="doodle" class="hidden lg:block lg:px-20" />
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 md:gap-12">
+    <div class="text-center lg:text-left px-4 md:px-12 lg:px-20">
+      <Heading htmlheading="h1" size="xlarge" font="display" stylingclasses="text-offwhite mt-5 md:mt-8 lg:-mt-15 py-2 intersect:animate-fade-right animate-once animate-duration-800ms">Hos Heltene skaber vi glæde i en svær hverdag</Heading>
+      <Text teksttype="brødtekst" stylingclasses="text-offwhite my-8 md:my-6 lg:my-4 lg:w-115 mx-auto lg:mx-0 intersect:animate-fade-right animate-once animate-duration-800ms">Vores fire helteinitiativer giver indlagte og udsatte børn mere leg, bevægelse og fællesskab. Vi møder dem dér, hvor de er, og styrker deres udvikling gennem aktiv og kreativ leg.</Text>
+    </div>
+
+    <div class="flex justify-center lg:justify-end pb-10 md:pb-14 lg:pb-0 px-4 md:px-12 lg:px-20">
+      <img src="/img/om_os_hero.webp" alt="gruppefoto" class="w-full max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl h-auto rounded-lg" />
+    </div>
+  </div>
+</section>
 	<div class="relative z-10 -mt-15">
   		<Stoet />
 	</div>
@@ -42,254 +37,161 @@ import Stoet from "../components/Stoet.astro";
 
 
 	<!-- START PÅ VORES VÆRDIER -->
-	<section class="container mx-auto relative py-10 overflow-hidden min-h-135 2xl:max-width-bscreen">
+<section class="container mx-auto relative py-10 md:py-12 overflow-hidden min-h-135 2xl:max-width-bscreen">
+  <div class="absolute top-0 left-0 w-full h-full z-0 pointer-events-none overflow-hidden"><div class="w-full h-full bg-[url(/assets/regnbue_om_web.svg)] bg-no-repeat bg-center bg-cover transform scale-125 origin-center"></div></div>
+  <Heading htmlheading="h2" size="large" font="display" stylingclasses="relative z-20 text-text text-center my-3 intersect:animate-fade-right animate-once animate-duration-800ms">Vores værdier</Heading>
+  <div class="relative z-10 w-full flex flex-col md:flex-col lg:flex-row justify-center items-center gap-y-6 lg:gap-0">
+    <div class="relative w-90 md:w-95 lg:w-100 aspect-square bg-[url(/assets/groen_bobbel.svg)] bg-no-repeat bg-center bg-contain z-30 flex flex-col items-center justify-center px-6 md:px-8 lg:px-10 intersect:animate-fade-down animate-once animate-duration-800ms"><Heading htmlheading="h4" size="large" font="sans" stylingclasses="text-center text-text pb-6">Ordentlighed</Heading><Text teksttype="brødtekst" stylingclasses="text-center text-text px-4">Vi bestræber os på at være ordentlige, pålidelige og ansvarsfulde. Derfor kommer vi på faste tidspunkter hver dag eller uge, fordi børnene skal kunne regne med deres legekammerat.</Text></div>
+    <div class="relative w-90 md:w-95 lg:w-100 aspect-square bg-[url(/assets/orange_bobbel.svg)] bg-no-repeat bg-center bg-contain z-20 flex flex-col items-center justify-center px-6 md:px-8 lg:px-10 -mt-16 md:-mt-16 lg:mt-0 lg:-ml-14 intersect:animate-fade-up animate-once animate-duration-800ms"><div class="absolute top-12 md:top-14 lg:top-10 left-1/2 -translate-x-1/2 z-30 pointer-events-none"><img src="/assets/mobil_orange_doodle.svg" alt="doodle" class="block lg:hidden w-20"/><img src="/assets/orange_doodle_web.svg" alt="doodle" class="hidden lg:block w-32"/></div><Heading htmlheading="h4" size="large" font="sans" stylingclasses="text-center text-text pt-6 pb-6">Faglighed</Heading><Text teksttype="brødtekst" stylingclasses="text-center text-text px-4">Vi vægter fagligheden højt i vores arbejde med syge børn. Derfor har vores Legehelte og Kreahelte en relevant faglig baggrund inden for ergo- eller fysioterapi, idræt eller inden for det pædagogiske og kreative område.</Text></div>
+    <div class="relative w-90 md:w-95 lg:w-100 aspect-square bg-[url(/assets/blaa_boobel.svg)] bg-no-repeat bg-center bg-contain z-10 flex flex-col items-center justify-center px-6 md:px-8 lg:px-10 -mt-22 md:-mt-22 lg:mt-0 lg:-ml-12 intersect:animate-fade-down animate-once animate-duration-800ms"><Heading htmlheading="h4" size="large" font="sans" stylingclasses="text-center text-text pb-10">Fællesskab</Heading><Text teksttype="brødtekst" stylingclasses="text-center text-text px-4">Det kan være ensomt at være syg eller udsat. Vi er en legekammerat i en svær tid, og vi arbejder for at skabe fantastiske fællesskaber mellem børn og familier.</Text></div>
+  </div>
+</section>
 
-		<!-- Regnbue (bag alt) -->
-		<div class="absolute top-0 left-0 w-full h-full z-0 pointer-events-none overflow-hidden">
-			<div class="w-full h-full bg-[url(/assets/regnbue_om_web.svg)] bg-no-repeat bg-center bg-cover transform scale-125 origin-center"></div>
-		</div>
-		<Heading htmlheading="h2" size="large" font="display" stylingclasses="relative z-20 text-text text-center my-3">Vores værdier</Heading>
 
-		<!-- Bobbel-wrapper -->
-		<div class="relative z-10 w-full flex flex-col lg:flex-row justify-center items-center lg:items-start lg:pr-30">
-			<!-- Bobbel 1 -->
-			<div class="relative w-90 lg:w-100 aspect-square bg-[url(/assets/groen_bobbel.svg)] bg-no-repeat bg-center bg-contain z-30 flex flex-col items-center justify-center px-10 mx-15">
-			<Heading htmlheading="h4" size="large" font="sans" stylingclasses="text-center text-text pb-6">
-				Ordentlighed
-			</Heading>
-			<Text teksttype="brødtekst" stylingclasses="text-center text-text px-4">
-				Vi bestræber os på at være ordentlige, pålidelige og ansvarsfulde. Derfor kommer vi på faste tidspunkter hver dag eller uge, fordi børnene skal kunne regne med deres legekammerat.
-			</Text>
-			</div>
-
-			<!-- Bobbel 2 (midten) -->
-			<div class="relative w-90 lg:w-100 aspect-square bg-[url(/assets/orange_bobbel.svg)] bg-no-repeat bg-center bg-contain z-20 flex flex-col items-center justify-center px-10 lg:-ml-20 mx-18 -mt-12 lg:mt-0">
-
-			<!-- Doodle -->
-			<div class="absolute top-12 lg:top-10 left-1/2 -translate-x-1/2 z-30 pointer-events-none">
-				<img src="/assets/mobil_orange_doodle.svg" alt="doodle" class="block lg:hidden w-20" />
-				<img src="/assets/orange_doodle_web.svg" alt="doodle" class="hidden lg:block w-32" />
-			</div>
-			<Heading htmlheading="h4" size="large" font="sans" stylingclasses="text-center text-text pt-6 pb-6">
-				Faglighed
-			</Heading>
-			<Text teksttype="brødtekst" stylingclasses="text-center text-text px-4">
-				Vi vægter fagligheden højt i vores arbejde med syge børn. Derfor har vores Legehelte og Kreahelte en relevant faglig baggrund inden for ergo- eller fysioterapi, idræt eller inden for det pædagogiske og kreative område.
-			</Text>
-			</div>
-
-			<!-- Bobbel 3 -->
-			<div class="relative w-90 lg:w-100 aspect-square bg-[url(/assets/blaa_boobel.svg)] bg-no-repeat bg-center bg-contain z-10 flex flex-col items-center justify-center px-10 lg:-ml-28 mx-2 -mt-20 lg:mt-0">
-			<Heading htmlheading="h4" size="large" font="sans" stylingclasses="text-center text-text pb-10">
-				Fællesskab
-			</Heading>
-			<Text teksttype="brødtekst" stylingclasses="text-center text-text px-4">
-				Det kan være ensomt at være syg eller udsat. Vi er en legekammerat i en svær tid, og vi arbejder for at skabe fantastiske fællesskaber mellem børn og familier.
-			</Text>
-			</div>
-		</div>
-	</section>
 	<!-- SLUT PÅ VORES VÆRDIER -->
 
 	<!-- START PÅ HELTEINITIATIVER -->
 	<div class="z-0 relative">
  	<section id="helteinitiativer" class="bg-secondary py-20">
-		<div class="2xl:max-width-bscreen">
+	<div class="2xl:max-width-bscreen">
 		<div class="container mx-auto">
-			<img src="/assets/mobil_offwhite_doodle.svg" alt="doodle" class="mx-auto pb-2 block lg:hidden" />
-			<img src="/assets/offwhite_doodle_web.svg" alt="doodle" class="mx-auto pb-2 hidden lg:block" />
-			<Heading htmlheading="h2" size="large" font="display" stylingclasses="text-offwhite text-center p-2">Vores fire helteinitiativer</Heading>
-			<Text teksttype="brødtekst" stylingclasses="text-offwhite text-center lg:px-20 pb-10">Vi skaber leg, bevægelse og fællesskab for syge og sårbare børn på hospitaler, i psykiatrien, på børnehjem og indkvarteringssteder. Gennem Legeheltene, Kreaheltene, Helteakademiet og Heltecamps skaber vi aktiviteter og gode oplevelser.</Text>
+			<img src="/assets/mobil_offwhite_doodle.svg" alt="doodle" class="mx-auto pb-2 block md:hidden"/>
+			<img src="/assets/offwhite_doodle_web.svg" alt="doodle" class="mx-auto pb-2 hidden md:block lg:hidden"/>
+			<img src="/assets/offwhite_doodle_web.svg" alt="doodle" class="mx-auto pb-2 hidden lg:block"/>
+			<Heading htmlheading="h2" size="large" font="display" stylingclasses="text-offwhite text-center p-2 intersect:animate-fade-left animate-once animate-duration-800ms">Vores fire helteinitiativer</Heading>
+			<Text teksttype="brødtekst" stylingclasses="text-offwhite text-center px-4 md:px-10 lg:px-20 pb-10 max-w-3xl mx-auto intersect:animate-fade-right animate-once animate-duration-800ms">Vi skaber leg, bevægelse og fællesskab for syge og sårbare børn på hospitaler, i psykiatrien, på børnehjem og indkvarteringssteder. Gennem Legeheltene, Kreaheltene, Helteakademiet og Heltecamps skaber vi aktiviteter og gode oplevelser.</Text>
 		</div>
-		<div class="container mx-auto p-4 grid grid-cols-1 gap-6 md:grid-cols-2">
-			<InitiativeCard
-			class="rounded-tl-3xl rounded-br-3xl flex-row-reverse hover:bg-skyblue100 transition-colors duration-300"
-			logo="/assets/legehelte_initiativ.svg"
-			number="20"
-			title="Legehelte"
-			text="er dagligt til stede på børneafdelinger i hele landet"
+		<div class="container mx-auto p-4 grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-2 lg:gap-6">
+			<InitiativeCard class="rounded-tl-3xl rounded-br-3xl flex-row-reverse hover:bg-skyblue100 transition-colors duration-300 intersect:animate-fade-up animate-once animate-duration-800ms" 
+			logo="/assets/legehelte_initiativ.svg" 
+			number="20" 
+			title="Legehelte" 
+			text="er dagligt til stede på børneafdelinger i hele landet" 
 			href="/legeheltene"
 			/>
-			<InitiativeCard
-			class="rounded-tr-3xl rounded-bl-3xl hover:bg-lime200 transition-colors duration-300"
-			logo="/assets/heltecamps_initiativ.svg"
-			number="7"
+			<InitiativeCard class="rounded-tr-3xl rounded-bl-3xl hover:bg-lime200 transition-colors duration-300 intersect:animate-fade-down animate-once animate-duration-800ms" 
+			logo="/assets/heltecamps_initiativ.svg" 
+			number="7" 
 			title="Heltecamps"
 			text="afholdes hver sommer for syge børn i hele Danmark"
 			/>
-			<InitiativeCard
-			class="rounded-tr-3xl rounded-bl-3xl hover:bg-pink200 transition-colors duration-300"
-			logo="/assets/kreahelte_initiativ.svg"
-			number="20"
-			title="Kreahelte"
+			<InitiativeCard class="rounded-tr-3xl rounded-bl-3xl hover:bg-pink200 transition-colors duration-300 intersect:animate-fade-left animate-once animate-duration-800ms" 
+			logo="/assets/kreahelte_initiativ.svg" 
+			number="20" 
+			title="Kreahelte" 
 			text="inviterer dagligt børnene ind i deres kreative værksteder"
 			/>
-			<InitiativeCard
-			class="rounded-tl-3xl rounded-br-3xl flex-row-reverse hover:bg-grassgreen300 transition-colors duration-300"
-			logo="/assets/helteakademi_initiativ.svg"
-			number="18"
-			title="Helteakademier"
-			text="sørger hver uge boldspil mm. for børn med sygdom og handicap"
-			/>
+			<InitiativeCard class="rounded-tl-3xl rounded-br-3xl flex-row-reverse hover:bg-grassgreen300 transition-colors duration-300 intersect:animate-fade-right animate-once animate-duration-800ms" 
+			logo="/assets/helteakademi_initiativ.svg" 
+			number="18" 
+			title="Helteakademier" 
+			text="sørger hver uge boldspil mm. for børn med sygdom og handicap"/>
 		</div>
-		
 		<div class="flex justify-center mt-10">
-            <Text><Link href="/stoette" variant="secondary" size="large">Det går din støtte til</Link></Text>
-		</div>
-		</div>
+		<Link href="/stoette" variant="secondary" size="large">Det går din støtte til</Link>
+	</div>
+	</div>
 	</section>
+
 	<!-- SLUT PÅ HELTEINITIATIVER -->
 
 	<!--START PÅ HISTORIEN BAG -->
-	<section class="container mx-auto relative pb-110 lg:pb-150 2xl:max-width-bscreen">
-
-  	<!-- Grid til billede + tekst -->
-  	<div class="grid grid-cols-1 lg:grid-cols-2">
-		<div class="order-2 lg:order-1 relative">
-			<img src="/img/henriette.webp" alt="stifter" class="w-full"/>
-		</div>
-
-		<div class="order-1 lg:order-2">
-			<!-- Doodles -->
-			<div class="pt-12">
-				<img
-				src="/assets/mobil_orange_doodle.svg"
-				alt="doodle"
-				class="px-4 pb-2 block lg:hidden"
-				/>
-				<img
-				src="/assets/orange_doodle_web.svg"
-				alt="doodle"
-				class="hidden lg:block lg:px-4 lg:pt-10"
-				/>
-				<img
-				src="/assets/orange_doodle_web.svg"
-				alt="doodle"
-				class="mx-auto hidden md:block lg:hidden"
-				/>
-			</div>
-		<Heading htmlheading="h2" size="large" font="display" stylingclasses="relative z-20 text-text px-4 my-3">
-			Historien bag Heltene
-		</Heading>
-		<Text teksttype="brødtekst" stylingclasses="text-text px-4 pb-5">
-			Idéen til Legeheltene opstod, da generalsekretær i Børneulykkesfonden,
-			Henriette Madsen, var indlagt med sin egen søn. Hun oplevede, hvordan tiden
-			på hospitalet kan føles lang, og at det kan være vanskeligt at skabe
-			mulighederne for den aktive leg.
-		</Text>
-		<Text teksttype="brødtekst" stylingclasses="text-text px-4">
-			Derfor startede Børneulykkesfonden Legeheltene. Legeheltene blev
-			startskuddet til en række initiativer – nemlig Kreaheltene,
-			Helteakademiet og Heltecamps.
-		</Text>
+<section class="container mx-auto relative pb-110 md:pb-120 lg:pb-150 2xl:max-width-bscreen">
+  <div class="grid grid-cols-1 lg:grid-cols-2">
+    <div class="order-2 lg:order-1 relative">
+      <img src="/img/henriette.webp" alt="stifter" class="w-full"/>
     </div>
-		<!-- Orange citat-bobbel -->
-		<div class="absolute top-170 lg:top-105 lg:left-30 z-30">
-		<!-- selve boblen -->
-		<img src="/assets/citat_bobbel.svg" alt="citat_bobbel" class="w-full h-auto"/>
-		<!-- Overlay-indhold -->
-		<div class="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
-			<!-- Citattegn -->
-			<img
-				src="/assets/citattegn_venstre_web.svg"
-				alt="citattegn"
-				class="w-10 md:w-15 lg:w-18 mb-4 absolute top-10 md:top-30 lg:top-40 left-25 lg:left-40"
-			/>
-			<img
-				src="/assets/citiattegn_hoejre_web.svg"
-				alt="citattegn"
-				class="w-10 md:w-15 lg:w-18 mb-4 absolute bottom-8 md:bottom-20 lg:bottom-40 right-20 lg:right-40"
-			/>
-
-			<!-- Citattekst -->
-			<Heading htmlheading="h4" size="medium" font="sans" stylingclasses="text-text lg:text-center mx-30 lg:mx-40 mb-4 leading-6 md:leading-8">
-				Henriette Madsen, stifter af Heltene
-			</Heading>
-			<!-- Mobil-version -->
-				<Text teksttype="brødtekst" stylingclasses="text-text text-center mx-12 md:hidden lg:hidden">
-				"Jeg startede Legeheltene, fordi jeg var indlagt med min egen søn Marius i 2016 og mærkede, hvordan det var at være indlagt både som barn og forælder. Kombinationen af dén erfaring, og ønsket om at gøre en forskel for indlagte børn og deres familier, blev grundlaget for idéen til Legeheltene."
-				</Text> 
-
-				<!-- Desktop version -->
-				<Text teksttype="brødtekst" stylingclasses="text-text text-center md:mx-20 lg:mx-40 pb-4 lg:pb-10 hidden md:block lg:block">
-					"Jeg startede Legeheltene, fordi jeg var indlagt med min egen søn Marius i 2016 og mærkede, hvordan det var at være indlagt både som barn og forælder. Kombinationen af dén erfaring, og ønsket om at gøre en forskel for indlagte børn og deres familier, blev grundlaget for idéen til Legeheltene. 
-				</Text>
-				<Text teksttype="brødtekst" stylingclasses="text-text text-center md:mx-20 lg:mx-40 hidden md:block lg:block">
-					Jeg ønskede at skabe en hverdag for indlagte børn og deres familier, der så vidt muligt kunne minde om den hverdag, som børnene har uden for hospitalet gennem legen. Det er vigtigt, at man som barn kan få lov til at parkere sygdommen for en stund og bare være barn. Ligeledes er det vigtigt at øge livskvaliteten for børnene og deres familier gennem fællesskabet med andre indlagte børn og legen, som Legeheltene sætter i gang med børnene."
-				</Text>
-			</div>
-	</div>
-		<!-- Tredje billede-->
-		<div class="absolute top-245 md:top-280 lg:top-95 right-30 md:right-50 lg:-right-10 z-30 lg:z-0">
-			<img
-			src="/img/historien_bag.webp"
-			alt="tredje billede"
-			class="w-64 md:w-100 lg:w-96 h-auto"
-			/>
-			</div>
-	</section>
+    <div class="order-1 lg:order-2">
+      <!-- Doodles -->
+      <div class="pt-12">
+        <img src="/assets/mobil_orange_doodle.svg" alt="doodle" class="px-4 pb-2 block md:hidden lg:hidden"/>
+        <img src="/assets/orange_doodle_web.svg" alt="doodle" class="hidden lg:block lg:px-4 lg:pt-10"/>
+        <img src="/assets/orange_doodle_web.svg" alt="doodle" class="mx-auto hidden md:block lg:hidden"/>
+      </div>
+      <Heading htmlheading="h2" size="large" font="display" stylingclasses="relative z-20 text-text px-4 md:px-10 lg:px-20 my-3 max-w-3xl mx-auto intersect:animate-fade-left animate-once animate-duration-800ms">Historien bag Heltene</Heading>
+      <Text teksttype="brødtekst" stylingclasses="text-text px-4 md:px-10 lg:px-20 pb-5 max-w-3xl mx-auto intersect:animate-fade-left animate-once animate-duration-800ms">Idéen til Legeheltene opstod, da generalsekretær i Børneulykkesfonden, Henriette Madsen, var indlagt med sin egen søn. Hun oplevede, hvordan tiden på hospitalet kan føles lang, og at det kan være vanskeligt at skabe mulighederne for den aktive leg.</Text>
+      <Text teksttype="brødtekst" stylingclasses="text-text px-4 md:px-10 lg:px-20 max-w-3xl mx-auto intersect:animate-fade-left animate-once animate-duration-800ms">Derfor startede Børneulykkesfonden Legeheltene. Legeheltene blev startskuddet til en række initiativer – nemlig Kreaheltene, Helteakademiet og Heltecamps.</Text>
+    </div>
+    <!-- Orange citat-bobbel -->
+    <div class="absolute top-170 md:top-180 lg:top-105 lg:left-30 z-30 w-full md:w-auto">
+      <img src="/assets/citat_bobbel.svg" alt="citat_bobbel" class="w-full h-auto"/>
+      <div class="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
+        <img src="/assets/citattegn_venstre_web.svg" alt="citattegn" class="w-10 md:w-15 lg:w-18 mb-4 absolute top-10 md:top-30 lg:top-40 left-25 lg:left-40"/>
+        <img src="/assets/citiattegn_hoejre_web.svg" alt="citattegn" class="w-10 md:w-15 lg:w-18 mb-4 absolute bottom-8 md:bottom-20 lg:bottom-40 right-20 lg:right-40"/>
+        <Heading htmlheading="h4" size="medium" font="sans" stylingclasses="text-text lg:text-center mx-12 md:mx-20 lg:mx-40 mb-4 leading-6 md:leading-8 intersect:animate-fade-right animate-once animate-duration-800ms">Henriette Madsen, stifter af Heltene</Heading>
+        <Text teksttype="brødtekst" stylingclasses="text-text text-center mx-12 md:hidden lg:hidden intersect:animate-fade-up animate-once animate-duration-800ms">"Jeg startede Legeheltene, fordi jeg var indlagt med min egen søn Marius i 2016 og mærkede, hvordan det var at være indlagt både som barn og forælder. Kombinationen af dén erfaring, og ønsket om at gøre en forskel for indlagte børn og deres familier, blev grundlaget for idéen til Legeheltene."</Text>
+        <Text teksttype="brødtekst" stylingclasses="text-text text-center md:mx-20 lg:mx-40 pb-4 lg:pb-10 hidden md:block lg:block intersect:animate-fade-up animate-once animate-duration-800ms">"Jeg startede Legeheltene, fordi jeg var indlagt med min egen søn Marius i 2016 og mærkede, hvordan det var at være indlagt både som barn og forælder. Kombinationen af dén erfaring, og ønsket om at gøre en forskel for indlagte børn og deres familier, blev grundlaget for idéen til Legeheltene."</Text>
+        <Text teksttype="brødtekst" stylingclasses="text-text text-center md:mx-20 lg:mx-40 hidden md:block lg:block intersect:animate-fade-up animate-once animate-duration-800ms">Jeg ønskede at skabe en hverdag for indlagte børn og deres familier, der så vidt muligt kunne minde om den hverdag, som børnene har uden for hospitalet gennem legen. Det er vigtigt, at man som barn kan få lov til at parkere sygdommen for en stund og bare være barn. Ligeledes er det vigtigt at øge livskvaliteten for børnene og deres familier gennem fællesskabet med andre indlagte børn og legen, som Legeheltene sætter i gang med børnene."</Text>
+      </div>
+    </div>
+    <!-- Tredje billede-->
+    <div class="absolute top-245 md:top-280 lg:top-95 right-30 md:right-50 lg:-right-10 z-30 lg:z-0">
+      <img src="/img/historien_bag.webp" alt="tredje billede" class="w-64 md:w-100 lg:w-96 h-auto"/>
+    </div>
+  </div>
+</section>
 	<!--SLUT PÅ HISTORIEN BAG -->
 
 
 	<!--START PÅ TIDSLINJE -->
 	<section class="container mx-auto 2xl:max-width-bscreen">
-		<Heading htmlheading="h2" size="large" font="display" stylingclasses="text-text text-center px-4 mt-5 lg:mt-20">
+		<Heading htmlheading="h2" size="large" font="display" stylingclasses="text-text text-center px-4 mt-5 lg:mt-20 intersect:animate-fade-left animate-once animate-duration-800ms">
 			Vores udvikling
 		</Heading>
-		<div class="grid grid-cols-30 grid-rows-16 lg:grid-rows-11 lg:h-500">
+		<div class="grid grid-cols-30 grid-rows-16 lg:grid-rows-11 lg:h-500 -mt-10 lg:-mt-20">
 			<img src="/assets/tidslinje.svg" alt="tidslinje" class="col-start-15 col-span-2 row-start-2 row-span-13 lg:row-start-2 lg:row-span-9 w-full h-full"/>
-			<div class="col-start-7 row-start-2 col-span-9 lg:col-start-9">
+			<div class="col-start-7 row-start-2 col-span-9 lg:col-start-9 intersect:animate-fade-up animate-once animate-duration-800ms">
 				<Text teksttype="brødtekst">2016 december</Text>
 				<Heading htmlheading="h4" size="medium" font="sans" stylingclasses="-mt-3">Idéen opstår</Heading>
 			</div>
 			<img src="/assets/bulb.svg" alt="bulb" class="col-start-2 col-span-4 row-start-2 -rotate-20 w-full h-auto lg:w-20 lg:col-start-7 lg:row-start-2 lg:col-span-2"/>
-			<div class="col-start-18 row-start-4 col-span-8 lg:row-start-3">
+			<div class="col-start-18 row-start-4 col-span-8 lg:row-start-3 intersect:animate-fade-up animate-once animate-duration-800ms">
 				<Text teksttype="brødtekst">2016/2017</Text>
 				<Heading htmlheading="h4" size="medium" font="sans" stylingclasses="-mt-3">Pilotprojekt</Heading>
 				<Heading htmlheading="h5" size="xsmall" font="sans" stylingclasses="leading-4">Lancering på OUH</Heading>
 			</div>
 			<img src="/assets/hospital.svg" alt="hospital" class="col-start-26 col-span-3 row-start-4 w-full h-auto lg:row-start-3 lg:col-start-23 lg:w-20"/>
-			<div class="col-start-3 row-start-5 row-span-2 col-span-12 lg:col-start-7 lg:col-span-8 lg:row-start-4">
+			<div class="col-start-3 row-start-5 row-span-2 col-span-12 lg:col-start-7 lg:col-span-8 lg:row-start-4 intersect:animate-fade-up animate-once animate-duration-800ms">
 				<Text teksttype="brødtekst">2018</Text>
 				<Heading htmlheading="h4" size="medium" font="sans" stylingclasses="-mt-3">10 Legehelte</Heading>
 				<Heading htmlheading="h5" size="xsmall" font="sans" stylingclasses="">7 børneafdelinger</Heading>
-				<Text teksttype="brødtekst">Herlev, Hvidovre, Aarhus, Aalborg Nord, Herning & Viborg</Text>
+				<Text teksttype="brødtekst" stylingclasses="pr-8 lg:pr-0">Herlev, Hvidovre, Aarhus, Aalborg Nord, Herning & Viborg</Text>
 			</div>
 			<img src="/assets/legehelte_tidslinje.svg" alt="legehelte" class="col-start-11 col-span-5 row-start-5 w-full h-auto lg:row-start-4 lg:col-start-13 lg:w-25"/>
-			<div class="col-start-17 row-start-7 row-span-2 col-span-15 lg:row-start-5">
+			<div class="col-start-17 row-start-7 row-span-2 col-span-15 lg:row-start-5 intersect:animate-fade-up animate-once animate-duration-800ms">
 				<Text teksttype="brødtekst">2019</Text>
 				<Heading htmlheading="h4" size="medium" font="sans" stylingclasses="-mt-3">16 Legehelte</Heading>
 				<Heading htmlheading="h5" size="xsmall" font="sans" stylingclasses="">11 børneafdelinger</Heading>
-				<Text teksttype="brødtekst">Rigshospitalet, Aabenraa, Slagelse & Færøerne</Text>
+				<Text teksttype="brødtekst" stylingclasses="pr-18 lg:pr-0">Rigshospitalet, Aabenraa, Slagelse & Færøerne</Text>
 			</div>
 			<img src="/assets/legehelte_tidslinje.svg" alt="legehelte" class="col-start-25 col-span-5 -rotate-50 row-start-7 w-full h-auto lg:w-25 lg:row-start-5 lg:col-start-22"/>
-			<div class="col-start-3 row-start-9 row-span-2 col-span-12 lg:row-start-6 lg:col-start-7 lg:pt-3">
+			<div class="col-start-3 row-start-9 row-span-2 col-span-12 lg:row-start-6 lg:col-start-7 lg:pt-3 intersect:animate-fade-up animate-once animate-duration-800ms">
 				<Text teksttype="brødtekst">2020</Text>
 				<Heading htmlheading="h4" size="medium" font="sans" stylingclasses="-mt-3">Lancering af</Heading>
 				<Heading htmlheading="h5" size="xsmall" font="sans" stylingclasses="leading-5">Helteakademiet og Kreaheltene</Heading>
 			</div>
 			<img src="/assets/kreahelte_tidslinje.svg" alt="kreahelte" class="col-start-7 col-span-5 row-start-8 w-full h-auto lg:w-25 lg:row-start-6 lg:col-start-13"/>
 			<img src="/assets/helteakademi_tidslinje.svg" alt="helteakademi" class="col-start-4 col-span-5 row-start-8 w-full h-auto lg:w-20 lg:row-start-6 lg:col-start-12"/>
-			<div class="col-start-17 row-start-10 row-span-3 col-span-15 lg:row-start-7">
+			<div class="col-start-17 row-start-10 row-span-3 col-span-15 lg:row-start-7 intersect:animate-fade-up animate-once animate-duration-800ms">
 				<Text teksttype="brødtekst">2020</Text>
 				<Heading htmlheading="h4" size="medium" font="sans" stylingclasses="-mt-3">20 Legehelte</Heading>
 				<Heading htmlheading="h5" size="xsmall" font="sans" stylingclasses="">13 børneafdelinger</Heading>
 			</div>
 			<img src="/assets/legehelte_tidslinje.svg" alt="legehelte" class="col-start-25 col-span-5 row-start-10 w-full h-auto lg:w-25 lg:row-start-7 lg:col-start-22"/>
-			<div class="col-start-3 row-start-11 row-span-3 col-span-12 lg:row-start-8 lg:col-span-7 lg:col-start-7">
+			<div class="col-start-3 row-start-11 row-span-3 col-span-12 lg:row-start-8 lg:col-span-7 lg:col-start-7 intersect:animate-fade-up animate-once animate-duration-800ms">
 				<Text teksttype="brødtekst">2021</Text>
 				<Heading htmlheading="h4" size="medium" font="sans" stylingclasses="-mt-3">26 Legehelte</Heading>
 				<Heading htmlheading="h5" size="xsmall" font="sans" stylingclasses="">19 børneafdelinger</Heading>
 				<Text teksttype="brødtekst">Aalborg Syd, Aalborg, psykiatri, Roskilde, Randers, Rønde & Esbjerg</Text>
 			</div>
 			<img src="/assets/legehelte_tidslinje.svg" alt="legehelte" class="col-start-11 -rotate-45 col-span-5 row-start-11 w-full h-auto lg:w-25 lg:row-start-8 lg:col-start-12"/>
-			<div class="col-start-17 row-start-13 row-span-4 col-span-15 lg:row-start-9">
+			<div class="col-start-17 row-start-13 row-span-4 col-span-12 lg:row-start-9 intersect:animate-fade-up animate-once animate-duration-800ms">
 				<Text teksttype="brødtekst" stylingclasses="lg:pl-2">2022</Text>
 				<Heading htmlheading="h4" size="medium" font="sans" stylingclasses="-mt-3 leading-6 lg:leading-9 lg:pl-2">Lancering af Heltecamps</Heading>
 				<Text teksttype="brødtekst" stylingclasses="lg:pl-2">Hjørring & Filadelfia</Text>
 			</div>
-			<img src="/assets/heltecamps_tidslinje.svg" alt="heltecamp" class="col-start-25 col-span-5 row-start-13 w-full h-auto lg:w-25 lg:row-start-9 lg:col-start-26 lg:pl-5"/>
-						<div class="col-start-3 row-start-14 row-span-4 col-span-12 lg:row-start-10 lg:col-start-7 lg:pt-4">
+			<img src="/assets/heltecamps_tidslinje.svg" alt="heltecamp" class="col-start-24 col-span-5 row-start-13 w-full h-auto lg:w-25 lg:row-start-9 lg:col-start-26 lg:pl-5"/>
+						<div class="col-start-3 row-start-14 row-span-4 col-span-10 lg:row-start-10 lg:col-start-7 lg:pt-4 intersect:animate-fade-up animate-once animate-duration-800ms">
 				<Text teksttype="brødtekst">2022</Text>
 				<Heading htmlheading="h4" size="medium" font="sans" stylingclasses="-mt-3">29 Legehelte</Heading>
 				<Heading htmlheading="h5" size="xsmall" font="sans" stylingclasses="leading-4">Et børnehjem og 4 modtagecentre</Heading>
@@ -301,30 +203,30 @@ import Stoet from "../components/Stoet.astro";
 	<!--SLUT PÅ TIDSLINJE -->
 
 	<!-- START PÅ ÅRSRAPPORT -->
-<section class="container mx-auto mb-30 bg-secondary rounded-tl-md rounded-br-md rounded-tr-50 rounded-bl-50 2xl:max-width-bscreen">
-  <div class="grid lg:grid-cols-2">
+<section class="container mx-auto mb-30 bg-secondary rounded-tl-md rounded-br-md rounded-tr-50 rounded-bl-50 2xl:max-width-bscreen intersect:animate-fade-left animate-once animate-duration-800ms">
+  <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2">
 
     <!-- TEKST -->
-    <div class="lg:mt-30 order-1 lg:order-2">
-      <Heading htmlheading="h2" size="large" font="display" stylingclasses="text-center lg:text-start text-offwhite px-10 mt-10 pb-5">
+    <div class="order-1 lg:order-2 lg:mt-30">
+      <Heading htmlheading="h2" size="large" font="display" stylingclasses="text-center md:text-center lg:text-start text-offwhite px-4 md:px-10 lg:px-10 mt-10 pb-5 intersect:animate-fade-right animate-once animate-duration-800ms">
         Årsrapport 2024
       </Heading>
-      <Text teksttype="brødtekst" stylingclasses="text-offwhite px-10 pb-5">
+      <Text teksttype="brødtekst" stylingclasses="text-offwhite px-4 md:px-10 lg:px-10 pb-5 intersect:animate-fade-right animate-once animate-duration-800ms">
         Takket være støtte fra private donorer, virksomheder, fonde, og samarbejdspartnere har Børneulykkesfonden i 2024 haft flere aktiviteter end nogensinde før.
       </Text>
-      <Text teksttype="brødtekst" stylingclasses="text-offwhite px-10">
+      <Text teksttype="brødtekst" stylingclasses="text-offwhite px-4 md:px-10 lg:px-10 intersect:animate-fade-right animate-once animate-duration-800ms">
         Læs mere om dette og årets resultater i årsrapporten her.
       </Text>
       <div class="pt-12">
         <img src="/assets/mobil_offwhite_doodle.svg" alt="doodle" class="mx-auto block pb-8 lg:hidden" />
-        <img src="/assets/offwhite_doodle_web.svg" alt="doodle" class="hidden lg:block lg:px-10 pb-10" />
+        <img src="/assets/offwhite_doodle_web.svg" alt="doodle" class="hidden md:hidden lg:block lg:px-10 pb-10" />
+        <img src="/assets/offwhite_doodle_web.svg" alt="doodle" class="hidden md:block lg:hidden mx-auto pb-8" />
       </div>
-     <div class="text-center lg:text-start px-10 lg:pb-10">
-  	<Link href="https://www.datocms-assets.com/104863/1757656519-arsmagasin-2024-web.pdf" variant="secondary" size="large">
-    Læs mere
-  	</Link>
-</div>
-
+      <div class="text-center md:text-center lg:text-start px-4 md:px-10 lg:px-10 lg:pb-10 pt-4">
+        <Link href="https://www.datocms-assets.com/104863/1757656519-arsmagasin-2024-web.pdf" variant="secondary" size="large">
+          Læs mere
+        </Link>
+      </div>
     </div>
 
     <!-- BILLEDE -->
@@ -332,6 +234,7 @@ import Stoet from "../components/Stoet.astro";
 
   </div>
 </section>
+
 
 
 	<!-- SLUT PÅ ÅRSRAPPORT -->
