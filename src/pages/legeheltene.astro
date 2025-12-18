@@ -12,6 +12,8 @@ import Legehelte from "../components/Legehelte.astro";
 <MainLayout title="Titel">
 	<!-- container mx-auto p-4 -->
 	<main class="">
+	<div class="progress-bar h-6 z-100 fixed w-full bg-[url('/assets/regnbue_hover.svg')] left-0 origin-top-left top-0 right-0"></div>
+
 			<!-- <div class="progress-bar h-6 z-100 fixed w-full bg-[url('/assets/regnbue_hover.svg')] left-0 origin-top-left top-0 right-0"></div> -->
 		<!-- HERO LEGEHELTENE -->
 		<section class="bg-dustblue200 h-190 md:h-130 lg:h-160  ">
@@ -342,3 +344,4 @@ import { animate, stagger, inView, scroll } from "motion";
 	/*Progress-baren/læseindikatoren */
 	scroll( animate(".progress-bar", { scaleX: [0, 1] }));
 </script>
+
