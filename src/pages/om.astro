@@ -8,6 +8,7 @@ import Stoet from "../components/Stoet.astro";
 ---
 <MainLayout title="Om os">
 <main class="">
+<div class="progress-bar h-6 z-110 fixed w-full bg-[url('/assets/regnbue_hover.svg')] left-0 origin-top-left top-0 right-0"></div>
 	<!-- HERO OM OS -->
 <section class="bg-secondary pb-15 2xl:max-width-bscreen">
   <div class="pt-12 md:pt-16">
@@ -270,3 +271,9 @@ import Stoet from "../components/Stoet.astro";
 
 </main>
 </MainLayout>
+<script>
+import { animate, stagger, inView, scroll } from "motion";
+
+	/*Progress-baren/læseindikatoren */
+	scroll( animate(".progress-bar", { scaleX: [0, 1] }));
+</script>

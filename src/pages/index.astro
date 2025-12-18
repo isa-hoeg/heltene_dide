@@ -1,17 +1,20 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+import thumbsup from "../assets/images/thumbsup.png";
 import Heading from "../components/Heading.astro";
 import Text from "../components/Text.astro";
+import Button from "../components/Button.astro";
 import Stoet from "../components/Stoet.astro";
 import InitiativeCard from "../components/InitiativeCard.astro";
 import Udtalelser from "../components/Udtalelser.astro";	
 ---
 <MainLayout title="Heltene">
 <main class="">
+<div class="progress-bar h-6 z-110 fixed w-full bg-[url('/assets/regnbue_hover.svg')] left-0 origin-top-left top-0 right-0"></div>
 <!-- start på hero -->
-<section class="w-full min-h-145 bg-[url(/assets/mobil_regnbue_hero.svg)] bg-cover bg-center bg-no-repeat md:bg-[url(/assets/regnbue_hero.svg)] md:bg-cover md:bg-center md:min-h-175 lg:w-full lg:bg-[url(/assets/baggrund.svg)] lg:bg-cover lg:bg-right">
-
+<section class="min-h-145 bg-[url(/assets/mobil_regnbue_hero.svg)] bg-cover bg-center bg-no-repeat md:bg-[url(/assets/mobil_regnbue_hero.svg)] md:bg-cover md:bg-center lg:w-full lg:bg-[url(/assets/regnbue_hero.svg)] lg:bg-cover lg:bg-right">
   <div class="2xl:max-width-bscreen mx-auto">
     <!-- Doodles -->
     <div class="pt-12">
@@ -24,7 +27,12 @@ import Udtalelser from "../components/Udtalelser.astro";
     <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2">
       <!-- Tekstkolonne -->
       <div class="text-center md:text-center lg:text-left px-4 md:px-10 lg:px-20">
-        <Heading htmlheading="h1" size="xlarge" font="display" stylingclasses="text-text mt-5 md:mt-10 lg:mt-0 py-2 row-start-2 lg:row-start-1 lg:col-start-2 intersect:animate-fade-right animate-once animate-duration-800ms">
+        <Heading 
+          htmlheading="h1" 
+          size="xlarge" 
+          font="display" 
+          stylingclasses="text-text mt-5 md:mt-10 lg:mt-0 py-2 row-start-2 lg:row-start-1 lg:col-start-2 intersect:animate-fade-right animate-once animate-duration-800ms"
+        >
           Sammen kan vi give børn smil og styrke i en svær tid
         </Heading>
 
@@ -59,7 +67,7 @@ import Udtalelser from "../components/Udtalelser.astro";
   </div>
 </section>
 
-<div class="relative z-10 lg:-mt-50">
+<div class="relative z-10 lg:-mt-23">
   <Stoet />
 </div>
 
@@ -302,3 +310,9 @@ import Udtalelser from "../components/Udtalelser.astro";
 
 	</main>
 </MainLayout>
+<script>
+import { animate, stagger, inView, scroll } from "motion";
+
+	/*Progress-baren/læseindikatoren */
+	scroll( animate(".progress-bar", { scaleX: [0, 1] }));
+</script>

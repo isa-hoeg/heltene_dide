@@ -12,7 +12,7 @@ import Link from "../components/Link.astro";
         <nav id="desktopmenu" class="hidden lg:block">
             <ul class="flex flex-row gap-6 items-center">
                 <!-- dropdown 1 -->
-                <li class="relative z-10" x-data="{ open: false }">
+                <li class="relative z-100" x-data="{ open: false }">
                     <button @click="open = !open" class="text-xl hover:text-accent font-semibold cursor-pointer">+ HELTEINITIATIVER</button>
                     <div x-show="open" @click.outside="open = false" x-transition class="absolute bg-offwhite flex flex-col mt-2 px-6 py-4 rounded-br-[50px]">
                         <Text><Link href="/legeheltene" variant="headerlink2" size="large">Legeheltene</Link></Text>
@@ -22,7 +22,7 @@ import Link from "../components/Link.astro";
                     </div>
                 </li>
                 <!-- dropdown 2 -->
-                <li class="relative z-10" x-data="{ open: false }">
+                <li class="relative z-100" x-data="{ open: false }">
                     <button @click="open = !open" class="text-xl hover:text-accent font-semibold cursor-pointer">+ OM OS</button>
                     <div x-show="open" @click.outside="open = false" x-transition class="absolute bg-offwhite  mt-2 px-6 py-4 rounded-br-[50px] grid grid-cols-2 min-w-lg">
                         <div class="">
