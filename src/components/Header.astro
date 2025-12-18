@@ -26,20 +26,20 @@ import Link from "../components/Link.astro";
                     <button @click="open = !open" class="text-xl hover:text-accent font-semibold cursor-pointer">+ OM OS</button>
                     <div x-show="open" @click.outside="open = false" x-transition class="absolute bg-offwhite  mt-2 px-6 py-4 rounded-br-[50px] grid grid-cols-2 min-w-lg">
                         <div class="">
-                        <p class="text-xl text-grey500">DET GØR VI</p>
-                        <Text><Link href="/om" variant="headerlink2" size="large">Om os</Link></Text>
-                        <Text><Link href="" variant="headerlink2" size="large">Organisationen</Link></Text>
-                        <Text><Link href="" variant="headerlink2" size="large">Ansvarlighed</Link></Text>
-                        <Text><Link href="" variant="headerlink2" size="large">Indsamlingsetik</Link></Text>
-                        <Text><Link href="" variant="headerlink2" size="large">Støttemuligheder</Link></Text>
-                        <Text><Link href="" variant="headerlink2" size="large">Find os</Link></Text>
+                            <p class="text-xl text-grey500">DET GØR VI</p>
+                            <Text><Link href="/om" variant="headerlink2" size="large">Om os</Link></Text>
+                            <Text><Link href="" variant="headerlink2" size="large">Organisationen</Link></Text>
+                            <Text><Link href="" variant="headerlink2" size="large">Ansvarlighed</Link></Text>
+                            <Text><Link href="" variant="headerlink2" size="large">Indsamlingsetik</Link></Text>
+                            <Text><Link href="" variant="headerlink2" size="large">Støttemuligheder</Link></Text>
+                            <Text><Link href="" variant="headerlink2" size="large">Find os</Link></Text>
                         </div>
                         <div class="">
-                        <p class="text-xl text-grey500">HELTEVENNER</p>
-                        <Text><Link href="" variant="headerlink2" size="large">Sponsorer</Link></Text>
-                        <Text><Link href="" variant="headerlink2" size="large">Samarbejdspartnere</Link></Text>
-                        <Text><Link href="" variant="headerlink2" size="large">Ambassadørfamilier</Link></Text>
-                        <Text><Link href="" variant="headerlink2" size="large">Helteklubben</Link></Text>
+                            <p class="text-xl text-grey500">HELTEVENNER</p>
+                            <Text><Link href="" variant="headerlink2" size="large">Sponsorer</Link></Text>
+                            <Text><Link href="" variant="headerlink2" size="large">Samarbejdspartnere</Link></Text>
+                            <Text><Link href="" variant="headerlink2" size="large">Ambassadørfamilier</Link></Text>
+                            <Text><Link href="" variant="headerlink2" size="large">Helteklubben</Link></Text>
                         </div>
                     </div>
                 </li>
@@ -49,13 +49,12 @@ import Link from "../components/Link.astro";
             </ul>
         </nav>
         <!-- Burgermenu -->
-         <div class="lg:hidden">
+         <div class="flex items-center gap-6 lg:hidden">
             <Link href="/form1" variant="primary" size="large" icon="/assets/stoet_ikon_web.svg" iconHover="/assets/stoet_ikon_filled.svg">Støt</Link>
+            <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-10">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg>
+            </button>
         </div>
-         <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-10">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-</svg>
-</button>
     </div>
     <nav x-show="showmenu" x-transition x-on:click.outside="showmenu = false">
         <ul class="border-t-2 border-b-2 border-black p-4">
@@ -63,9 +62,9 @@ import Link from "../components/Link.astro";
                 <details>
                     <summary class="text-lg hover:text-accent font-semibold">HELTEINITIATIVER</summary>
                     <Text><Link href="/legeheltene" variant="headerlink2" size="large">Legeheltene</Link></Text>
-                        <Text><Link href="/legeheltene" variant="headerlink2" size="large">Kreaheltene</Link></Text>
-                        <Text><Link href="/legeheltene" variant="headerlink2" size="large">Helteakademiet</Link></Text>
-                        <Text><Link href="/legeheltene" variant="headerlink2" size="large">Heltecamps</Link></Text>
+                    <Text><Link href="/legeheltene" variant="headerlink2" size="large">Kreaheltene</Link></Text>
+                    <Text><Link href="/legeheltene" variant="headerlink2" size="large">Helteakademiet</Link></Text>
+                    <Text><Link href="/legeheltene" variant="headerlink2" size="large">Heltecamps</Link></Text>
                 </details>
             </li>
             <li class="text-left py-2">
@@ -79,14 +78,14 @@ import Link from "../components/Link.astro";
                         <Text><Link href="" variant="headerlink2" size="large">Indsamlingsetik</Link></Text>
                         <Text><Link href="" variant="headerlink2" size="large">Støttemuligheder</Link></Text>
                         <Text><Link href="" variant="headerlink2" size="large">Find os</Link></Text>
-                        </div>
-                        <div class="">
+                    </div>
+                    <div class="">
                         <p class="text-lg lg:text-xl text-grey500">HELTEVENNER</p>
                         <Text><Link href="" variant="headerlink2" size="large">Sponsorer</Link></Text>
                         <Text><Link href="" variant="headerlink2" size="large">Samarbejdspartnere</Link></Text>
                         <Text><Link href="" variant="headerlink2" size="large">Ambassadørfamilier</Link></Text>
                         <Text><Link href="" variant="headerlink2" size="large">Helteklubben</Link></Text>
-                        </div>
+                    </div>
                 </details>
             </li>
             <li><Text><Link href="/stoette" variant="headerlink" size="medium">DET STØTTER DU</Link></Text></li>
@@ -95,10 +94,10 @@ import Link from "../components/Link.astro";
         </ul>
     </nav>
 
-<script>
-    function toggleDropdown(){
-        let dropdown = document.querySelector ('#dropdownbutton #dropdown');
-        dropdown.classList.toggle('hidden')
-    }
-</script>
+    <script>
+        function toggleDropdown(){
+            let dropdown = document.querySelector ('#dropdownbutton #dropdown');
+            dropdown.classList.toggle('hidden')
+        }
+    </script>
 </header>

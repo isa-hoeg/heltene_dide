@@ -70,7 +70,10 @@ import Text from "../components/Text.astro";
 								    <Heading htmlheading="h4" size="small" font="sans" stylingclasses="font-medium self-start pb-1" >Persondata</Heading>
 								    <Text teksttype="brødtekst">Vi behandler dine personoplysninger dels efter den gældende EU persondataforordning og dels efter den danske persondatalov.</Text>
 								    <Text teksttype="brødtekst">Vil du vide mere om dine rettigheder og vores databehandling, så kan du læse vores <Link href="https://xn--brneulykkesfonden-00b.dk/heltene/cookie-og-privatlivspolitik" variant="textlink" size="medium" font="serif">persondatapolitik</Link>.</Text>
-								    <div class=" flex mt-6 self-end" x-data="{ paymentMethod: localStorage.getItem('paymentMethod') || 'mobilepay' }">
+								    
+									<!-- Her vises information om persondata, og med Alpine.js afgøres det automatisk, 
+									 hvilken betalingsside brugeren sendes videre til, baseret på den valgte betalingsmetode gemt i localStorage. -->
+									<div class=" flex mt-6 self-end" x-data="{ paymentMethod: localStorage.getItem('paymentMethod') || 'mobilepay' }">
             					        <a x-show="paymentMethod === 'mobilepay'" href="/mpform" class="cursor-pointer">
 	            					        <img src="/assets/orange_pil_hoejre.svg" class="scale-80">
             					        </a>
