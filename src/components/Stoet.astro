@@ -5,40 +5,34 @@ import Link from "../components/Link.astro";
 import Button from "../components/Button.astro";
 ---
 
-<article class="bg-offwhite py-6 px-2 ml-5 mr-5 z-20 mx-auto rounded-tl-50 rounded-tr-md rounded-br-50 rounded-bl-md lg:ml-15 lg:mr-15 lg:p-8 2xl:ml-auto 2xl:mr-auto 2xl:max-w-[1600px] intersect:animate-fade-left animate-once animate-duration-800ms">
-    <Heading htmlheading="h3" size="medium" stylingclasses="font-semibold text-text pl-4 pb-8 lg:pl-6">Støt alvorligt og kronisk syge børn</Heading>
-    <div class="flex flex-wrap gap-2 items-center justify-between lg:flex-row lg:gap-10 ">
-        <!-- Radiobuttons -->
-        <div class="pl-4 pb-4 lg:pl-6">
-            <div class="flex items-center mb-2 lg:mb-4">
-                <input id="default-radio-1" type="radio" value="" name="default-radio" class="border-1 border-accent bg-offwhite focus:ring-accent checked:bg-accent rounded-full lg:w-6 lg:h-6">
-                <label for="default-radio-1" class="select-none ms-2 font-serif text-2xl"><Text teksttype="brødtekst" stylingclasses="text-text">Enkelt</Text></label>
-            </div>
-            <div class="flex items-center">
-                <input checked id="default-radio-2" type="radio" value="" name="default-radio" class="border-1 border-accent bg-offwhite focus:ring-accent checked:bg-accent lg:w-6 lg:h-6">
-                <label for="default-radio-2" class="select-none ms-2 font-serif text-2xl"><Text teksttype="brødtekst" stylingclasses="text-text">Månedligt</Text></label>
-            </div>  
-        </div>
-        <!-- Valg af beløb -->
-        <div id="amount-switch" class="inline-flex pr-4 rounded-full bg-bg">
-            <button class="switch-btn active"><Text teksttype="brødtekst" stylingclasses="text-text">50 kr</Text></button>
-            <button class="switch-btn cursor-pointer"><Text teksttype="brødtekst" stylingclasses="text-text">150 kr</Text></button>
-            <button class="switch-btn cursor-pointer"><Text teksttype="brødtekst" stylingclasses="text-text">250 kr</Text></button>
-        </div>
-        <div class="flex gap-10">
-            <input id="andetbeloeb" type="text" name="andetbeloeb" placeholder="Andet beløb" class="px-4 rounded-full border-none placeholder:text-text focus:outline-accent font-serif text-base bg-bg lg:text-2xl lg:px-12 lg:py-3 " />       
-            <div class="lg:pr-6">
-                <Text><Link href="#" variant="primary" size="large" icon="/assets/stoet_ikon_web.svg" iconHover="/assets/stoet_ikon_filled.svg">Støt</Link></Text>  
-            </div> 
-        </div>
+<article x-data="{ amount: '50' }" class="bg-offwhite py-6 px-2 mx-5 z-20 rounded-tl-50 rounded-tr-md rounded-br-50 rounded-bl-md md:px-6 lg:mx-15 lg:p-8 2xl:mx-auto 2xl:max-w-[1600px] intersect:animate-fade-left animate-once animate-duration-800ms">
+  <Heading htmlheading="h3" size="medium" stylingclasses="font-semibold text-text text-center mx-auto pb-8 md:text-center lg:text-left lg:pl-6">Støt alvorligt og kronisk syge børn</Heading>
+
+  <div class="flex flex-col items-center gap-4 md:flex-row md:flex-wrap md:justify-center md:gap-8 lg:flex-nowrap lg:items-center lg:gap-10">
+    <div class="flex gap-4 md:flex-col pl-4 pb-4 lg:pl-6">
+      <div class="flex items-center">
+        <input type="radio" name="default-radio" class="border-1 border-accent bg-offwhite focus:ring-accent checked:bg-accent rounded-full lg:w-6 lg:h-6">
+        <label class="ms-2 font-serif text-2xl text-text">Enkelt</label>
+      </div>
+      <div class="flex items-center">
+        <input checked type="radio" name="default-radio" class="border-1 border-accent bg-offwhite focus:ring-accent checked:bg-accent rounded-full lg:w-6 lg:h-6">
+        <label class="ms-2 font-serif text-2xl text-text">Månedligt</label>
+      </div>
     </div>
-    <script>
-        document.querySelectorAll(".switch-btn").forEach(btn => {
-        btn.addEventListener("click", () => {
-        document.querySelectorAll(".switch-btn")
-            .forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
-         });
-        });
-    </script>
+
+    <div class="flex flex-col gap-4 md:flex-row md:items-center lg:gap-10">
+      <div class="flex items-center justify-between rounded-full bg-bg h-10 w-80 lg:h-12">
+        <button @click="amount = '50'" :class="amount === '50' ? 'active' : ''" class="switch-btn flex-1 h-full"><Text teksttype="brødtekst">50 kr</Text></button>
+        <button @click="amount = '150'" :class="amount === '150' ? 'active' : ''" class="switch-btn flex-1 h-full"><Text teksttype="brødtekst">150 kr</Text></button>
+        <button @click="amount = '250'" :class="amount === '250' ? 'active' : ''" class="switch-btn flex-1 h-full"><Text teksttype="brødtekst">250 kr</Text></button>
+      </div>
+
+      <input type="text" placeholder="Andet beløb" class="w-80 px-4 rounded-full border-none placeholder:text-text focus:outline-accent font-serif text-base bg-bg lg:text-xl lg:px-12 lg:py-3">
+    </div>
+
+    <div class="pt-4 md:w-full md:flex md:justify-center lg:w-auto lg:ml-auto lg:pr-6">
+      <Link href="#" variant="primary" size="large" icon="/assets/stoet_ikon_web.svg" iconHover="/assets/stoet_ikon_filled.svg">Støt</Link>
+    </div>
+  </div>
 </article>
+
