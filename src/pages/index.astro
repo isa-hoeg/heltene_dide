@@ -13,58 +13,59 @@ import Udtalelser from "../components/Udtalelser.astro";
 <MainLayout title="Heltene">
 <main class="">
 <!-- start på hero -->
-<section class=" min-h-145 bg-[url(/assets/mobil_regnbue_hero.svg)] bg-cover bg-center bg-no-repeat lg:w-full lg:bg-[url(/assets/regnbue_hero.svg)] lg:bg-cover lg:bg-right">
+<section class="min-h-145 bg-[url(/assets/mobil_regnbue_hero.svg)] bg-cover bg-center bg-no-repeat md:bg-[url(/assets/mobil_regnbue_hero.svg)] md:bg-cover md:bg-center lg:w-full lg:bg-[url(/assets/regnbue_hero.svg)] lg:bg-cover lg:bg-right">
   <div class="2xl:max-width-bscreen mx-auto">
-  <!-- Doodles -->
-  <div class="pt-12">
-    <img src="/assets/mobil_orange_doodle.svg" alt="doodle" class="mx-auto pb-2 block lg:hidden" />
-    <img src="/assets/orange_doodle_web.svg" alt="doodle" class="lg:px-20 hidden lg:block" />
-    <img src="/assets/orange_doodle_web.svg" alt="doodle" class="mx-auto hidden md:block lg:hidden" />
-  </div>
+    <!-- Doodles -->
+    <div class="pt-12">
+      <img src="/assets/mobil_orange_doodle.svg" alt="doodle" class="mx-auto pb-2 block md:hidden lg:hidden" />
+      <img src="/assets/orange_doodle_web.svg" alt="doodle" class="hidden md:block lg:hidden mx-auto" />
+      <img src="/assets/orange_doodle_web.svg" alt="doodle" class="lg:px-20 hidden lg:block" />
+    </div>
 
-  <!-- Grid med tekst og billede -->
-  <div class="grid grid-cols-1 lg:grid-cols-2">
-    <!-- Tekstkolonne -->
-    <div class="text-center lg:text-left px-4 lg:px-20">
-      <Heading 
-        htmlheading="h1" 
-        size="xlarge" 
-        font="display" 
-        stylingclasses="text-text mt-5 lg:mt-0 py-2 row-start-2 lg:row-start-1 lg:col-start-2"
-      >
-        Sammen kan vi give børn smil og styrke i en svær tid
-      </Heading>
+    <!-- Grid med tekst og billede -->
+    <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2">
+      <!-- Tekstkolonne -->
+      <div class="text-center md:text-center lg:text-left px-4 md:px-10 lg:px-20">
+        <Heading 
+          htmlheading="h1" 
+          size="xlarge" 
+          font="display" 
+          stylingclasses="text-text mt-5 md:mt-10 lg:mt-0 py-2 row-start-2 lg:row-start-1 lg:col-start-2 intersect:animate-fade-right animate-once animate-duration-800ms"
+        >
+          Sammen kan vi give børn smil og styrke i en svær tid
+        </Heading>
 
-      <Text teksttype="brødtekst" stylingclasses="text-text">
-        Vi arbejder for at skabe et liv med mere leg, bevægelse og fællesskab for syge, indlagte og udsatte børn og deres familier.
-      </Text>
-
-      <Text teksttype="brødtekst" stylingclasses="text-text">
-        Gør en heltegerning, og støt vores arbejde.
-      </Text>
-
-      <div class="flex flex-row items-center gap-5 py-8 lg:flex-row lg:items-start px-10 lg:px-0">
-        <Text><Link href="/form1" variant="primary" size="large" icon="/assets/stoet_ikon_web.svg" iconHover="/assets/stoet_ikon_filled.svg">Støt</Link></Text>
-
-        <Text>
-          <Link href="#helteinitiativer" variant="secondary" size="large">
-            Helteinitiativer
-          </Link>
+        <Text teksttype="brødtekst" stylingclasses="text-text mx-10 lg:mx-0 lg:w-115 mt-4 md:mt-6 lg:mt-2 intersect:animate-fade-right animate-once animate-duration-800ms">
+          Vi arbejder for at skabe et liv med mere leg, bevægelse og fællesskab for syge, indlagte og udsatte børn og deres familier.
         </Text>
+
+        <Text teksttype="brødtekst" stylingclasses="text-text mt-2 md:mt-4 lg:mt-2 intersect:animate-fade-right animate-once animate-duration-800ms">
+          Gør en heltegerning, og støt vores arbejde.
+        </Text>
+
+        <div class="flex flex-row md:flex-row justify-center md:justify-center gap-5 py-8 lg:flex-row lg:justify-start px-10 md:px-10 lg:px-0">
+          <Text><Link href="/form1" variant="primary" size="large" icon="/assets/stoet_ikon_web.svg" iconHover="/assets/stoet_ikon_filled.svg">Støt</Link></Text>
+
+          <Text>
+            <Link href="#helteinitiativer" variant="secondary" size="large">
+              Helteinitiativer
+            </Link>
+          </Text>
+        </div>
+      </div>
+
+      <!-- Billedkolonne -->
+      <div class="mt-10 md:mt-12 lg:mt-0">
+        <img
+          src="/img/forside_hero.webp" 
+          class="w-100 mx-auto z-10 -order-1 md:order-1 lg:order-1 object-cover" 
+          alt="heroimg"
+        />
       </div>
     </div>
-
-    <!-- Billedkolonne -->
-    <div>
-      <img
-        src="/img/forside_hero.webp" 
-        class="w-100 mx-auto z-10 -order-1 lg:order-1 object-cover" 
-        alt="heroimg"
-      />
-    </div>
-  </div>
   </div>
 </section>
+
 <div class="relative z-10 lg:-mt-23">
   <Stoet />
 </div>
@@ -76,17 +77,18 @@ import Udtalelser from "../components/Udtalelser.astro";
     <div class="container mx-auto 2xl:max-width-bscreen">
       <img src="/assets/mobil_offwhite_doodle.svg" alt="doodle" class="mx-auto pb-2 block lg:hidden" />
       <img src="/assets/offwhite_doodle_web.svg" alt="doodle" class="mx-auto pb-2 hidden lg:block" />
-      <Heading htmlheading="h2" size="large" font="display" stylingclasses="text-offwhite text-center p-2">
-        Vores fire helteinitiativer
-      </Heading>
-      <Text teksttype="brødtekst" stylingclasses="text-offwhite text-center lg:px-20 pb-10">
-        Vi skaber leg, bevægelse og fællesskab for syge og sårbare børn på hospitaler, i psykiatrien, på børnehjem og indkvarteringssteder. Gennem Legeheltene, Kreaheltene, Helteakademiet og Heltecamps skaber vi aktiviteter og gode oplevelser.
-      </Text>
+  <Heading htmlheading="h2" size="large" font="display" stylingclasses="text-offwhite text-center p-2 intersect:animate-fade-right animate-once animate-duration-800ms">
+  Vores fire helteinitiativer
+</Heading>
+<Text teksttype="brødtekst" stylingclasses="text-offwhite text-center my-8 md:my-6 lg:my-4 max-w-xl mx-auto pb-10 intersect:animate-fade-left animate-once animate-duration-800ms">
+  Vores fire helteinitiativer giver indlagte og udsatte børn mere leg, bevægelse og fællesskab. Vi møder dem dér, hvor de er, og styrker deres udvikling gennem aktiv og kreativ leg.
+</Text>
+
     </div>
 
-    <div class="container mx-auto p-4 grid grid-cols-1 gap-6 md:grid-cols-2">
+    <div class="container mx-auto px-6 grid grid-cols-1 gap-6 md:grid-cols-2">
       <InitiativeCard
-        class="rounded-tl-50 rounded-br-50 rounded-tr-md rounded-bl-md flex-row-reverse hover:bg-skyblue100 transition-colors duration-300"
+        class="rounded-tl-50 rounded-br-50 rounded-tr-md rounded-bl-md flex-row-reverse hover:bg-skyblue100 transition-colors duration-300 intersect:animate-fade-up animate-once animate-duration-800ms"
         logo="/assets/legehelte_initiativ.svg"
         number="20"
         title="Legehelte"
@@ -94,21 +96,21 @@ import Udtalelser from "../components/Udtalelser.astro";
         href="/legeheltene"
       />
       <InitiativeCard
-        class="rounded-tl-md rounded-br-md rounded-tr-50 rounded-bl-50 hover:bg-lime200 transition-colors duration-300"
+        class="rounded-tl-md rounded-br-md rounded-tr-50 rounded-bl-50 hover:bg-lime200 transition-colors duration-300 intersect:animate-fade-down animate-once animate-duration-800ms"
         logo="/assets/heltecamps_initiativ.svg"
         number="7"
         title="Heltecamps"
         text="afholdes hver sommer for syge børn i hele Danmark"
       />
       <InitiativeCard
-        class="rounded-tl-md rounded-br-md rounded-tr-50 rounded-bl-50 hover:bg-pink200 transition-colors duration-300"
+        class="rounded-tl-md rounded-br-md rounded-tr-50 rounded-bl-50 hover:bg-pink200 transition-colors duration-300 intersect:animate-fade-left animate-once animate-duration-800ms"
         logo="/assets/kreahelte_initiativ.svg"
         number="20"
         title="Kreahelte"
         text="inviterer dagligt børnene ind i deres kreative værksteder"
       />
       <InitiativeCard
-        class="rounded-tl-50 rounded-br-50 rounded-tr-md rounded-bl-md flex-row-reverse hover:bg-grassgreen300 transition-colors duration-300"
+        class="rounded-tl-50 rounded-br-50 rounded-tr-md rounded-bl-md flex-row-reverse hover:bg-grassgreen300 transition-colors duration-300 intersect:animate-fade-right animate-once animate-duration-800ms"
         logo="/assets/helteakademi_initiativ.svg"
         number="18"
         title="Helteakademier"
@@ -129,7 +131,7 @@ import Udtalelser from "../components/Udtalelser.astro";
 <!-- START PÅ UDTALELSER -->
 
 <section class="container mx-auto py-20 2xl:max-width-bscreen">
-  <Heading htmlheading="h2" size="large" font="display" stylingclasses="text-text text-center px-10 mb-10">
+  <Heading htmlheading="h2" size="large" font="display" stylingclasses="text-text text-center px-10 mb-10 intersect:animate-fade-right animate-once animate-duration-800ms">
     Det siger forældre og fagfolk om os
   </Heading>
   	<div class="lg:flex lg:justify-start">
@@ -138,9 +140,9 @@ import Udtalelser from "../components/Udtalelser.astro";
 					<!-- Desktop doodle -->
 					<img src="/assets/orange_doodle_web.svg" alt="" class="hidden lg:block lg:mx-auto pt-10">
 				</div>
-  <div class="-my-10 lg:my-10 ">
-			<article class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth w-full gap-60 ml-0 lg:ml-14 mt-10 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200">
-				<div id="christina" class="flex-none justify-center min-w-full lg:min-w-0 snap-start lg:w-80">
+  <div class="-my-10 lg:my-5 mx-6">
+			<article class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth w-full gap-6 lg:gap-60 ml-0 lg:ml-14 mt-10 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200 intersect:animate-fade-up animate-once animate-duration-800ms">
+				<div id="christina" class="flex-none justify-center lg:min-w-0 snap-start lg:w-80">
 					<Udtalelser
 					size="large"
 					cardimage="/img/udtalelser_1.webp"
@@ -149,7 +151,7 @@ import Udtalelser from "../components/Udtalelser.astro";
 					cardundertitle="Mor til Elias, som spiller i Helteakademiet"
 					/>
 				</div>
-				<div id="dorhte" class="flex-none justify-center min-w-full lg:min-w-0 snap-start lg:w-80">
+				<div id="dorhte" class="flex-none justify-center lg:min-w-0 snap-start lg:w-80">
 					<Udtalelser
 					size="large"
 					cardimage="/img/udtalelser_2.webp"
@@ -158,7 +160,7 @@ import Udtalelser from "../components/Udtalelser.astro";
 					cardundertitle="Mor til Luna, der har deltaget på heltecamp"
 					/>
 				</div>
-				<div id="lise" class="flex-none justify-center min-w-full lg:min-w-0 snap-start lg:w-80">
+				<div id="lise" class="flex-none justify-center lg:min-w-0 snap-start lg:w-80">
 					<Udtalelser
 					size="large"
 					cardimage="/img/udtalelser_3.webp"
@@ -167,7 +169,7 @@ import Udtalelser from "../components/Udtalelser.astro";
 					cardundertitle="Mor til Jessica, der har leget med Legeheltene og Kreaheltene"
 					/>
 				</div>
-				<div id="ella" class="flex-none justify-center min-w-full lg:min-w-0 snap-start lg:w-80">
+				<div id="ella" class="flex-none justify-center lg:min-w-0 snap-start lg:w-80">
 					<Udtalelser
 					size="large"
 					cardimage="/img/udtalelser_4.webp"
@@ -176,7 +178,7 @@ import Udtalelser from "../components/Udtalelser.astro";
 					cardundertitle="Mor til Thor, der har leget med Legeheltene og Kreaheltene mange gange"
 					/>
 				</div>
-				<div id="susanne" class="flex-none justify-center min-w-full lg:min-w-0 snap-start lg:w-80">
+				<div id="susanne" class="flex-none justify-center lg:min-w-0 snap-start lg:w-80">
 					<Udtalelser
 					size="large"
 					cardimage="/img/udtalelser_5.webp"
@@ -193,14 +195,14 @@ import Udtalelser from "../components/Udtalelser.astro";
 
 <!-- START PÅ NYHEDER -->
 <section class="container mx-auto pb-20 my-10 2xl:max-width-bscreen">
-  <Heading htmlheading="h2" size="large" font="display" stylingclasses="text-text text-center">
+  <Heading htmlheading="h2" size="large" font="display" stylingclasses="text-text text-center intersect:animate-fade-left animate-once animate-duration-800ms">
     Seneste Nyheder
   </Heading>
 
-  <div class="mx-4 lg:mx-0 gap-6 flex space-x-4 snap-x snap-mandatory overflow-x-auto px-2 lg:grid lg:grid-cols-3 lg:grid-rows-3 lg:auto-rows-fr lg:overflow-visible lg:space-x-0 my-10">
+  <div class="mx-6 lg:mx-0 gap-6 flex space-x-4 snap-x snap-mandatory overflow-x-auto px-2 lg:grid lg:grid-cols-3 lg:grid-rows-3 lg:auto-rows-fr lg:overflow-visible lg:space-x-0 my-10">
 
     <!-- STORT FEATURE -->
-  <div class="flex-none snap-start w-90 sm:w-96 lg:w-full flex flex-col my-6 rounded-tl-md rounded-br-md rounded-tr-50 rounded-bl-50 bg-offwhite overflow-hidden row-start-1 row-span-2 lg:h-full">
+  <div class="flex-none snap-start w-90 sm:w-96 lg:w-full flex flex-col my-6 rounded-tl-md rounded-br-md rounded-tr-50 rounded-bl-50 bg-offwhite overflow-hidden row-start-1 row-span-2 lg:h-full intersect:animate-fade-right animate-once animate-duration-800ms">
     <img src="/img/nyheder_prisvinder.webp" class="w-full h-36 lg:h-150 object-cover">
       <div class="p-4 flex flex-col h-full justify-between">
         <div>
@@ -217,7 +219,7 @@ import Udtalelser from "../components/Udtalelser.astro";
     </div>
 
     <!-- LILLE -->
-    <div class="flex-none snap-start w-75 sm:w-72 lg:w-full flex flex-col my-6 rounded-tl-md rounded-br-md rounded-tr-50 rounded-bl-50 bg-offwhite overflow-hidden lg:h-full">
+    <div class="flex-none snap-start w-75 sm:w-72 lg:w-full flex flex-col my-6 rounded-tl-md rounded-br-md rounded-tr-50 rounded-bl-50 bg-offwhite overflow-hidden lg:h-full intersect:animate-fade-up animate-once animate-duration-800ms">
       <img src="/img/nyheder_kreahelte.webp" class="w-full h-36 lg:h-full object-cover">
       <div class="p-4 flex flex-col h-full justify-between">
         <div>
@@ -231,7 +233,7 @@ import Udtalelser from "../components/Udtalelser.astro";
     </div>
 
     <!-- HORIZONTAL -->
-    <div class="flex-none snap-start w-90 sm:w-96 lg:w-full flex flex-col lg:flex-row items-stretch my-6 rounded-tl-md rounded-br-md rounded-tr-50 rounded-bl-50 bg-offwhite overflow-hidden row-start-2 col-start-2 col-span-2 lg:h-full">
+    <div class="flex-none snap-start w-90 sm:w-96 lg:w-full flex flex-col lg:flex-row items-stretch my-6 rounded-tl-md rounded-br-md rounded-tr-50 rounded-bl-50 bg-offwhite overflow-hidden row-start-2 col-start-2 col-span-2 lg:h-full intersect:animate-fade-left animate-once animate-duration-800ms">
       <img src="/img/nyheder_kasper_fisker.webp" class="w-full h-36 lg:w-1/2 lg:h-full object-cover">
       <div class="p-4 flex flex-col h-full justify-between">
         <div>
@@ -248,7 +250,7 @@ import Udtalelser from "../components/Udtalelser.astro";
     </div>
 
     <!-- HORIZONTAL -->
-    <div class="flex-none snap-start w-90 sm:w-96 lg:w-full flex flex-col lg:flex-row items-stretch my-6 rounded-tl-md rounded-br-md rounded-tr-50 rounded-bl-50 bg-offwhite overflow-hidden row-start-3 col-start-1 col-span-2 lg:h-full">
+    <div class="flex-none snap-start w-90 sm:w-96 lg:w-full flex flex-col lg:flex-row items-stretch my-6 rounded-tl-md rounded-br-md rounded-tr-50 rounded-bl-50 bg-offwhite overflow-hidden row-start-3 col-start-1 col-span-2 lg:h-full intersect:animate-fade-right animate-once animate-duration-800ms">
       <img src="/img/nyheder_dgi.webp" class="w-full h-36 lg:w-1/2 lg:h-full object-cover">
       <div class="p-4 flex flex-col h-full justify-between">
         <div>
@@ -264,7 +266,7 @@ import Udtalelser from "../components/Udtalelser.astro";
     </div>
 
     <!-- SMÅ -->
-    <div class="flex-none snap-start w-75 sm:w-72 lg:w-full flex flex-col my-6 rounded-tl-md rounded-br-md rounded-tr-50 rounded-bl-50 bg-offwhite overflow-hidden lg:h-full">
+    <div class="flex-none snap-start w-75 sm:w-72 lg:w-full flex flex-col my-6 rounded-tl-md rounded-br-md rounded-tr-50 rounded-bl-50 bg-offwhite overflow-hidden lg:h-full intersect:animate-fade-right animate-once animate-duration-800ms">
       <img src="/img/nyheder_kreahelte_2.webp" class="w-full h-36 lg:h-full object-cover">
       <div class="p-4 flex flex-col h-full justify-between">
         <div>
@@ -277,7 +279,7 @@ import Udtalelser from "../components/Udtalelser.astro";
       </div>
     </div>
 
-    <div class="flex-none snap-start w-75 sm:w-72 lg:w-full flex flex-col my-6 rounded-tl-md rounded-br-md rounded-tr-50 rounded-bl-50 bg-offwhite overflow-hidden lg:h-full">
+    <div class="flex-none snap-start w-75 sm:w-72 lg:w-full flex flex-col my-6 rounded-tl-md rounded-br-md rounded-tr-50 rounded-bl-50 bg-offwhite overflow-hidden lg:h-full intersect:animate-fade-down animate-once animate-duration-800ms">
       <img src="/img/nyheder_kreahelte.webp" class="w-full h-36 lg:h-full object-cover">
       <div class="p-4 flex flex-col h-full justify-between">
         <div>
