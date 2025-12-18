@@ -21,16 +21,11 @@ const { title } = Astro.props;
 	<body class="bg-bg">
 		
 		<Header></Header>
-		<div class="progress-bar h-6 z-100 fixed w-full bg-[url('/assets/regnbue_hover.svg')] left-0 origin-top-left top-0 right-0"></div>
+		
 		<slot />
 
 		<Footer></Footer>
 			
 	</body>
-	<script src="../assets/login.js">
-import { animate, stagger, inView, scroll } from "motion";
-
-	/*Progress-baren/læseindikatoren */
-	scroll( animate(".progress-bar", { scaleX: [0, 1] }));
-</script>
+	<script src="../assets/login.js"></script>
 </html>
