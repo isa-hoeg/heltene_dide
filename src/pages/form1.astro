@@ -6,7 +6,7 @@ import Text from "../components/Text.astro";
 import Button from "../components/Button.astro";
 ---
 <MainLayout title="Støt">
-	<main class="container mx-auto p-8">
+	<main class="container mx-auto p-8 2xl:max-w-bscreen">
 		<section class="lg:mt-15">
     		<Heading htmlheading="h1" size="xlarge" font="display" stylingclasses="text-center">Tak fordi du støtter Heltene</Heading>
     		<div class="relative w-full mx-auto mt-10 lg:mt-20">
@@ -67,15 +67,12 @@ import Button from "../components/Button.astro";
   						<button type="button" @click="payment = 'kort'" :class="payment === 'kort' ? 'active' : ''" class="switch-btn flex-1 h-full"><Text teksttype="brødtekst">Kort</Text></button>
 					</div>
 
-					<!-- Pil navigation -->
-					<div class="flex justify-end mt-8 w-80">
-  						<a x-show="payment === 'mobilepay'" href="/mpform" class="cursor-pointer">
-    						<img src="/assets/orange_pil_hoejre.svg" class="scale-80">
-  						</a>
-  						<a x-show="payment === 'kort'" href="/form3" class="cursor-pointer">
-    						<img src="/assets/orange_pil_hoejre.svg" class="scale-80">
-  						</a>
-					</div>
+				<!-- Pil navigation -->
+				<div class="flex justify-end mt-8 w-80">
+  					<a href="/form2" @click="localStorage.setItem('paymentMethod', payment)" class="cursor-pointer">
+    					<img src="/assets/orange_pil_hoejre.svg" class="scale-80">
+  					</a>
+				</div>
 				</div>
 			</div>
 		</section>

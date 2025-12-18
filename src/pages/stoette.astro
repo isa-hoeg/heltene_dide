@@ -11,74 +11,74 @@ import Link from "../components/Link.astro";
     
     <!-- start på hero -->
     <section class="w-full min-h-145 bg-[url(/assets/mobil_regnbue_hero.svg)] bg-cover bg-center bg-no-repeat md:bg-[url(/assets/regnbue_hero.svg)] md:bg-cover md:bg-center md:min-h-175 lg:w-full lg:bg-[url(/assets/regnbue_hero.svg)] lg:bg-cover lg:bg-center">
-      
-      <div class="relative">
+      <div class="2xl:max-w-bscreen mx-auto">
+        <div class="relative">
         
-        <!-- Mobil -->
-        <img
-          src="/assets/mobil_orange_doodle.svg"
-          alt="Orange doodle mobil"
-          class="mx-auto block pt-12 lg:hidden lg:pt-12"
-        />
+          <!-- Mobil -->
+          <img
+            src="/assets/mobil_orange_doodle.svg"
+            alt="Orange doodle mobil"
+            class="mx-auto block pt-12 lg:hidden lg:pt-12"
+          />
 
-        <!-- Desktop -->
-        <img
-          src="/assets/orange_doodle_web.svg"
-          alt="Orange doodle desktop"
-          class="hidden lg:block lg:ml-20 lg:pt-12"
-        />
-
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-2">
-
-        <div class="text-center lg:text-left px-4 lg:px-20">
-          <Heading htmlheading="h1" size="xlarge" font="display" stylingclasses="text-text mt-4 py-2 mb-2 row-start-2 lg:row-start-1 lg:col-start-2"
-          >
-            Støt i dag og gør en heltegerning
-          </Heading>
-
-          <Text teksttype="brødtekst" stylingclasses="text-text">
-            Du er ved at gøre en vaskeægte heltegerning. Med din støtte kan vi give indlagte og udsatte børn et frirum med plads til leg og fællesskab. 
-          </Text>
-
-          <Text teksttype="brødtekst" stylingclasses="text-text">
-            Af hjertet tak.
-          </Text>
-
-          <div class="pt-4 pb-8 lg:pt-4 lg:pb-8">
-            <Link href="#støttemuligheder" variant="secondary" size="large" class="scroll-smooth"
-            >
-              Støttemuligheder
-            </Link>
-          </div>
+          <!-- Desktop -->
+          <img
+            src="/assets/orange_doodle_web.svg"
+            alt="Orange doodle desktop"
+            class="hidden lg:block lg:ml-20 lg:pt-12"
+          />
 
         </div>
 
-        <img
-          src="/assets/mobil_helteikoner.svg"
-          alt="helteikoner_mobil.svg"
-          class="w-full max-w-xs mx-auto z-10 order-1 md:max-w-md lg:hidden"
-        />
+        <div class="grid grid-cols-1 lg:grid-cols-2">
 
-        <img
-          src="/assets/helteikoner_hero.svg"
-          alt="hero_svg"
-          class="hidden lg:block w-full max-w-lg mx-auto z-10 lg:order-2"
-        />
+          <div class="text-center lg:text-left px-4 lg:px-20">
+            <Heading htmlheading="h1" size="xlarge" font="display" stylingclasses="text-text mt-4 py-2 mb-2 row-start-2 lg:row-start-1 lg:col-start-2"
+            >
+              Støt i dag og gør en heltegerning
+            </Heading>
 
+            <Text teksttype="brødtekst" stylingclasses="text-text">
+              Du er ved at gøre en vaskeægte heltegerning. Med din støtte kan vi give indlagte og udsatte børn et frirum med plads til leg og fællesskab. 
+            </Text>
+
+            <Text teksttype="brødtekst" stylingclasses="text-text">
+              Af hjertet tak.
+            </Text>
+
+            <div class="pt-4 pb-8 lg:pt-4 lg:pb-8">
+              <Link href="#støttemuligheder" variant="secondary" size="large" class="scroll-smooth"
+              >
+                Støttemuligheder
+              </Link>
+            </div>
+
+          </div>
+
+          <img
+            src="/assets/mobil_helteikoner.svg"
+            alt="helteikoner_mobil.svg"
+            class="w-full max-w-xs mx-auto z-10 order-1 md:max-w-md lg:hidden"
+          />
+
+          <img
+            src="/assets/helteikoner_hero.svg"
+            alt="hero_svg"
+            class="hidden lg:block w-full max-w-lg mx-auto z-10 lg:order-2"
+          />
+
+        </div>
+
+        <div class="relative z-10">
+          <Stoet />
+        </div>
       </div>
-
-      <div class="relative z-10">
-        <Stoet />
-      </div>
-
     </section>
     <!-- Slut på hero -->
 
     <!-- Start på Det går din støtte til-section -->
     <section class="bg-secondary relative z-0 -mt-12 lg:-mt-20 pt-12 lg:pt-20 lg:pb-6">
-      <div class="container mx-auto relative z-0">
+      <div class="container mx-auto relative z-0 2xl:max-w-bscreen">
         
         <!-- Doodles -->
         <img src="/assets/mobil_offwhite_doodle.svg" alt="doodle mobil" class="mx-auto pb-2 block mt-12 lg:hidden" />
@@ -104,10 +104,10 @@ import Link from "../components/Link.astro";
     </section>
 
     <section class="bg-secondary relative z-0 py-6 lg:py-6">
-      <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+      <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 2xl:max-w-bscreen">
 
         <!-- Card 1 -->
-        <article class="flex flex-col bg-white shadow-md rounded-xl overflow-hidden mx-4 mb-6 lg:mx-0 lg:mb-0">
+        <article class="flex flex-col bg-white rounded-tl-md rounded-br-md rounded-tr-50 rounded-bl-50 overflow-hidden mx-4 mb-6 lg:mx-0 lg:mb-0">
           <div class="w-full h-64">
             <img src="/img/stoette1.webp" alt="Støt i dag" class="w-full h-full object-cover" />
           </div>
@@ -183,7 +183,7 @@ import Link from "../components/Link.astro";
         </article>
 
         <!-- Card 2 -->
-        <article class="flex flex-col bg-white shadow-md rounded-xl overflow-hidden mx-4 mb-6 lg:mx-0 lg:mb-0">
+        <article class="flex flex-col bg-white rounded-tl-50 rounded-br-50 rounded-tr-md rounded-bl-md overflow-hidden mx-4 mb-6 lg:mx-0 lg:mb-0">
 
           <div class="w-full h-64">
             <img src="/img/stoette2.webp" alt="Dit bidrag" class="w-full h-full object-cover" />
@@ -249,7 +249,7 @@ import Link from "../components/Link.astro";
 
     
 <section class="bg-bg">
-  <div class="container mx-auto">
+  <div class="container mx-auto 2xl:max-w-bscreen">
     
     <!-- Doodles -->
     <img src="/assets/mobil_orange_doodle.svg" alt="doodle" class="mx-auto pb-2 block mt-12 lg:hidden" />
@@ -317,7 +317,7 @@ import Link from "../components/Link.astro";
 <!-- Frivillig-section -->
 <section class="bg-offwhite mt-12 lg:mt-24">
   
-	<div class="text-center px-4 pt-8 lg:px-20 lg:pt-12">
+	<div class="text-center px-4 pt-8 lg:px-20 lg:pt-12 2xl:max-w-bscreen mx-auto">
     <Heading htmlheading="h2" size="large" font="display" stylingclasses="text-center text-text pb-6 mt-12">
       Interesseret i at være frivillig?
     </Heading>
@@ -365,7 +365,7 @@ import Link from "../components/Link.astro";
 
 <!-- Helteshop-section -->
 <section class="w-full py-12 md:py-16 lg:py-24">
-  <div class="container mx-auto px-4 md:px-12 lg:px-20">
+  <div class="container mx-auto px-4 md:px-12 lg:px-20 2xl:max-w-bscreen">
     
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
       

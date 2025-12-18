@@ -3,14 +3,14 @@ const { variant = "primary", size = "medium", icon = null, iconHover = null, typ
 
 // Base styling (gælder alle knapper)
 const buttonStyling =
-  "border-2 px-12 py-3 rounded-full inline-flex items-center gap-2 transition-all duration-500";
+  "border-2 px-12 py-2 px-6 rounded-full inline-flex items-center gap-2 transition-all duration-500 font-sans";
 
 // Varianter
 const variantClasses = {
   primary:
-    "border-accent border-4 bg-burnedorange100 text-accent hover:bg-accent hover:text-offwhite cursor-pointer hover:scale-102",
-  secondary:
     "bg-accent border-accent text-offwhite bg-no-repeat bg-center bg-cover hover:bg-[url('/assets/regnbue_hover.svg')] cursor-pointer hover:scale-102",
+  secondary:
+    "border-accent border-4 bg-burnedorange100 text-accent hover:bg-accent hover:text-offwhite cursor-pointer hover:scale-102",
 };
 
 // Størrelser

@@ -7,7 +7,7 @@ import Button from "../components/Button.astro";
 ---
 
 <MainLayout title="Titel">
-    <main class="container mx-auto p-8" x-data="{ confirmed: false }">
+    <main class="container mx-auto p-8 2xl:max-w-bscreen" x-data="{ confirmed: false }">
         <section x-show="!confirmed" x-transition>
             <Heading htmlheading="h1" size="xlarge" font="display" stylingclasses="text-center">Tak fordi du støtter Heltene</Heading>
 			<div class="relative w-full mx-auto mt-10 lg:mt-20">
@@ -50,9 +50,9 @@ import Button from "../components/Button.astro";
         </section>
 
         <!-- Bekræftelse -->
-        <section x-show="confirmed" x-transition>
+        <section x-show="confirmed" x-transition class=" mx-auto 2xl:max-w-bscreen">
         <Heading htmlheading="h1" size="xlarge" font="display" stylingclasses="text-center">Tak fordi du støtter Heltene</Heading>
-			<div class="relative w-full mx-auto mt-10 lg:mt-20">
+			<div class="relative  mt-10 lg:mt-20 ">
         		<!-- Linjen -->
         		<div class="h-2 bg-offwhite w-73 mx-auto lg:w-200"></div>
         		<!-- Cirkler ovenpå linjen -->

@@ -7,7 +7,7 @@ import Button from "../components/Button.astro";
 ---
 
 <MainLayout title="Oplysninger">
-	<main class="container mx-auto p-8">
+	<main class="container mx-auto p-8 2xl:max-w-bscreen">
 		<!-- Oplysninger -->
 		    <section class="mt-10 mb-10">
 			    <Heading htmlheading="h1" size="xlarge" font="display" stylingclasses="text-center">Tak fordi du støtter Heltene</Heading>
@@ -71,8 +71,13 @@ import Button from "../components/Button.astro";
 								    <Heading htmlheading="h4" size="small" font="sans" stylingclasses="font-medium self-start pb-1" >Persondata</Heading>
 								    <Text teksttype="brødtekst">Vi behandler dine personoplysninger dels efter den gældende EU persondataforordning og dels efter den danske persondatalov.</Text>
 								    <Text teksttype="brødtekst">Vil du vide mere om dine rettigheder og vores databehandling, så kan du læse vores <Link href="https://xn--brneulykkesfonden-00b.dk/heltene/cookie-og-privatlivspolitik" variant="textlink" size="medium" font="serif">persondatapolitik</Link>.</Text>
-								    <div class=" flex mt-6 self-end">
-            					        <Text><Link href="form3" variant="primary" size="medium" icon="/assets/stoet_ikon_web.svg" iconHover="/assets/stoet_ikon_filled.svg">Støt</Link></Text>
+								    <div class=" flex mt-6 self-end" x-data="{ paymentMethod: localStorage.getItem('paymentMethod') || 'mobilepay' }">
+            					        <a x-show="paymentMethod === 'mobilepay'" href="/mpform" class="cursor-pointer">
+	            					        <img src="/assets/orange_pil_hoejre.svg" class="scale-80">
+            					        </a>
+            					        <a x-show="paymentMethod === 'kort'" href="/form3" class="cursor-pointer">
+	            					        <img src="/assets/orange_pil_hoejre.svg" class="scale-80">
+            					        </a>
 								    </div>
 							    </div>
 						    </div>
