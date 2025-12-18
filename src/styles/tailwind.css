@@ -33,6 +33,7 @@
   --color-skyblue500: #1b8691;
   --color-skyblue400: #23a2af;
   --color-skyblue100: #96f1fe;
+  --color-skyblue600: #136c75;
   --color-lime800: #4c5524;
   --color-lime200: #c6dc68;
   --color-pink600: #d01878;
@@ -54,14 +55,10 @@
   --radius-50: 50px;
 
   /* max-width på større skærme end 1536px */
---max-width-bscreen: 1600px;
+  --max-width-bscreen: 1600px;
 }
 
-
-
 @layer base {
-  
-  
 }
 
 @layer components {
@@ -69,12 +66,10 @@
 
 @layer utilities {
   .switch-btn {
-  @apply flex items-center justify-center px-4 py-2 lg:px-6 lg:py-4 rounded-full transition;
-}
+    @apply flex items-center justify-center px-4 py-2 lg:px-6 lg:py-4 rounded-full transition;
+  }
 
-
-.switch-btn.active {
-  @apply bg-burnedorange100 border-3 border-accent ;
-}
-  
+  .switch-btn.active {
+    @apply bg-burnedorange100 border-3 border-accent;
+  }
 }
