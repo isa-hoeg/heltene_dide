@@ -18,10 +18,10 @@ import Legehelte from "../components/Legehelte.astro";
 				<div class="p-4 text-center md:text-left md:pl-7 lg:text-left lg:pl-20">
 					<img src="/assets/mobil_blaa_doodle.svg" class="mx-auto pt-10 pb-6 block md:hidden lg:hidden" alt="">
 					<img src="/assets/blue_doodle_web.svg" class="pt-20 pb-6 hidden md:block lg:block" alt="doodle">
-					<Heading htmlheading="h1" size="xlarge" font="display" stylingclasses="text-text">Legeheltene skaber leg, bevægelse og frirum</Heading>
-					<Text teksttype="brødtekst" stylingclasses="pt-10 lg:w-115 text-text">Legeheltene møder børn på hospitaler, institutioner og indkvarteringssteder og skaber et frirum med leg, bevægelse og plads til at være barn igen.</Text>
+					<Heading htmlheading="h1" size="xlarge" font="display" stylingclasses="text-text intersect:animate-fade-right animate-once animate-duration-800ms">Legeheltene skaber leg, bevægelse og frirum</Heading>
+					<Text teksttype="brødtekst" stylingclasses="pt-10 lg:w-115 text-text intersect:animate-fade-right animate-once animate-duration-800ms">Legeheltene møder børn på hospitaler, institutioner og indkvarteringssteder og skaber et frirum med leg, bevægelse og plads til at være barn igen.</Text>
 				</div>
-				<img src="/assets/legehelte_hero.svg" class="scale-80 md:scale-100 md:mt-15 lg:scale-90 lg:mt-5 relative z-0" alt="">
+				<img src="/assets/legehelte_hero.svg" class="scale-80 md:scale-100 md:mt-15 lg:scale-90 lg:mt-5 relative z-0 intersect:animate-fade-down animate-once animate-duration-800ms" alt="">
 			</div>
 		</section>
 		<div class="-mt-40 md:-mt-25 lg:-mt-38 relative">
@@ -31,19 +31,19 @@ import Legehelte from "../components/Legehelte.astro";
 
 		<!-- START - FÅ INDBLIK I LEGEHELTENS HVERDAG -->
 		<section class=" bg-bg mt-20 md:grid md:grid-cols-2 md:mt-40 lg:grid lg:grid-cols-2 lg:mt-40 lg:gap-30 lg:relative 2xl:max-w-bscreen mx-auto">
-			<iframe class="z-10 mx-auto h-70 w-95 rounded-tl-md rounded-tr-50 rounded-bl-50 rounded-br-md md:h-90 md:w-130 lg:w-190 lg:h-130 lg:ml-15 lg:z-10" src="https://www.youtube.com/embed/_B3UnoStQDY?autoplay=1&mute=1&playsinline=1&rel=0" title="YouTube video player" allow="autoplay; encrypted-media; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin"allowfullscreen></iframe>
+			<iframe class="z-10 mx-auto h-70 w-95 rounded-tl-md rounded-tr-50 rounded-bl-50 rounded-br-md md:h-90 md:w-130 lg:w-190 lg:h-130 lg:ml-15 lg:z-10 intersect:animate-fade-up animate-once animate-duration-800ms" src="https://www.youtube.com/embed/_B3UnoStQDY?autoplay=1&mute=1&playsinline=1&rel=0" title="YouTube video player" allow="autoplay; encrypted-media; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin"allowfullscreen></iframe>
 
 			<div class="bg-[url('/assets/blaa_boobel.svg')] bg-cover bg-no-repeat h-130 bg-center -mt-15 lg:h-170 lg:bg-[url('/assets/blaa_bobbel_web.svg')]">
 				<div class="container mx-auto p-8 lg:text-left lg:pl-20 lg:pt-25">
 					<img src="/assets/legehelte_hero.svg" alt="" class="absolute -rotate-20 scale-30 hidden lg:block lg:-top-70 lg:-right-25">
-					<Heading htmlheading="h2" size="large" font="display" stylingclasses="pt-12 text-center lg:text-left text-text">Få indblik i <br/>Legeheltenes arbejde</Heading>
-					<Text teksttype="brødtekst" stylingclasses="pt-8 text-text">Legeheltene skaber:</Text>
-					<ul class="list-disc ml-6">
+					<Heading htmlheading="h2" size="large" font="display" stylingclasses="pt-12 text-center lg:text-left text-text intersect:animate-fade-left animate-once animate-duration-800ms">Få indblik i <br/>Legeheltenes arbejde</Heading>
+					<Text teksttype="brødtekst" stylingclasses="pt-8 text-text intersect:animate-fade-down animate-once animate-duration-800ms">Legeheltene skaber:</Text>
+					<ul class="list-disc ml-6 intersect:animate-fade-down animate-once animate-duration-800ms">
 						<li><Text teksttype="brødtekst" stylingclasses="text-text">Et trygt frirum med plads til leg og bevægelse</Text></li>
 						<li><Text teksttype="brødtekst" stylingclasses="text-text">Et øjeblik, hvor børn kan være børn igen</Text></li>
 						<li><Text teksttype="brødtekst" stylingclasses="text-text">Tumlelege, samarbejde og store armbevægelser</Text></li>
 					</ul>
-					<Text teksttype="brødtekst" stylingclasses="pt-4 text-text">Vi møder børn på hospitaler, psykiatriske afdelinger, børnehjem og indkvarteringssteder for flygtninge.</Text>
+					<Text teksttype="brødtekst" stylingclasses="pt-4 text-text intersect:animate-fade-down animate-once animate-duration-800ms">Vi møder børn på hospitaler, psykiatriske afdelinger, børnehjem og indkvarteringssteder for flygtninge.</Text>
 					<div class="flex justify-center mt-8 lg:justify-start">
 						<Text stylingclasses="text-text"><Link href="/forms" variant="primary" size="medium" icon="/assets/stoet_ikon_web.svg" iconHover="/assets/stoet_ikon_filled.svg">Støt legeheltene her</Link></Text>
 					</div>
@@ -54,29 +54,29 @@ import Legehelte from "../components/Legehelte.astro";
 
 		<!-- START - VI LEGER HVER DAG -->
 		 <section class="items-center mt-20">
-    		<img src="/assets/boelge_orange_legehelte.svg" alt="" class="scale-109 hidden md:block lg:block">
-			<img src="/assets/boelge_orange_legehelte_mobil.svg" alt="" class="scale-109 block md:hidden lg:hidden">
-			<div class=" bg-burnedorange300 -mt-4">
-				<div class="mx-auto  p-8 text-center grid grid-cols-1 gap-24  md:grid-cols-2 md:gap-16 md:px-16 md:text-center lg:grid-cols-4 lg:gap-10 lg:pb-30 2xl:max-w-bscreen">
+    		<img src="/assets/boelge_orange_web.svg" alt="" class="hidden md:block lg:block">
+			<img src="/assets/boelge_orange_mobil.svg" alt="" class="block md:hidden lg:hidden">
+			<div class=" bg-burnedorange300">
+				<div class="mx-auto p-8 text-center grid grid-cols-1 gap-24  md:grid-cols-2 md:gap-16 md:px-16 md:text-center lg:grid-cols-4 lg:gap-10 lg:pb-30 2xl:max-w-bscreen">
 				<div>
-					<Heading htmlheading="h1" size="xxlarge" font="display" stylingclasses="text-text">64</Heading>
-					<Heading htmlheading="h2" size="medium" font="display" stylingclasses="text-text">Afdelinger</Heading>
-					<Text teksttype="brødtekst" stylingclasses="text-text">Legeheltene er på 64 afdelinger inden for hospitalsvæsenet, børne- og ungepsykiatrien, børnehjem og indkvarteringssteder for flygtninge.</Text>
+					<Heading htmlheading="h1" size="xxlarge" font="display" stylingclasses="text-text intersect:animate-fade-down animate-once animate-duration-800ms">64</Heading>
+					<Heading htmlheading="h2" size="medium" font="display" stylingclasses="text-text intersect:animate-fade-left animate-once animate-duration-800ms">Afdelinger</Heading>
+					<Text teksttype="brødtekst" stylingclasses="text-text intersect:animate-fade-left animate-once animate-duration-800ms">Legeheltene er på 64 afdelinger inden for hospitalsvæsenet, børne- og ungepsykiatrien, børnehjem og indkvarteringssteder for flygtninge.</Text>
 				</div>
 				<div>
-					<Heading htmlheading="h1" size="xxlarge" font="display" stylingclasses="text-text">3000+</Heading>
-					<Heading htmlheading="h2" size="medium" font="display" stylingclasses="text-text">Legeheltevagter</Heading>
-					<Text teksttype="brødtekst" stylingclasses="text-text">Vi har mere end 3000 Legeheltevagter hvert år.</Text>
+					<Heading htmlheading="h1" size="xxlarge" font="display" stylingclasses="text-text intersect:animate-fade-right animate-once animate-duration-800ms">3000+</Heading>
+					<Heading htmlheading="h2" size="medium" font="display" stylingclasses="text-text intersect:animate-fade-up animate-once animate-duration-800ms">Legeheltevagter</Heading>
+					<Text teksttype="brødtekst" stylingclasses="text-text intersect:animate-fade-up animate-once animate-duration-800ms">Vi har mere end 3000 Legeheltevagter hvert år.</Text>
 				</div>
 				<div>
-					<Heading htmlheading="h1" size="xxlarge" font="display" stylingclasses="text-text">12.620</Heading>
-					<Heading htmlheading="h2" size="medium" font="display" stylingclasses="text-text">Timer</Heading>
-					<Text teksttype="brødtekst" stylingclasses="text-text">Vi leger 12.620 timer på et år. Det svarer til 35 timer hver eneste dag året rundt.</Text>
+					<Heading htmlheading="h1" size="xxlarge" font="display" stylingclasses="text-text intersect:animate-fade-up animate-once animate-duration-800ms">12.620</Heading>
+					<Heading htmlheading="h2" size="medium" font="display" stylingclasses="text-text intersect:animate-fade-right animate-once animate-duration-800ms">Timer</Heading>
+					<Text teksttype="brødtekst" stylingclasses="text-text intersect:animate-fade-right animate-once animate-duration-800ms">Vi leger 12.620 timer på et år. Det svarer til 35 timer hver eneste dag året rundt.</Text>
 				</div>
 				<div>
-					<Heading htmlheading="h1" size="xxlarge" font="display" stylingclasses="text-text">21.700+</Heading>
-					<Heading htmlheading="h2" size="medium" font="display" stylingclasses="text-text">Børn og unge</Heading>
-					<Text teksttype="brødtekst" stylingclasses="text-text">Hvert år leger vi med mere end 21.700 børn og unge.</Text>
+					<Heading htmlheading="h1" size="xxlarge" font="display" stylingclasses="text-text intersect:animate-fade-left animate-once animate-duration-800ms">21.700+</Heading>
+					<Heading htmlheading="h2" size="medium" font="display" stylingclasses="text-text intersect:animate-fade-down animate-once animate-duration-800ms">Børn og unge</Heading>
+					<Text teksttype="brødtekst" stylingclasses="text-text intersect:animate-fade-down animate-once animate-duration-800ms">Hvert år leger vi med mere end 21.700 børn og unge.</Text>
 				</div>
 				</div>
     		</div>
@@ -86,16 +86,16 @@ import Legehelte from "../components/Legehelte.astro";
 		 <!-- START - MØD DEN VIRKELIG HELT, LAUGE -->
 		<section class="bg-dustblue200">
   			<div class="mx-auto md:grid md:grid-cols-1 md:py-16 lg:grid lg:grid-cols-2 2xl:max-w-bscreen">
-    			<img src="/img/lauge.webp" alt="Lauge" class="mx-auto md:w-3/4 md:pt-10 lg:w-full lg:pt-5">
+    			<img src="/img/lauge.webp" alt="Lauge" class="mx-auto md:w-3/4 md:pt-10 lg:w-full lg:pt-5 intersect:animate-fade-right animate-once animate-duration-800ms">
     			<div class="container mx-auto p-8 md:px-16 md:pt-12 md:text-center lg:pt-40 lg:text-left">
       				<div class="flex justify-center md:justify-center lg:justify-start">
         				<img src="/assets/mobil_orange_doodle.svg" alt="" class="block lg:hidden">
         				<img src="/assets/orange_doodle_web.svg" alt="" class="hidden lg:block">
       				</div>
-      				<Heading htmlheading="h2" size="large" font="display" stylingclasses="text-center pt-6 pb-4 text-text md:text-center md:pb-6 lg:text-left">Mød den virkelige <br/> helt, Lauge</Heading>
-      				<Text teksttype="brødtekst" stylingclasses="pb-4 text-text md:max-w-prose md:mx-auto lg:mx-0">“Legeheltene og kreaheltene gør en kæmpe forskel på sygdomsramte børn, og de er i en eller anden forstand med til at gøre dem raske, fordi det de bidrager med er glæde, og de bringer håb og normalitet ind i hverdagen i form af de aktiviteter de giver.</Text>
-      				<Text teksttype="brødtekst" stylingclasses="text-text md:max-w-prose md:mx-auto lg:mx-0">Jeg tror på, at hvis man har den psykiske del med, så bliver man først og fremmest hurtigere rask, men det bliver også nemmere at komme igennem sådan et forløb, ikke kun for børnene, men for hele familien.”</Text>
-      				<Heading htmlheading="h4" size="small" stylingclasses="font-medium text-skyblue500 pt-2 text-text md:text-center lg:text-left">Lauges mor</Heading>
+      				<Heading htmlheading="h2" size="large" font="display" stylingclasses="text-center pt-6 pb-4 text-text md:text-center md:pb-6 lg:text-left intersect:animate-fade-left animate-once animate-duration-800ms">Mød den virkelige <br/> helt, Lauge</Heading>
+      				<Text teksttype="brødtekst" stylingclasses="pb-4 text-text md:max-w-prose md:mx-auto lg:mx-0 intersect:animate-fade-left animate-once animate-duration-800ms">“Legeheltene og kreaheltene gør en kæmpe forskel på sygdomsramte børn, og de er i en eller anden forstand med til at gøre dem raske, fordi det de bidrager med er glæde, og de bringer håb og normalitet ind i hverdagen i form af de aktiviteter de giver.</Text>
+      				<Text teksttype="brødtekst" stylingclasses="text-text md:max-w-prose md:mx-auto lg:mx-0 intersect:animate-fade-left animate-once animate-duration-800ms">Jeg tror på, at hvis man har den psykiske del med, så bliver man først og fremmest hurtigere rask, men det bliver også nemmere at komme igennem sådan et forløb, ikke kun for børnene, men for hele familien.”</Text>
+      				<Heading htmlheading="h4" size="small" stylingclasses="font-medium text-skyblue500 pt-2 text-text md:text-center lg:text-left intersect:animate-fade-left animate-once animate-duration-800ms">Lauges mor</Heading>
       				<div class="flex justify-center pt-6 md:justify-center lg:justify-start">
         				<Text stylingclasses="text-text"><Link href="" variant="secondary" size="large">Mød flere helte som Lauge</Link></Text>
       				</div>
@@ -109,12 +109,12 @@ import Legehelte from "../components/Legehelte.astro";
 		<!-- SECTION - LEG OG BEVÆGELSE -->
 		<section class="container mx-auto p-8 flex flex-col justify-center items-center lg:mt-20 2xl:max-w-bscreen">
                 <div class="lg:w-150">
-                	<Heading htmlheading="h2" size="large" font="display" stylingclasses="text-center pt-6 pb-4 text-text">Leg og Bevægelse</Heading>
-                	<Text teksttype="brødtekst" stylingclasses="text-center pb-10 lg:pt-8 lg:pb-14 text-text">Leg og bevægelse er vigtigt for børns udvikling. Også når de er indlagte eller lever et liv med langvarig eller kronisk sygdom. Få indblik i den viden og forskning, som danner grundlag for Legeheltenes arbejde.</Text>
+                	<Heading htmlheading="h2" size="large" font="display" stylingclasses="text-center pt-6 pb-4 text-text intersect:animate-fade-right animate-once animate-duration-800ms">Leg og bevægelse</Heading>
+                	<Text teksttype="brødtekst" stylingclasses="text-center pb-10 lg:pt-8 lg:pb-14 text-text intersect:animate-fade-left animate-once animate-duration-800ms">Leg og bevægelse er vigtigt for børns udvikling. Også når de er indlagte eller lever et liv med langvarig eller kronisk sygdom. Få indblik i den viden og forskning, som danner grundlag for Legeheltenes arbejde.</Text>
                 </div>
 			<!-- Vigtighden af leg -->
 			<div class="flex flex-col gap-10 justify-center items-center">
-			<details class="group">
+			<details class="group intersect:animate-fade-up animate-once animate-duration-800ms">
         		<summary class="flex flex-row items-center bg-offwhite w-90 h-30 rounded-tr-4xl rounded-bl-4xl border-4 border-transparent group-open:border-pink600 transition md:w-170 lg:w-300 lg:h-40">
             		<img src="/assets/leg_ikon.svg" alt="" class="scale-60 lg:scale-85">
 					<Heading htmlheading="h4" size="medium" stylingclasses="font-semibold text-text">Vigtigheden af leg</Heading>
@@ -146,7 +146,7 @@ import Legehelte from "../components/Legehelte.astro";
 			</details>
 
 			<!-- Vigtigheden af bevægelse -->
-			<details class="group relative">
+			<details class="group relative intersect:animate-fade-down animate-once animate-duration-800ms">
         		<summary class="flex flex-row justify-between items-center  bg-offwhite w-90 h-30 p-4 rounded-tr-4xl rounded-bl-4xl border-4 border-transparent group-open:border-accent transition md:w-170  lg:w-300 lg:h-40 lg:justify-end">
             		<div class="mr-auto lg:ml-4 transition-transform duration-300 group-open:rotate-180">
 						<img src="/assets/chevrondown.svg" alt="" >
@@ -175,7 +175,7 @@ import Legehelte from "../components/Legehelte.astro";
     		</details>
 
 			<!-- Når børn indlægges -->
-			<details class="group">
+			<details class="group intersect:animate-fade-up animate-once animate-duration-800ms">
         		<summary class="flex flex-row items-center bg-offwhite w-90 h-30 p-2 rounded-tr-4xl rounded-bl-4xl border-4 border-transparent group-open:border-skyblue500 transition md:w-170  lg:w-300 lg:h-40">
             		<img src="/assets/indlagt_ikon.svg" alt="" class="scale-60 lg:scale-80 lg:pt-4">
             		<Heading htmlheading="h3" size="medium" stylingclasses="font-semibold">Når børn indlægges</Heading>
@@ -208,7 +208,7 @@ import Legehelte from "../components/Legehelte.astro";
     		</details>
 
 			<!-- Tal og statistik -->
-			<details class="group">
+			<details class="group intersect:animate-fade-down animate-once animate-duration-800ms">
         		<summary class="flex flex-row items-center bg-offwhite w-90 h-30 p-4 rounded-tr-4xl rounded-bl-4xl border-4 border-transparent group-open:border-grassgreen700 transition md:w-170  lg:w-300 lg:h-40 lg:justify-end">
             		<div class="mr-auto scale-60 transition-transform duration-300 group-open:rotate-180 lg:ml-4 lg:scale-100">
 						<img src="/assets/chevrondown.svg" alt="" >
@@ -283,8 +283,8 @@ import Legehelte from "../components/Legehelte.astro";
 					<!-- Desktop doodle -->
 					<img src="/assets/orange_doodle_web.svg" alt="" class="hidden lg:block lg:mx-0 mb-10 pl-14">
 				</div>
-			<Heading htmlheading="h2" size="large" font="display" stylingclasses="text-center pb-10 lg:text-left lg:pl-14 text-text">Mød legeheltene</Heading>
-			<article class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth gap-6 mx-8 lg:gap-60 lg:ml-14 mt-10">
+			<Heading htmlheading="h2" size="large" font="display" stylingclasses="text-center pb-10 lg:text-left lg:pl-14 text-text intersect:animate-fade-right animate-once animate-duration-800ms">Mød legeheltene</Heading>
+			<article class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth gap-6 mx-8 lg:gap-60 lg:ml-14 mt-10 intersect:animate-fade-left animate-once animate-duration-800ms">
 				<div id="cecilie" class="flex-none justify-center lg:min-w-0 snap-start lg:w-80">
 					<Legehelte
 					size="large"
